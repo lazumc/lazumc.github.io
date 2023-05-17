@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.menubanner {
+  background-color: #000000;
+  text-align: left;
+  font-family: verdana;
+  color: white;
+  padding: 0px;
+  height:30px;
+}
+.heading {
+  background-color: #cc0001;
+  text-align: center;
+  font-family: verdana;
+  color: white;
+  padding: 1px;
+}
+
+.advert-grid {
+  display: grid;
+  column-gap: 50px;
+  row-gap: 10px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.advert {
+  background-color: #dddddd;
+  text-align: center;
+  font-family: verdana;
+  color: black;
+  padding: 1px;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div class="menubanner"><p>OFFICE SUPPLIES&nbsp&nbsp&nbsp OFFICE FURNITURE&nbsp&nbsp PRINTERS&nbsp&nbsp INKS AND TONER</p></div>
+
+<div class="heading"><h1>Staples Chat Test</h1></div>
+
+<div class="advert-grid">
+	<div class="advert">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor</div>
+	<div class="advert">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor</div>
+	<div class="advert">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor</div>
+	<div class="advert">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor</div>
+	<div class="advert">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor</div>
+	<div class="advert">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor</div>
+</div>
+
+<!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
+<div id="__8x8-chat-button-container-script_9187977096435250c007542.90163843" align="right">
+</div>
+
+<!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+<script type="text/javascript">
+    window.__8x8Chat = {
+        uuid: "script_9187977096435250c007542.90163843",
+        tenant: "ZXZvZ3JvdXAwMQ",
+        channel: "Staples", 
+        domain: "https://vcc-eu8.8x8.com",
+        path: "/.",
+        buttonContainerId: "__8x8-chat-button-container-script_9187977096435250c007542.90163843",
+        align: "right",
+    };
+
+    (function() {
+        var se = document.createElement("script");
+        se.type = "text/javascript";
+        se.async = true;
+        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+
+        var os = document.getElementsByTagName("script")[0];
+        os.parentNode.insertBefore(se, os);
+    })();
+</script>
+</body>
+
+</html>
