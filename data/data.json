@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "surname": "Smith",
+      "claim_number": "1122334",
+      "cms": "HHS"
+    },
+    {
+      "surname": "Cunningham",
+      "claim_number": "1234567",
+      "cms": "HIH"
+    },
+    {
+      "surname": "Williams",
+      "claim_number": "7654321",
+      "cms": "FCO"
+    },
+    {
+      "surname": "Grigg",
+      "claim_number": "2345678",
+      "cms": "HIH"
+    },
+    {
+      "surname": "Cura",
+      "claim_number": "3456789",
+      "division": "FCO"
+    }
+  ]
+}
