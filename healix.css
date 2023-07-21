@@ -4,7 +4,7 @@
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
-	font-size: 8pt !important;
+	font-size: 10pt !important;
 }
 
 /*****************************************************************************/
@@ -22,15 +22,15 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 8pt !important;
+	font-size: 10pt !important;
 }
 
-.chat-incoming-msg {
+.chat-incoming-msg,.chat-incoming-msg:after {
     background: #f5f7f3 !important;
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 8pt !important;
+	font-size: 10pt !important;
 }
 
 /*****************************************************************************/
