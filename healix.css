@@ -14,11 +14,16 @@
 	font-size: 10pt !important;
 }
 
+.ac-textBlock {
+	font-size: 10px !important;
+	color: #223f3b !important;
+}
+
 /*****************************************************************************/
 /* Buttons in Say or Question Nodes */
 /*****************************************************************************/
 
-.ac-pushButton {
+.ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 10pt !important;
@@ -39,6 +44,7 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
+	font-size: 10px !important;
 }
 
 .chat-incoming-msg {
@@ -46,6 +52,7 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
+	font-size: 10px !important;
 }
 
 /*****************************************************************************/
