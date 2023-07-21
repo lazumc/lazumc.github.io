@@ -37,14 +37,14 @@
 /* Message Entry Area*/
 /****************************************************************************/
 .message-box {
-	background: #deebda !important;
+	background: #f5f7f3 !important;
 }
 
 /*****************************************************************************/
 /* Message Entry Box*/
 /****************************************************************************/
 .sc-iwajpm.kydRHc {
-	background: #deebda !important;
+	background: #f5f7f3 !important;
 	color: #223f3b !important;
 }
 
@@ -52,6 +52,13 @@
 /* Send Message*/
 /****************************************************************************/
 .sc-bCwfaz.hrxVLf {
-	background: #deebda !important;
-	color: #223f3b !important;
+	background: #eb8c4b !important;
+}
+
+
+/*****************************************************************************/
+/* Send Message*/
+/****************************************************************************/
+.control.end.js-control.js-close {
+		background: #eb8c4b !important;
 }
