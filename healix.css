@@ -8,17 +8,25 @@
 }
 
 /*****************************************************************************/
+/* Message Window*/
+/****************************************************************************/
+.message-content.js-message-content {
+	background: #deebda !important;
+}
+
+/*****************************************************************************/
 /* Message */
 /****************************************************************************/
 .chat-outgoing-msg {
-    background: #deebda;
+    background: #deebda !important;
     border: 1px solid #243;
     color: #223f3b;
     position: relative;
+	font-size: 8pt !important;
 }
 
 .chat-incoming-msg {
-    background: #deebda;
+    background: #deebda !important;
     border: 1px solid #243;
     color: #223f3b;
     position: relative;
