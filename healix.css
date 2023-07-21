@@ -1,15 +1,16 @@
 /*****************************************************************************/
 /* General */
 /*****************************************************************************/
-body, input[type="text"], textarea, button, select {
-    font-family: "Segoe UI", "Myriad Pro", "Frutiger", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", "Arial", "sans-serif";
-}
+/* body, input[type="text"], textarea, button, select {
+    font-family: "Segoe UI", "Myriad Pro", "Frutiger", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", "Arial", "sans-serif"; 
+} */
 
 /*****************************************************************************/
 /* Container */
 /*****************************************************************************/
 .container {
     border-radius: 0;
+	background: #deebda;
 	width: 500px;
 	height: 800px;
 }
@@ -20,7 +21,6 @@ body, input[type="text"], textarea, button, select {
 
 .inner-container {
     -ms-filter: "none";
-    background: #deebda;
     padding: 0;
 }
 
