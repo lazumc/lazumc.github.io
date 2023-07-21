@@ -1,4 +1,11 @@
 /*****************************************************************************/
+/* Container */
+/*****************************************************************************/
+.container, .inner-container {
+    background: #deebda !important;
+}
+
+/*****************************************************************************/
 /* Quick Reply */
 /*****************************************************************************/
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
@@ -17,7 +24,7 @@
 /*****************************************************************************/
 /* Message */
 /****************************************************************************/
-.chat-outgoing-msg, .chat-outgoing-msg:after {
+.chat-outgoing-msg {
     background: #f5f7f3 !important;
     border: 0px solid #243;
     color: #223f3b;
@@ -25,7 +32,7 @@
 	font-size: 10pt !important;
 }
 
-.chat-incoming-msg,.chat-incoming-msg:after {
+.chat-incoming-msg {
     background: #f5f7f3 !important;
     border: 0px solid #243;
     color: #223f3b;
