@@ -1,12 +1,66 @@
 /*****************************************************************************/
-/* Container */
+/* Set background color for chat container                                   */
 /*****************************************************************************/
 .container, .inner-container, .wrapper {
     background: #deebda !important;
 }
 
 /*****************************************************************************/
-/* Quick Reply */
+/* Set background color for message window                                   */
+/*****************************************************************************/
+.message-wrapper.js-message-wrapper {
+	background: #deebda !important;
+}
+
+/*****************************************************************************/
+/* Set background color for message entry area                               */
+/*****************************************************************************/
+.message-box {
+	background: #f5f7f3 !important;
+}
+
+/*****************************************************************************/
+/* Set message entry box background and font color                           */
+/*****************************************************************************/
+.sc-iwajpm.kydRHc {
+	background: #f5f7f3 !important;
+	color: #223f3b !important;
+}
+
+/*****************************************************************************/
+/* Set background color of send message button                               */
+/*****************************************************************************/
+.sc-bCwfaz.hrxVLf {
+	background: #eb8c4b !important;
+}
+
+/*****************************************************************************/
+/* Set background color of close chat window button                          */
+/*****************************************************************************/
+.control.end.js-control.js-close {
+	background: #eb8c4b !important;
+}
+
+/*****************************************************************************/
+/* Set message background and font color and font size of inbound messages   */
+/*****************************************************************************/
+.chat-outgoing-msg {
+    background: #f5f7f3 !important;
+    border: 0px solid #243;
+    color: #223f3b;
+    position: relative;
+}
+
+.chat-incoming-msg {
+    background: #f5f7f3 !important;
+    border: 0px solid #243;
+    color: #223f3b;
+    position: relative;
+	font-size: 14px !important;
+}
+
+/*****************************************************************************/
+/* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
@@ -24,9 +78,9 @@
 }
 
 /*****************************************************************************/
-/* Buttons in Say or Question Nodes */
+/* Set say, question, gallery node button background and font color and font */
+/* size and update wrap to allowfor more than 2 buttons                      */
 /*****************************************************************************/
-
 .ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
 	color: #deebda;
@@ -38,62 +92,14 @@
 }
 
 /*****************************************************************************/
-/* Message Window */
-/****************************************************************************/
-.message-wrapper.js-message-wrapper {
-	background: #deebda !important;
-}
-
+/* Set background and font color of primary "yes" button on the close window */
+/* this primary button is also used on the invite for "chat now".            */
+/* Also set the secondary "no" button on the close window				     */
+/* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
-/* Message */
-/****************************************************************************/
-.chat-outgoing-msg {
-    background: #f5f7f3 !important;
-    border: 0px solid #243;
-    color: #223f3b;
-    position: relative;
-}
-
-.chat-incoming-msg {
-    background: #f5f7f3 !important;
-    border: 0px solid #243;
-    color: #223f3b;
-    position: relative;
-	font-size: 14px !important;
-}
-
-/*****************************************************************************/
-/* Message Entry Area*/
-/****************************************************************************/
-.message-box {
-	background: #f5f7f3 !important;
-}
-
-/*****************************************************************************/
-/* Message Entry Box*/
-/****************************************************************************/
-.sc-iwajpm.kydRHc {
-	background: #f5f7f3 !important;
-	color: #223f3b !important;
-}
-
-/*****************************************************************************/
-/* Send Message*/
-/****************************************************************************/
-.sc-bCwfaz.hrxVLf {
-	background: #eb8c4b !important;
-}
-
-/*****************************************************************************/
-/* Close Window*/
-/****************************************************************************/
-.control.end.js-control.js-close {
-	background: #eb8c4b !important;
-	color: #fff !important;
-}
-
 .nugen__btn.nugen__btn--primary {
 	background: #223f3b !important;
+	color: #fff !important;
 }
 
 .nugen__btn.nugen__btn--secondary {
