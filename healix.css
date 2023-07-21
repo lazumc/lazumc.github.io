@@ -41,11 +41,11 @@ body, input[type="text"], textarea, button, select {
 /*****************************************************************************/
 /* Header */
 /*****************************************************************************/
-.header .logo {
+.header.logo {
     display: none !important;
 }
 
-.header .title {
+.header.title {
     background: rgba(0, 0, 0, 0.6);
     font-size: 14px;
     color: #fff;
@@ -105,10 +105,17 @@ button, button:active {
     width: 100%;
 }
 
-.chat-outgoing-msg, .chat-incoming-msg {
+.chat-outgoing-msg {
     background: #deebda;
     border: 1px solid #243;
-    color: #333;
+    color: #223f3b;
+    position: relative;
+}
+
+.chat-incoming-msg {
+    background: #aaaaaa;
+    border: 1px solid #ddd;
+    color: #00F;
     position: relative;
 }
 
