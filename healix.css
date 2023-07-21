@@ -112,9 +112,9 @@
 }
 
 .chat-msg-sender:before {
-   content: Felix !important;
+   content: "Felix (" !important;
 }
 
 .chat-msg-sender:after {
-   content: h !important;
+   content: ")" !important;
 }
