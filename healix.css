@@ -1,10 +1,10 @@
 /*****************************************************************************/
 /* Quick Reply */
 /*****************************************************************************/
-
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
+	font-size: 8pt !important;
 }
 
 /*****************************************************************************/
@@ -14,13 +14,12 @@
 	background: #deebda !important;
 }
 
-
 /*****************************************************************************/
 /* Message */
 /****************************************************************************/
 .chat-outgoing-msg {
     background: #f5f7f3 !important;
-    border: 1px solid #243;
+    border: 0px solid #243;
     color: #223f3b;
     position: relative;
 	font-size: 8pt !important;
@@ -28,7 +27,7 @@
 
 .chat-incoming-msg {
     background: #f5f7f3 !important;
-    border: 1px solid #243;
+    border: 0px solid #243;
     color: #223f3b;
     position: relative;
 }
@@ -55,11 +54,10 @@
 	background: #eb8c4b !important;
 }
 
-
 /*****************************************************************************/
 /* Close Window*/
 /****************************************************************************/
 .control.end.js-control.js-close {
 	background: #eb8c4b !important;
-	color: #f5f7f3;
+	color: #f5f7f3 !important;
 }
