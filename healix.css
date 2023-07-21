@@ -8,9 +8,13 @@
 }
 
 /*****************************************************************************/
-/* Message Window*/
+/* Message Window and Box*/
 /****************************************************************************/
-.message-content.js-message-content {
+.message-box {
+	background: #deebda !important;
+}
+
+.message-wrapper.js-message-wrapper {
 	background: #deebda !important;
 }
 
@@ -30,4 +34,11 @@
     border: 1px solid #243;
     color: #223f3b;
     position: relative;
+}
+
+/*****************************************************************************/
+/* Send Message*/
+/****************************************************************************/
+.sc-bCwfaz.hrxVLf {
+	background: #223f3b !important;
 }
