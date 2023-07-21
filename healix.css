@@ -15,7 +15,7 @@
 }
 
 .ac-textBlock {
-	font-size: 10px !important;
+	font-size: 14px !important;
 	color: #223f3b !important;
 }
 
@@ -44,7 +44,7 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 10px !important;
+	font-size: 12px !important;
 }
 
 .chat-incoming-msg {
@@ -52,7 +52,7 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 10px !important;
+	font-size: 12px !important;
 }
 
 /*****************************************************************************/
