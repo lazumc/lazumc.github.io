@@ -70,12 +70,12 @@
 
 /*****************************************************************************/
 /* Set font and left margin so the adaptive card formatting used by 8x8 to   */
-/* display a say/question node with buttons looks like a standard say node   */
+/* display a say/question node with buttons looks like a standard say node.  */
+/* This also reduces size of title text in a gallery                         */
 /*****************************************************************************/
 .ac-textBlock {
 	font-family: inherit !important;
 	font-size: 14px !important;
-	font-weight: inherit !important;
 	line-height: inherit !important;
 	margin-left: -15px;
 	color: #223f3b !important;
