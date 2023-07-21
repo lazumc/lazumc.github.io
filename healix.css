@@ -42,7 +42,7 @@
 }
 
 /*****************************************************************************/
-/* Set message background and font color and font size of inbound messages   */
+/* Set message background and font color and font size of chat messages      */
 /*****************************************************************************/
 .chat-outgoing-msg {
     background: #f5f7f3 !important;
@@ -68,6 +68,10 @@
 	font-size: 12px !important;
 }
 
+/*****************************************************************************/
+/* Set font and left margin so the adaptive card formatting used by 8x8 to   */
+/* display a say/question node with buttons looks like a standard say node   */
+/*****************************************************************************/
 .ac-textBlock {
 	font-family: inherit !important;
 	font-size: 14px !important;
@@ -79,7 +83,7 @@
 
 /*****************************************************************************/
 /* Set say, question, gallery node button background and font color and font */
-/* size and update wrap to allowfor more than 2 buttons                      */
+/* size and update wrap to allow for more than 2 buttons to display          */
 /*****************************************************************************/
 .ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
@@ -94,7 +98,7 @@
 /*****************************************************************************/
 /* Set background and font color of primary "yes" button on the close window */
 /* this primary button is also used on the invite for "chat now".            */
-/* Also set the secondary "no" button on the close window				     */
+/* Also set the secondary "no" button on the close window.			         */
 /* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
 .nugen__btn.nugen__btn--primary {
