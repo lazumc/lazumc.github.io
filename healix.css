@@ -1,7 +1,7 @@
 /*****************************************************************************/
 /* Set background color for chat container                                   */
 /*****************************************************************************/
-.container, .inner-container, .wrapper {
+.container, .nugen__inner-container.inner-container, .nugen__main.main {
 	background: #deebda !important;
 }
 
