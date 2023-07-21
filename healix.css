@@ -66,9 +66,12 @@ input[type="text"], textarea, .message-history, select {
 
 button, button:active {
     -ms-filter: "none";
-	background: #223f3b;
     background-image: none;
     box-shadow: none;
+}
+
+.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
+	background: red;
 }
 
 /*****************************************************************************/
@@ -166,11 +169,14 @@ button, button:active {
 
 .chat-outgoing-msg {
     margin-left: 20%;
-    text-align: left;
+    margin-right: 20%;
+    text-align: right;
 }
 
 .chat-incoming-msg {
+    margin-left: 20%;
     margin-right: 20%;
+    text-align: left;
 }
 
 .chat-log-msg, .chat-info-msg, .chat-error-msg, .chat-link-msg {
