@@ -43,9 +43,9 @@
 
 /*****************************************************************************/
 /* Put the bot name in from of messages from the bot.                        */
-/* Note that "(Bot)" has to follow the name                                  */
+/* Note that "(Bot)" has to follow the name with this method 			     */
 /*****************************************************************************/
-.chat-msg-sender[aria-label="Bot"]::before {
+/*.chat-msg-sender[aria-label="Bot"]::before {
 	content: "Felix (" !important;
 	color: #223f3b;
 }
@@ -57,7 +57,17 @@
 
 .chat-msg-sender {
 	color: #223f3b !important;
+} */
+
+.chat-msg-sender[aria-label="Bot"]::before {
+	content: "Felix " !important;
+	color: #223f3b;
 }
+
+.chat-msg-sender {
+	color: #f5f7f3 !important;
+}
+
 
 /*****************************************************************************/
 /* Set message background and font color and font size of chat messages      */
