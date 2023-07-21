@@ -11,11 +11,11 @@
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
-	font-size: 10pt !important;
+	font-size: smaller !important;
 }
 
 .ac-textBlock {
-	font-size: 14px !important;
+	font-size: inherit !important;
 	color: #223f3b !important;
 }
 
@@ -26,7 +26,7 @@
 .ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
 	color: #deebda;
-	font-size: 10pt !important;
+	font-size: smaller !important;
 }
 
 /*****************************************************************************/
@@ -44,7 +44,7 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 12px !important;
+	font-size: inherit !important;
 }
 
 .chat-incoming-msg {
@@ -52,7 +52,7 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 12px !important;
+	font-size: inherit !important;
 }
 
 /*****************************************************************************/
