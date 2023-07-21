@@ -19,8 +19,8 @@
 }
 
 .__8x8Chat-Container {
-	width: 500px;
-	height: 800px;
+	width: 500px !important;
+	height: 800px !important;
 }
 
 /*****************************************************************************/
