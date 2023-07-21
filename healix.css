@@ -1,7 +1,7 @@
 /*****************************************************************************/
 /* Container */
 /*****************************************************************************/
-.container, .inner-container, .main {
+.container, .inner-container, .wrapper {
     background: #deebda !important;
 }
 
@@ -29,7 +29,6 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 6pt !important;
 }
 
 .chat-incoming-msg {
@@ -37,7 +36,6 @@
     border: 0px solid #243;
     color: #223f3b;
     position: relative;
-	font-size: 10pt !important;
 }
 
 /*****************************************************************************/
@@ -68,4 +66,13 @@
 .control.end.js-control.js-close {
 	background: #eb8c4b !important;
 	color: #fff !important;
+}
+
+.nugen__btn.nugen__btn--primary {
+	background: #223f3b !important;
+}
+
+.nugen__btn.nugen__btn--secondary {
+	background: #f5f7f3 !important;
+	color: #243 !important;
 }
