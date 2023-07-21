@@ -19,7 +19,7 @@
 /* Message */
 /****************************************************************************/
 .chat-outgoing-msg {
-    background: #deebda !important;
+    background: #f5f7f3 !important;
     border: 1px solid #243;
     color: #223f3b;
     position: relative;
@@ -27,7 +27,7 @@
 }
 
 .chat-incoming-msg {
-    background: #deebda !important;
+    background: #f5f7f3 !important;
     border: 1px solid #243;
     color: #223f3b;
     position: relative;
@@ -57,8 +57,9 @@
 
 
 /*****************************************************************************/
-/* Send Message*/
+/* Close Window*/
 /****************************************************************************/
 .control.end.js-control.js-close {
-		background: #eb8c4b !important;
+	background: #eb8c4b !important;
+	color: #f5f7f3;
 }
