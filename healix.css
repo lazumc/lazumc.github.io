@@ -9,24 +9,13 @@
 /* Container */
 /*****************************************************************************/
 
-.container {
-    border-radius: 0;
-	width: 500px !important;
-	height: 800px !important;	
-}
-
-.inner-container, button {
+.container, .inner-container, button {
     border-radius: 0;
 }
 
 .inner-container {
     -ms-filter: "none";
     padding: 0;
-}
-
-.__8x8Chat-Container {
-	width: 500px !important;
-	height: 800px !important;
 }
 
 /*****************************************************************************/
@@ -73,13 +62,15 @@ input[type="text"], textarea, .message-history, select {
 button, button:active {
     -ms-filter: "none";
     background-image: none;
+	background: #223f3b;
+	color: #deebda;
     box-shadow: none;
 }
 
-.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
+/* .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
-}
+} */
 
 /*****************************************************************************/
 /* Introduction */
