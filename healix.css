@@ -14,7 +14,6 @@
 	font-size: 12px !important;
 }
 
-
 .ac-textBlock {
 	font-family: inherit !important;
 	font-size: 14px !important;
@@ -32,6 +31,10 @@
 	background: #223f3b;
 	color: #deebda;
 	font-size: 14px !important;
+}
+
+.ac-actionSet {
+	flex-wrap: wrap !important;
 }
 
 /*****************************************************************************/
