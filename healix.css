@@ -111,6 +111,6 @@
 	color: #243 !important;
 }
 
-#[aria-label="Bot"]:before{
+[aria-label=Bot]:before {
    content: "Felix " !important;
 }
