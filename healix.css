@@ -9,7 +9,13 @@
 /* Container */
 /*****************************************************************************/
 
-.container, .inner-container, button {
+.container {
+    border-radius: 0;
+	width: 500px !important;
+	height: 800px !important;	
+}
+
+.inner-container, button {
     border-radius: 0;
 }
 
@@ -71,7 +77,8 @@ button, button:active {
 }
 
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
-	background: red;
+	background: #223f3b;
+	color: #deebda;
 }
 
 /*****************************************************************************/
@@ -169,12 +176,10 @@ button, button:active {
 
 .chat-outgoing-msg {
     margin-left: 20%;
-    margin-right: 20%;
     text-align: right;
 }
 
 .chat-incoming-msg {
-    margin-left: 20%;
     margin-right: 20%;
     text-align: left;
 }
