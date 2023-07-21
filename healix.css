@@ -42,8 +42,22 @@
 }
 
 /*****************************************************************************/
-/* Put the bot name in from of messages from the bot.                        */
-/* Note that "(Bot)" has to follow the name with this method 			     */
+/* Put the bot name instead of "Bot" in messages from the bot                */
+/* METHOD 1: Hide the word "bot" my making it the background color		     */
+/* It will be visible if the user selects the text		    				 */
+/*****************************************************************************/
+.chat-msg-sender[aria-label="Bot"]::before {
+	content: "Felix " !important;
+	color: #223f3b;
+}
+
+.chat-msg-sender {
+	color: #f5f7f3 !important;
+}
+
+/*****************************************************************************/
+/* Put the bot name instead of "Bot" in messages from the bot                */
+/* METHOD 2: Put "Bot" in brackets after the bot name e.g. "Name (Bot)"	     */
 /*****************************************************************************/
 /*.chat-msg-sender[aria-label="Bot"]::before {
 	content: "Felix (" !important;
@@ -58,16 +72,6 @@
 .chat-msg-sender {
 	color: #223f3b !important;
 } */
-
-.chat-msg-sender[aria-label="Bot"]::before {
-	content: "Felix " !important;
-	color: #223f3b;
-}
-
-.chat-msg-sender {
-	color: #f5f7f3 !important;
-}
-
 
 /*****************************************************************************/
 /* Set message background and font color and font size of chat messages      */
