@@ -1,0 +1,172 @@
+/*****************************************************************************/
+/* General */
+/*****************************************************************************/
+body, input[type="text"], textarea, button, select {
+    font-family: "Segoe UI", "Myriad Pro", "Frutiger", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", "Arial", "sans-serif";
+}
+
+/*****************************************************************************/
+/* Container */
+/*****************************************************************************/
+.container, .inner-container, button {
+    border-radius: 0;
+}
+
+.inner-container {
+    -ms-filter: "none";
+    background: none;
+    padding: 0;
+}
+
+/*****************************************************************************/
+/* Controls */
+/*****************************************************************************/
+.control {
+    background: none !important;
+    border: 0 !important;
+    line-height: 1.1;
+    text-decoration: none !important;
+    opacity: 0.8 !important;
+}
+
+.control:hover {
+    opacity: 1 !important;
+}
+
+.control.close:before, .control.end:before {
+    color: #fff;
+    content: "\u00D7";
+}
+
+/*****************************************************************************/
+/* Header */
+/*****************************************************************************/
+.header .logo {
+    display: none !important;
+}
+
+.header .title {
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 8px;
+}
+
+/*****************************************************************************/
+/* Form */
+/*****************************************************************************/
+input[type="text"], textarea, .message-history, select {
+    box-shadow: none;
+}
+
+button, button:active {
+    -ms-filter: "none";
+    background-image: none;
+    box-shadow: none;
+}
+
+/*****************************************************************************/
+/* Introduction */
+/*****************************************************************************/
+.intro {
+    padding: 0 20px;
+}
+
+/*****************************************************************************/
+ * Window */
+/*****************************************************************************/
+.translation-header {
+    border-left: 0;
+    border-right: 0;
+}
+
+/*****************************************************************************/
+/* Message */
+/****************************************************************************/
+#message-field {
+    border: 0 !important;
+}
+
+.message-history {
+    border-left: 0;
+    border-right: 0;
+}
+
+.message-actions {
+    z-index: 1;
+}
+
+.message-wrapper {
+    padding: 15px;
+}
+
+.message-content {
+    display: inline-block;
+    width: 100%;
+}
+
+.chat-outgoing-msg, .chat-incoming-msg {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    color: #333;
+    position: relative;
+}
+
+.chat-outgoing-msg:before, .chat-incoming-msg:before, .chat-outgoing-msg:after, .chat-incoming-msg:after {
+    content: "";
+    position:absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+}
+
+.chat-outgoing-msg:before, .chat-incoming-msg:before {
+    top: auto;
+    bottom: 8px;
+    right: -6px;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent #ddd;
+}
+
+.chat-outgoing-msg:after, .chat-incoming-msg:after {
+    top: auto;
+    bottom: 10px;
+    right: -4px;
+    border-width: 4px 0 4px 4px;
+    border-color: transparent #fff;
+    clear: both;
+}
+
+.chat-incoming-msg:before {
+    top: 8px;
+    bottom: auto;
+    left: -6px;
+    border-width: 6px 6px 6px 0;
+}
+
+.chat-incoming-msg:after {
+    top: 10px;
+    bottom: auto;
+    left: -4px;
+    border-width: 4px 4px 4px 0;
+}
+
+.chat-outgoing-msg {
+    margin-left: 20%;
+    text-align: left;
+}
+
+.chat-incoming-msg {
+    margin-right: 20%;
+}
+
+.chat-log-msg, .chat-info-msg, .chat-error-msg, .chat-link-msg {
+    text-align: center;
+}
+
+/*****************************************************************************/
+/* Acknowledge/Close messages */
+/*****************************************************************************/
+.acknowledge-text, .confirm-close {
+    padding: 0;
+}
