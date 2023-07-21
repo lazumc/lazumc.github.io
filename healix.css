@@ -8,20 +8,19 @@
 /*****************************************************************************/
 /* Container */
 /*****************************************************************************/
-.container {
-    border-radius: 0;
-	background: #deebda;
-	width: 500px;
-	height: 800px;
-}
 
-.inner-container, button {
+.container, .inner-container, button {
     border-radius: 0;
 }
 
 .inner-container {
     -ms-filter: "none";
     padding: 0;
+}
+
+.__8x8Chat-Container {
+	width: 500px;
+	height: 800px;
 }
 
 /*****************************************************************************/
@@ -67,6 +66,7 @@ input[type="text"], textarea, .message-history, select {
 
 button, button:active {
     -ms-filter: "none";
+	background: #223f3b;
     background-image: none;
     box-shadow: none;
 }
