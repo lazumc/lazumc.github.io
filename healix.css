@@ -111,10 +111,10 @@
 	color: #243 !important;
 }
 
-#content[aria-label=Bot]:before {
+.chat-msg-sender#content[aria-label=Bot]:before {
    content: "Felix (" !important;
 }
 
-#content[aria-label=Bot]:after {
+.chat-msg-sender#content[aria-label=Bot]:after {
    content: ")" !important;
 }
