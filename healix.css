@@ -8,13 +8,19 @@ body, input[type="text"], textarea, button, select {
 /*****************************************************************************/
 /* Container */
 /*****************************************************************************/
-.container, .inner-container, button {
+.container {
+    border-radius: 0;
+	width: 500px;
+	height: 800px;
+}
+
+.inner-container, button {
     border-radius: 0;
 }
 
 .inner-container {
     -ms-filter: "none";
-    background: none;
+    background: #deebda;
     padding: 0;
 }
 
