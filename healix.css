@@ -111,6 +111,10 @@
 	color: #243 !important;
 }
 
-[aria-label=Bot]:before {
-   content: "Felix " !important;
+#content[aria-label=Bot]:before {
+   content: "Felix (" !important;
+}
+
+#content[aria-label=Bot]:after {
+   content: ")" !important;
 }
