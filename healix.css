@@ -63,7 +63,7 @@
 /* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
-	background: #223f3b;
+	background: #5CC87a;
 	color: #deebda;
 	font-size: 12px !important;
 }
@@ -86,7 +86,7 @@
 /* size and update wrap to allow for more than 2 buttons to display          */
 /*****************************************************************************/
 .ac-pushButton.style-default.ac-selectable {
-	background: #223f3b;
+	background: #5CC87a;
 	color: #deebda;
 	font-size: 14px !important;
 }
@@ -102,7 +102,7 @@
 /* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
 .nugen__btn.nugen__btn--primary {
-	background: #223f3b !important;
+	background: #5CC87a !important;
 	color: #fff !important;
 }
 
