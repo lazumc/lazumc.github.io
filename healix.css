@@ -1,7 +1,7 @@
 /*****************************************************************************/
 /* Container */
 /*****************************************************************************/
-.container, .inner-container, .nugen__main.main {
+.container, .inner-container, .main {
     background: #deebda !important;
 }
 
@@ -68,12 +68,4 @@
 .control.end.js-control.js-close {
 	background: #eb8c4b !important;
 	color: #fff !important;
-}
-
-.nugen__btn.nugen__btn--primary {
-	background: #223f3b !important;
-}
-
-.nugen__btn.nugen__btn--secondary {
-	background: #f5f7f3 !important;
 }
