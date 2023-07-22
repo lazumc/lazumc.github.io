@@ -80,8 +80,8 @@ svg[role=presentation] {
 
 /*****************************************************************************/
 /* Put the bot name instead of "Bot" in messages from the bot                */
-/* METHOD 1: Hide the word "bot" my making it the background color		     */
-/* It will be visible if the user selects the text		    				 */
+/* METHOD 1: Hide the word "bot" my making it the background color           */
+/* It will be visible if the user selects the text                           */
 /*****************************************************************************/
 .chat-msg-sender[aria-label="Bot"]::before {
 	content: "Felix " !important;
@@ -112,7 +112,7 @@ svg[role=presentation] {
 
 /*****************************************************************************/
 /* Set message background and font color and font size of chat messages      */
-/* Also set the font color and weight for hyperlinks					     */
+/* Also set the font color and weight for hyperlinks                         */
 /*****************************************************************************/
 .chat-outgoing-msg {
 	background: #f5f7f3 !important;
@@ -144,7 +144,7 @@ a {
 }
 
 /*****************************************************************************/
-/* Set quick reply buttons to be centered in the chat Window		         */
+/* Set quick reply buttons to be centered in the chat Window                 */
 /*****************************************************************************/
 
 .KKTYm {
@@ -182,7 +182,7 @@ a {
 /*****************************************************************************/
 /* Set background and font color of primary "yes" button on the close window */
 /* this primary button is also used on the invite for "chat now".            */
-/* Also set the secondary "no" button on the close window.			         */
+/* Also set the secondary "no" button on the close window.                   */
 /* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
 .nugen__btn.nugen__btn--primary {
