@@ -11,11 +11,18 @@ body, input[type="text"], textarea, button, select {
 /*****************************************************************************/
 /* h1.nugen__title.nugen.title.js-window_title { */
 h1.nugen__title {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .nugen__header {
 	min-height: 75px;
+}
+
+/*****************************************************************************/
+/* Hide the 8x8 download transcript and co-browse menu button                */
+/*****************************************************************************/
+.message-actions {
+	visibility: hidden;
 }
 
 /*****************************************************************************/
@@ -56,10 +63,14 @@ h1.nugen__title {
 }
 
 /*****************************************************************************/
-/* Set background color of close chat window button                          */
+/* Set background and text color of close chat window button                 */
 /*****************************************************************************/
 .control.end.js-control.js-close {
 	background: #eb8c4b !important;
+}
+
+svg[role=presentation] {
+    fill: #ffffff !important;
 }
 
 /*****************************************************************************/
@@ -96,6 +107,7 @@ h1.nugen__title {
 
 /*****************************************************************************/
 /* Set message background and font color and font size of chat messages      */
+/* Also set the font color and weight for hyperlinks					     */
 /*****************************************************************************/
 .chat-outgoing-msg {
 	background: #f5f7f3 !important;
@@ -110,6 +122,11 @@ h1.nugen__title {
 	color: #223f3b;
 	position: relative;
 	font-size: 14px !important;
+}
+
+a {
+    color: #223f3b;
+    font-weight: 600 !important;
 }
 
 /*****************************************************************************/
