@@ -57,7 +57,7 @@ h1.nugen__title {
 
 textarea.sc-jNnpgg.kLwVqJ {
     background: #f5f7f3;
-	border-color: ##deebda;
+	border-color: #deebda;
 }
 
 /*****************************************************************************/
@@ -130,8 +130,8 @@ svg[role=presentation] {
 }
 
 a {
-    color: #223f3b;
-    font-weight: 600 !important;
+	color: #223f3b;
+	font-weight: 600 !important;
 }
 
 /*****************************************************************************/
