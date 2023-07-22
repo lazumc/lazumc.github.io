@@ -28,7 +28,6 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Set background color for chat container                                   */
 /*****************************************************************************/
-/*.container, .nugen__inner-container.inner-container, .nugen__main.main, .nugen__window-content.nugen__message-history.message-history, .nugen__content-loading.message-loading.js-message-loading { */
 .container, .nugen__inner-container, .nugen__main, .nugen__message-history, .nugen__content-loading {
 	background: #deebda !important;
 }
@@ -146,7 +145,6 @@ a {
 /*****************************************************************************/
 /* Set quick reply buttons to be centered in the chat Window                 */
 /*****************************************************************************/
-
 .KKTYm {
 	width: 110% !important;
 	place-content: center !important;
