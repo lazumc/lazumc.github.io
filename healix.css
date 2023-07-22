@@ -9,16 +9,18 @@ body, input[type="text"], textarea, button, select {
 /*****************************************************************************/
 /* Set chat window title font size and minimum height                        */
 /*****************************************************************************/
-h1.nugen__title.nugen.title.js-window_title {
+/* h1.nugen__title.nugen.title.js-window_title { */
+h1.nugen__title {
     font-size: 14px;
-	min-height: 30px;
+	min-height: 50px;
+	vertical-align: middle;
 }
 
 /*****************************************************************************/
 /* Set background color for chat container                                   */
 /*****************************************************************************/
 /*.container, .nugen__inner-container.inner-container, .nugen__main.main, .nugen__window-content.nugen__message-history.message-history, .nugen__content-loading.message-loading.js-message-loading { */
-.container, .inner-container, .main, .message-history, .message-loading {
+.container, .nugen__inner-container, .nugen__main, .nugen__message-history, .nugen__content-loading {
 	background: #deebda !important;
 }
 
