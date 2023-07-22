@@ -56,7 +56,7 @@ h1.nugen__title {
 }
 
 textarea.sc-jNnpgg.kLwVqJ {
-    background: #f5f7f3;
+	background: #f5f7f3;
 	border-color: #deebda;
 }
 
@@ -141,6 +141,11 @@ a {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 12px !important;
+}
+
+.KKTYm {
+	max-width: 110% !important;
+	place-content: center !important;
 }
 
 /*****************************************************************************/
