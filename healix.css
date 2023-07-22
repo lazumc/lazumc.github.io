@@ -143,6 +143,10 @@ a {
 	font-size: 12px !important;
 }
 
+/*****************************************************************************/
+/* Set quick reply buttons to be centered in the chat Window		         */
+/*****************************************************************************/
+
 .KKTYm {
 	width: 110% !important;
 	place-content: center !important;
