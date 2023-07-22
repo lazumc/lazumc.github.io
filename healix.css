@@ -1,12 +1,4 @@
 /*****************************************************************************/
-/* Set chat window size                                                      */
-/*****************************************************************************/
-div.__8x8Chat-Container {
-	height: 750px !important;
-	width: 334px !important;
-}
-
-/*****************************************************************************/
 /* Font family (use default unless customer has their own font family to use */
 /*****************************************************************************/
 body, input[type="text"], textarea, button, select {
