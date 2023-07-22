@@ -48,11 +48,16 @@ h1.nugen__title {
 }
 
 /*****************************************************************************/
-/* Set message entry box background and font color                           */
+/* Set message entry box background, border and font color                   */
 /*****************************************************************************/
 .sc-iwajpm.kydRHc {
 	background: #f5f7f3 !important;
 	color: #223f3b !important;
+}
+
+textarea.sc-jNnpgg.kLwVqJ {
+    background: #f5f7f3;
+	border-color: ##deebda;
 }
 
 /*****************************************************************************/
