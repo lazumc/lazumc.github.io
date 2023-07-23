@@ -1,4 +1,10 @@
 /*****************************************************************************/
+/*****************************************************************************/
+/* PLEASE EDIT THE VARIABLES AND FONT FAMILY BELOW FOR YOUR CHATBOT          */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
 /* Declare color and sizing variables                                        */
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
@@ -86,7 +92,7 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Hide the 8x8 download transcript and co-browse menu button                */
 /*****************************************************************************/
-.message-actions {
+.message-actions.js-message-actions {
 	visibility: var (--chatDownloadCobrowseMenuVisibility);
 }
 
@@ -138,7 +144,7 @@ textarea.sc-jNnpgg.kLwVqJ {
 	background: var(--chatControlButtonBackgroundColor) !important;
 }
 
-svg[role=presentation] {
+svg[width="14"] {
     fill: var(--chatControlButtonFontColor) !important;
 }
 
