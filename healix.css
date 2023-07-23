@@ -93,7 +93,7 @@ h1.nugen__title {
 /* Hide the 8x8 download transcript and co-browse menu button                */
 /*****************************************************************************/
 .message-actions.js-message-actions {
-	visibility: var (--chatDownloadCobrowseMenuVisibility);
+	visibility: var(--chatDownloadCobrowseMenuVisibility);
 }
 
 /*****************************************************************************/
