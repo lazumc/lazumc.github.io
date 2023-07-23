@@ -124,7 +124,7 @@ svg[role=presentation] {
 
 .chat-incoming-msg {
 	background: #f5f7f3 !important;
-	border: 0px solid #243;
+	border: 0px solid #223f3b;
 	color: #223f3b;
 	position: relative;
 	font-size: 0.85rem !important;
@@ -146,6 +146,7 @@ p {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 0.75rem !important;
+	border: 0px solid #223f3b;
 }
 
 /*****************************************************************************/
@@ -181,6 +182,7 @@ p {
 	font-size: 0.75rem !important;
 	font-family: inherit !important;
 	margin-bottom: 0px;
+	border: 0px solid #223f3b;
 }
 
 .ac-actionSet {
@@ -200,9 +202,12 @@ button {
 .nugen__btn, .nugen__btn--primary {
 	background: #223f3b !important;
 	color: #ffffff !important;
+	border: 0px solid #223f3b;
 }
 
 .nugen__btn--secondary {
 	background: #f5f7f3 !important;
 	color: #223f3b !important;
+	border: 0px solid #f5f7f3;
+
 }
