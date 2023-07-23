@@ -10,7 +10,7 @@ body, input[type="text"], textarea, button, select {
 /* Set chat window title font size and minimum height                        */
 /*****************************************************************************/
 h1.nugen__title {
-    font-size: 16px !important;
+    font-size: 1.25rem !important;
 }
 
 .nugen__header {
@@ -124,7 +124,7 @@ svg[role=presentation] {
 	border: 0px solid #243;
 	color: #223f3b;
 	position: relative;
-	font-size: 14px !important;
+	font-size: 0.85rem !important;
 }
 
 a {
@@ -138,7 +138,7 @@ a {
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
-	font-size: 12px !important;
+	font-size: 0.75rem !important;
 }
 
 /*****************************************************************************/
@@ -156,7 +156,7 @@ a {
 /*****************************************************************************/
 .ac-textBlock {
 	font-family: inherit !important;
-	font-size: 14px !important;
+	font-size: 1rem !important;
 	line-height: inherit !important;
 	margin-left: -15px;
 	color: #223f3b !important;
@@ -169,7 +169,7 @@ a {
 .ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
 	color: #deebda;
-	font-size: 14px !important;
+	font-size: 1rem !important;
 }
 
 .ac-actionSet {
