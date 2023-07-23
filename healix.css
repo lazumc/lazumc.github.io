@@ -5,8 +5,8 @@
 :root {
 	--chatTitleFontSize: 1.25rem;
 	--chatControlButtonBackgroundColor: #eb8c4b;
-	--chatControlButtonFontColor: #ffffff;
-	--chatDownloadCobrowseMenuVisibility: hidden;
+	--chatControlButtonFontColor: #ffffff;  /*Note: Send button always white */
+	--chatDownloadCobrowseMenuVisibility: hidden;   /* "hidden" or "visible" */
 	--chatMessageBackgroundColor: #f5f7f3;
 	--chatMessageFontColor: #223f3b;
 	--chatMessageFontSize: 0.85rem;
@@ -14,7 +14,7 @@
 	--chatMessageHypertextFontColor: #223f3b;
 	--chatMessageHypertextFontWeight: 600;
 	--chatButtonBackgroundColor: #223f3b;
-	--chatButtonFontColor: #deebda;
+	--chatButtonFontColor: #f5f7f3;
 	--chatButtonFontSize: 0.85rem;
 	--chatButtonQuickReplyFontSize: 0.75rem;
 	--chatButtonBorder: 0px solid #223f3b;
