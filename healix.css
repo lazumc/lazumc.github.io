@@ -145,7 +145,7 @@ textarea.sc-jNnpgg.kLwVqJ {
 }
 
 svg[width="14"] {
-    fill: var(--chatControlButtonFontColor) !important;
+	fill: var(--chatControlButtonFontColor) !important;
 }
 
 /*****************************************************************************/
@@ -176,7 +176,7 @@ a {
 }
 
 p {
-    font-size: inherit !important;
+	font-size: inherit !important;
 }
 
 /*****************************************************************************/
@@ -190,11 +190,11 @@ p {
 }
 
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo:focus {
-    background: var(--chatButtonFocusBackgroundColor) !important;
+	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo:hover {
-    background: var(--chatButtonFocusBackgroundColor) !important;
+	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
 /*****************************************************************************/
@@ -233,11 +233,11 @@ p {
 }
 
 .ac-pushButton.style-default.ac-selectable:focus {
-    background: var(--chatButtonFocusBackgroundColor) !important;
+	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
 .ac-pushButton.style-default.ac-selectable:hover {
-    background: var(--chatButtonFocusBackgroundColor) !important;
+	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
 .ac-actionSet {
