@@ -34,7 +34,7 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Set background color for message window                                   */
 /*****************************************************************************/
-.message-wrapper.js-message-wrapper {
+.message-wrapper {
 	background: #deebda !important;
 }
 
@@ -48,12 +48,17 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Set message entry box background, border and font color                   */
 /*****************************************************************************/
-.sc-iwajpm.kydRHc {
+/* Full class = .sc-iwajpm.kydRHc                                            */
+/*****************************************************************************/
+.kydRHc {
 	background: #f5f7f3 !important;
 	color: #223f3b !important;
 }
 
-textarea.sc-jNnpgg.kLwVqJ {
+/*****************************************************************************/
+/* Full class = textarea.sc-jNnpgg.kLwVqJ                                    */
+/*****************************************************************************/
+textarea.kLwVqJ {
 	background: #f5f7f3;
 	border-color: #deebda;
 }
@@ -61,14 +66,18 @@ textarea.sc-jNnpgg.kLwVqJ {
 /*****************************************************************************/
 /* Set background color of send message button                               */
 /*****************************************************************************/
-.sc-bCwfaz.hrxVLf {
+/* Full class = .sc-bCwfaz.hrxVLf                                            */
+/*****************************************************************************/
+.hrxVLf {
 	background: #eb8c4b !important;
 }
 
 /*****************************************************************************/
 /* Set background and text color of close chat window button                 */
 /*****************************************************************************/
-.control.end.js-control.js-close {
+/* Full class = .control.end.js-control.js-close                             */
+/*****************************************************************************/
+.end {
 	background: #eb8c4b !important;
 }
 
@@ -111,12 +120,15 @@ svg[role=presentation] {
 /*****************************************************************************/
 /* Set message background and font color and font size of chat messages      */
 /* Also set the font color and weight for hyperlinks                         */
+/* The p element inherit is needed as outgoing chat messages, unlike inbound */
+/* chat message are embedded within p elements                               */
 /*****************************************************************************/
 .chat-outgoing-msg {
 	background: #f5f7f3 !important;
 	border: 0px solid #243;
 	color: #223f3b;
 	position: relative;
+	font-size: 0.85rem !important;
 }
 
 .chat-incoming-msg {
@@ -132,10 +144,16 @@ a {
 	font-weight: 600 !important;
 }
 
+p {
+    font-size: inherit !important;
+}
+
 /*****************************************************************************/
 /* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
-.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
+/* Full class = .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo          */
+/*****************************************************************************/
+.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 0.75rem !important;
@@ -143,6 +161,8 @@ a {
 
 /*****************************************************************************/
 /* Set quick reply buttons to be centered in the chat Window                 */
+/*****************************************************************************/
+/* Full class = .sc-euEtCV.KKTYm                                             */
 /*****************************************************************************/
 .KKTYm {
 	width: 110% !important;
@@ -166,7 +186,9 @@ a {
 /* Set say, question, gallery node button background and font color and font */
 /* size and update wrap to allow for more than 2 buttons to display          */
 /*****************************************************************************/
-.ac-pushButton.style-default.ac-selectable {
+/* Full class = .ac-pushButton.style-default.ac-selectable                   */
+/*****************************************************************************/
+.ac-pushButton {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 1rem !important;
@@ -182,12 +204,12 @@ a {
 /* Also set the secondary "no" button on the close window.                   */
 /* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
-.nugen__btn.nugen__btn--primary {
+.nugen__btn, .nugen__btn--primary {
 	background: #223f3b !important;
 	color: #ffffff !important;
 }
 
-.nugen__btn.nugen__btn--secondary {
+.nugen__btn--secondary {
 	background: #f5f7f3 !important;
 	color: #223f3b !important;
 }
