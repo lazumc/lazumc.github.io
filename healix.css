@@ -48,17 +48,12 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Set message entry box background, border and font color                   */
 /*****************************************************************************/
-/* Full class = .sc-iwajpm.kydRHc                                            */
-/*****************************************************************************/
-.kydRHc {
+.sc-iwajpm.kydRHc {
 	background: #f5f7f3 !important;
 	color: #223f3b !important;
 }
 
-/*****************************************************************************/
-/* Full class = textarea.sc-jNnpgg.kLwVqJ                                    */
-/*****************************************************************************/
-textarea.kLwVqJ {
+textarea.sc-jNnpgg.kLwVqJ {
 	background: #f5f7f3;
 	border-color: #deebda;
 }
@@ -66,16 +61,12 @@ textarea.kLwVqJ {
 /*****************************************************************************/
 /* Set background color of send message button                               */
 /*****************************************************************************/
-/* Full class = .sc-bCwfaz.hrxVLf                                            */
-/*****************************************************************************/
-.hrxVLf {
+.sc-bCwfaz.hrxVLf {
 	background: #eb8c4b !important;
 }
 
 /*****************************************************************************/
 /* Set background and text color of close chat window button                 */
-/*****************************************************************************/
-/* Full class = .control.end.js-control.js-close                             */
 /*****************************************************************************/
 .end {
 	background: #eb8c4b !important;
@@ -151,9 +142,7 @@ p {
 /*****************************************************************************/
 /* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
-/* Full class = .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo          */
-/*****************************************************************************/
-.hWMIAo {
+.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 0.75rem !important;
@@ -162,9 +151,7 @@ p {
 /*****************************************************************************/
 /* Set quick reply buttons to be centered in the chat Window                 */
 /*****************************************************************************/
-/* Full class = .sc-euEtCV.KKTYm                                             */
-/*****************************************************************************/
-.KKTYm {
+.sc-euEtCV.KKTYm {
 	width: 110% !important;
 	place-content: center !important;
 }
