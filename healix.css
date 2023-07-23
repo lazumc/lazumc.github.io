@@ -22,7 +22,7 @@
 	--chatButtonBorder: 0px solid #223f3b;
 	--chatSecondaryButtonBackgroundColor: #f5f7f3;
 	--chatSecondaryButtonFontColor: #223f3b;
-	--chatSecondaryButtonBorder: 0px solid #f5f7f3;
+	--chatSecondaryButtonBorder: 1px solid #223f3b;
 	--chatWindowBackgroundColor: #deebda;
 	--chatWindowEntryAreaBackgroundColor: #f5f7f3;
 	--chatWindowEntryTextboxBackgroundColor: #f5f7f3;
@@ -271,5 +271,10 @@ button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[a
 
 .nugen__btn:hover, .nugen__btn:focus {
     outline: 2px solid var(--chatButtonBackgroundColor) !important;
-    border: 1px solid var(--chatWindowBackgroundColor) !important
+    border: 1px solid var(--chatWindowBackgroundColor) !important;
+}
+
+.nugen__btn:focus {
+    outline: 2px solid var(--chatButtonBackgroundColor);
+    border: 1px solid var(--chatWindowBackgroundColor);
 }
