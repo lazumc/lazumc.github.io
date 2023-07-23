@@ -82,7 +82,7 @@ body, input[type="text"], textarea, button, select {
 /* Set chat window title font size and minimum height                        */
 /*****************************************************************************/
 h1.nugen__title {
-    font-size: var(--chatTitleFontSize) !important;
+	font-size: var(--chatTitleFontSize) !important;
 }
 
 .nugen__header {
@@ -276,11 +276,11 @@ button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[a
 }
 
 .nugen__btn:hover, .nugen__btn:focus {
-    outline: 2px solid var(--chatButtonBackgroundColor) !important;
-    border: 1px solid var(--chatWindowBackgroundColor) !important;
+	outline: 2px solid var(--chatButtonBackgroundColor) !important;
+	border: 1px solid var(--chatWindowBackgroundColor) !important;
 }
 
 .nugen__btn:focus {
-    outline: 2px solid var(--chatButtonBackgroundColor);
-    border: 1px solid var(--chatWindowBackgroundColor);
+	outline: 2px solid var(--chatButtonBackgroundColor);
+	border: 1px solid var(--chatWindowBackgroundColor);
 }
