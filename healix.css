@@ -15,6 +15,7 @@
 	--chatMessageHypertextFontColor: #223f3b;
 	--chatMessageHypertextFontWeight: 600;
 	--chatButtonBackgroundColor: #223f3b;
+	--chatButtonFocusBackgroundColor: #5cc87a;
 	--chatButtonFontColor: #f5f7f3;
 	--chatButtonFontSize: 0.85rem;
 	--chatButtonQuickReplyFontSize: 0.75rem;
@@ -182,6 +183,14 @@ p {
 	border: var(--chatButtonBorder);
 }
 
+.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo:focus {
+    background: var(--chatButtonFocusBackgroundColor) !important;
+}
+
+.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo:hover {
+    background: var(--chatButtonFocusBackgroundColor) !important;
+}
+
 /*****************************************************************************/
 /* Set quick reply buttons to be centered in the chat Window                 */
 /*****************************************************************************/
@@ -217,6 +226,14 @@ p {
 	border: var(--chatButtonBorder);
 }
 
+.ac-pushButton.style-default.ac-selectable:focus {
+    background: var(--chatButtonFocusBackgroundColor) !important;
+}
+
+.ac-pushButton.style-default.ac-selectable:hover {
+    background: var(--chatButtonFocusBackgroundColor) !important;
+}
+
 .ac-actionSet {
 	flex-wrap: wrap !important;
 }
@@ -243,11 +260,16 @@ button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[a
 .nugen__btn, .nugen__btn--primary {
 	background: var(--chatButtonBackgroundColor) !important;
 	color: var(--chatButtonFontColor) !important;
-	border: var(--chatButtonBorder);
+	border: var(--chatButtonBorder) !important;
 }
 
 .nugen__btn--secondary {
 	background: var(--chatSecondaryButtonBackgroundColor) !important;
 	color: var(--chatSecondaryButtonFontColor) !important;
-	border: var(--chatSecondaryButtonBorder);
+	border: var(--chatSecondaryButtonBorder) !important;
+}
+
+.nugen__btn:hover, .nugen__btn:focus {
+    outline: 2px solid var(--chatButtonBackgroundColor) !important;
+    border: 1px solid var(--chatWindowBackgroundColor) !important
 }
