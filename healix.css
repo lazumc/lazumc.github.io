@@ -173,9 +173,7 @@ p {
 /* Set say, question, gallery node button background and font color and font */
 /* size and update wrap to allow for more than 2 buttons to display          */
 /*****************************************************************************/
-/* Full class = .ac-pushButton.style-default.ac-selectable                   */
-/*****************************************************************************/
-.ac-pushButton {
+.ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
 	color: #deebda;
 	font-size: 1rem !important;
