@@ -1,4 +1,62 @@
 /*****************************************************************************/
+/* Declare color and sizing variables                                        */
+/* Note: Chat title font and background color set in 8x8 chat design         */
+/*****************************************************************************/
+:root {
+	--chatTitleFontSize: 1.25rem;
+	--chatControlButtonBackgroundColor: #eb8c4b;
+	--chatControlButtonFontColor: #ffffff;
+	--chatDownloadCobrowseMenuVisibility: hidden;
+	--chatMessageBackgroundColor: #f5f7f3;
+	--chatMessageFontColor: #223f3b;
+	--chatMessageFontSize: 0.85rem;
+	--chatMessageBorder: 0px solid #223f3b;
+	--chatMessageHypertextFontColor: #223f3b;
+	--chatMessageHypertextFontWeight: 600;
+	--chatButtonBackgroundColor: #223f3b;
+	--chatButtonFontColor: #deebda;
+	--chatButtonFontSize: 0.85rem;
+	--chatButtonQuickReplyFontSize: 0.75rem;
+	--chatButtonBorder: 0px solid #223f3b;
+	--chatSecondaryButtonBackgroundColor: #f5f7f3;
+	--chatSecondaryButtonFontColor: #223f3b;
+	--chatSecondaryButtonBorder: 0px solid #f5f7f3;
+	--chatWindowBackgroundColor: #deebda;
+	--chatWindowEntryAreaBackgroundColor: #f5f7f3;
+	--chatWindowEntryTextboxBackgroundColor: #f5f7f3;
+	--chatWindowEntryTextboxFontColor: #223f3b;
+	--chatWindowEntryTextboxBorder: 1px solid #deebda;
+}
+
+/*****************************************************************************/
+/* Put the bot name instead of "Bot" in messages from the bot                */
+/* METHOD 1: Hide the word "bot" my making it the background color           */
+/* It will be visible if the user selects the text                           */
+/*****************************************************************************/
+.chat-msg-sender[aria-label="Bot"]::before {
+	content: "Felix " !important;
+	color: var(--chatMessageFontColor);
+}
+
+.chat-msg-sender {
+	color: var(--chatMessageBackgroundColor) !important;
+}
+
+/*****************************************************************************/
+/* Put the bot name instead of "Bot" in messages from the bot                */
+/* METHOD 2: Put "Bot" in brackets after the bot name e.g. "Name (Bot)"	     */
+/*****************************************************************************/
+/*.chat-msg-sender[aria-label="Bot"]::before {
+	content: "Felix (" !important;
+	color: var(--chatMessageFontColor);
+}
+
+.chat-msg-sender[aria-label="Bot"]::after {
+	content: ")" !important;
+	color: var(--chatMessageFontColor);
+} */
+
+/*****************************************************************************/
 /* Font family (use default unless customer has their own font family to use */
 /*****************************************************************************/
 body, input[type="text"], textarea, button, select {
@@ -7,10 +65,16 @@ body, input[type="text"], textarea, button, select {
 }
 
 /*****************************************************************************/
+/*****************************************************************************/
+/* YOU SHOULD NOT NEED TO EDIT ANYTHING BELOW THIS POINT                     */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
 /* Set chat window title font size and minimum height                        */
 /*****************************************************************************/
 h1.nugen__title {
-    font-size: 1.25rem !important;
+    font-size: var(--chatTitleFontSize) !important;
 }
 
 .nugen__header {
@@ -21,92 +85,60 @@ h1.nugen__title {
 /* Hide the 8x8 download transcript and co-browse menu button                */
 /*****************************************************************************/
 .message-actions {
-	visibility: hidden;
+	visibility: var (--chatDownloadCobrowseMenuVisibility);
 }
 
 /*****************************************************************************/
 /* Set background color for chat container                                   */
 /*****************************************************************************/
 .container, .nugen__inner-container, .nugen__main, .nugen__message-history, .nugen__content-loading {
-	background: #deebda !important;
+	background: var(--chatWindowBackgroundColor) !important;
 }
 
 /*****************************************************************************/
 /* Set background color for message window                                   */
 /*****************************************************************************/
 .message-wrapper {
-	background: #deebda !important;
+	background: var(--chatWindowBackgroundColor) !important;
 }
 
 /*****************************************************************************/
 /* Set background color for message entry area                               */
 /*****************************************************************************/
 .message-box {
-	background: #f5f7f3 !important;
+	background: var(--chatWindowEntryAreaBackgroundColor) !important;
 }
 
 /*****************************************************************************/
 /* Set message entry box background, border and font color                   */
 /*****************************************************************************/
 .sc-iwajpm.kydRHc {
-	background: #f5f7f3 !important;
-	color: #223f3b !important;
+	background: var(--chatWindowEntryTextboxBackgroundColor) !important;
+	color: var(--chatWindowEntryTextboxFontColor) !important;
 }
 
 textarea.sc-jNnpgg.kLwVqJ {
-	background: #f5f7f3;
-	border-color: #deebda;
+	background: var(--chatWindowEntryTextboxBackgroundColor);
+	border: var(--chatWindowEntryTextboxBorder);
 }
 
 /*****************************************************************************/
 /* Set background color of send message button                               */
 /*****************************************************************************/
 .sc-bCwfaz.hrxVLf {
-	background: #eb8c4b !important;
+	background: var(--chatControlButtonBackgroundColor) !important;
 }
 
 /*****************************************************************************/
 /* Set background and text color of close chat window button                 */
 /*****************************************************************************/
 .end {
-	background: #eb8c4b !important;
+	background: var(--chatControlButtonBackgroundColor) !important;
 }
 
 svg[role=presentation] {
-    fill: #ffffff !important;
+    fill: var(--chatControlButtonFontColor) !important;
 }
-
-/*****************************************************************************/
-/* Put the bot name instead of "Bot" in messages from the bot                */
-/* METHOD 1: Hide the word "bot" my making it the background color           */
-/* It will be visible if the user selects the text                           */
-/*****************************************************************************/
-.chat-msg-sender[aria-label="Bot"]::before {
-	content: "Felix " !important;
-	color: #223f3b;
-}
-
-.chat-msg-sender {
-	color: #f5f7f3 !important;
-}
-
-/*****************************************************************************/
-/* Put the bot name instead of "Bot" in messages from the bot                */
-/* METHOD 2: Put "Bot" in brackets after the bot name e.g. "Name (Bot)"	     */
-/*****************************************************************************/
-/*.chat-msg-sender[aria-label="Bot"]::before {
-	content: "Felix (" !important;
-	color: #223f3b;
-}
-
-.chat-msg-sender[aria-label="Bot"]::after {
-	content: ")" !important;
-	color: #223f3b;
-}
-
-.chat-msg-sender {
-	color: #223f3b !important;
-} */
 
 /*****************************************************************************/
 /* Set message background and font color and font size of chat messages      */
@@ -115,24 +147,24 @@ svg[role=presentation] {
 /* chat message are embedded within p elements                               */
 /*****************************************************************************/
 .chat-outgoing-msg {
-	background: #f5f7f3 !important;
-	border: 0px solid #243;
-	color: #223f3b;
+	background: var(--chatMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatMessageFontColor);
 	position: relative;
-	font-size: 0.85rem !important;
+	font-size: var(--chatMessageFontSize) !important;
 }
 
 .chat-incoming-msg {
-	background: #f5f7f3 !important;
-	border: 0px solid #223f3b;
-	color: #223f3b;
+	background: var(--chatMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatMessageFontColor);
 	position: relative;
-	font-size: 0.85rem !important;
+	font-size: var(--chatMessageFontSize) !important;
 }
 
 a {
-	color: #223f3b;
-	font-weight: 600 !important;
+	color: var(--chatMessageHypertextFontColor);
+	font-weight: var(--chatMessageHypertextFontWeight) !important;
 }
 
 p {
@@ -143,10 +175,10 @@ p {
 /* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
 .sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
-	background: #223f3b;
-	color: #deebda;
-	font-size: 0.75rem !important;
-	border: 0px solid #223f3b;
+	background: var(--chatButtonBackgroundColor);
+	color: var(--chatButtonFontColor);
+	font-size: var(--chatButtonQuickReplyFontSize) !important;
+	border: var(--chatButtonBorder);
 }
 
 /*****************************************************************************/
@@ -164,10 +196,10 @@ p {
 /*****************************************************************************/
 .ac-textBlock {
 	font-family: inherit !important;
-	font-size: 0.85rem !important;
+	font-size: var(--chatButtonFontSize) !important;
 	line-height: inherit !important;
 	margin-left: -15px;
-	color: #223f3b !important;
+	color: var(--chatMessageFontColor) !important;
 }
 
 /*****************************************************************************/
@@ -176,12 +208,12 @@ p {
 /* Update wrap to allow for more than 2 buttons to display                   */
 /*****************************************************************************/
 .ac-pushButton.style-default.ac-selectable {
-	background: #223f3b;
-	color: #deebda;
-	font-size: 0.75rem !important;
+	background: var(--chatButtonBackgroundColor);
+	color: var(--chatButtonFontColor);
+	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	font-family: inherit !important;
 	margin-bottom: 0px;
-	border: 0px solid #223f3b;
+	border: var(--chatButtonBorder);
 }
 
 .ac-actionSet {
@@ -208,14 +240,13 @@ button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[a
 /* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
 .nugen__btn, .nugen__btn--primary {
-	background: #223f3b !important;
-	color: #ffffff !important;
-	border: 0px solid #223f3b;
+	background: var(--chatButtonBackgroundColor) !important;
+	color: var(--chatButtonFontColor) !important;
+	border: var(--chatButtonBorder);
 }
 
 .nugen__btn--secondary {
-	background: #f5f7f3 !important;
-	color: #223f3b !important;
-	border: 0px solid #f5f7f3;
-
+	background: var(--chatSecondaryButtonBackgroundColor) !important;
+	color: var(--chatSecondaryButtonFontColor) !important;
+	border: var(--chatSecondaryButtonBorder);
 }
