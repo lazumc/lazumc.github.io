@@ -163,7 +163,7 @@ p {
 /*****************************************************************************/
 .ac-textBlock {
 	font-family: inherit !important;
-	font-size: 1rem !important;
+	font-size: 0.85rem !important;
 	line-height: inherit !important;
 	margin-left: -15px;
 	color: #223f3b !important;
@@ -171,16 +171,24 @@ p {
 
 /*****************************************************************************/
 /* Set say, question, gallery node button background and font color and font */
-/* size and update wrap to allow for more than 2 buttons to display          */
+/* size and remove unnecessary bottom margin                                 */
+/* Update wrap to allow for more than 2 buttons to display and change min    */
+/* width to be 30px rather than 80px                                         */
 /*****************************************************************************/
 .ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
 	color: #deebda;
-	font-size: 1rem !important;
+	font-size: 0.75rem !important;
+	font-family: inherit !important;
+	margin-bottom: 0px;
 }
 
 .ac-actionSet {
 	flex-wrap: wrap !important;
+}
+
+button {
+	mid-width: 30px;
 }
 
 /*****************************************************************************/
