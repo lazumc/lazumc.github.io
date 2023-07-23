@@ -173,8 +173,7 @@ p {
 /*****************************************************************************/
 /* Set say, question, gallery node button background and font color and font */
 /* size and remove unnecessary bottom margin                                 */
-/* Update wrap to allow for more than 2 buttons to display and change min    */
-/* width to be 30px rather than 80px                                         */
+/* Update wrap to allow for more than 2 buttons to display                   */
 /*****************************************************************************/
 .ac-pushButton.style-default.ac-selectable {
 	background: #223f3b;
@@ -189,8 +188,17 @@ p {
 	flex-wrap: wrap !important;
 }
 
-button {
-	min-width: 30px !important;
+/*****************************************************************************/
+/* Set buttons for digits 1-10 as 40px circles                               */
+/*****************************************************************************/
+button[aria-label="1"], button[aria-label="2"], button[aria-label="3"], button[aria-label="4"], button[aria-label="5"] {
+	min-width: 40px !important;
+	border-radius: 50%;
+}
+
+button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[aria-label="9"], button[aria-label="10"] {
+	min-width: 40px !important;
+	border-radius: 50%;
 }
 
 /*****************************************************************************/
