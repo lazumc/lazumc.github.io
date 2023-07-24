@@ -127,9 +127,10 @@ h1.nugen__title {
 }*/
 
 textarea[data-id=message-input-box] {
-	background: var(--chatWindowEntryTextboxBackgroundColor);
-	border: var(--chatWindowEntryTextboxBorder);
+	background: var(--chatWindowEntryTextboxBackgroundColor) !important;
+	border: var(--chatWindowEntryTextboxBorder) !important;
 	color: var(--chatWindowEntryTextboxFontColor) !important;
+	font-size: var(--chatMessageFontSize) !important;
 }
 
 /*****************************************************************************/
