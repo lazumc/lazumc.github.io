@@ -183,28 +183,29 @@ p {
 /*****************************************************************************/
 /* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
-.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo {
+button[data-test-id=quick-reply-bubble-button] {
 	background: var(--chatButtonBackgroundColor);
 	color: var(--chatButtonFontColor);
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	border: var(--chatButtonBorder);
+	min-width: 75px;
 }
 
-.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo:focus {
+button[data-test-id=quick-reply-bubble-button]:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
-.sc-dlnjwi.iBzKJA.sc-jSFjdj.kJmatq.sc-fHCHyC.hWMIAo:hover {
+button[data-test-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
 /*****************************************************************************/
 /* Set quick reply buttons to be centered in the chat Window                 */
 /*****************************************************************************/
-.sc-euEtCV.KKTYm {
+/*.sc-euEtCV.KKTYm {
 	width: 110% !important;
 	place-content: center !important;
-}
+}*/
 
 /*****************************************************************************/
 /* Set font and left margin so the adaptive card formatting used by 8x8 to   */
