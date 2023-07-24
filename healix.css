@@ -12,7 +12,7 @@
 	--chatbotName: "Felix";
 	--chatTitleFontSize: 1.25rem;
 	--chatControlButtonBackgroundColor: #eb8c4b;
-	--chatControlButtonFontColor: #ffffff;  		/*Note: The send button image will always be white */
+	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
 	--chatDownloadCobrowseMenuVisibility: hidden;   /*Allowed values are "hidden" or "visible" */
 	--chatMessageBackgroundColor: #f5f7f3;
 	--chatMessageFontColor: #223f3b;
@@ -229,7 +229,6 @@ p {
 	color: var(--chatButtonFontColor);
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	font-family: inherit !important;
-	margin-bottom: 0px;
 	border: var(--chatButtonBorder);
 }
 
