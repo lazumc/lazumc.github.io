@@ -121,11 +121,6 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Set message entry box background, border and font color                   */
 /*****************************************************************************/
-/*.sc-iwajpm.kydRHc {
-	background: var(--chatWindowEntryTextboxBackgroundColor) !important;
-	color: var(--chatWindowEntryTextboxFontColor) !important;
-}*/
-
 textarea[data-id=message-input-box] {
 	background: var(--chatWindowEntryTextboxBackgroundColor) !important;
 	border: var(--chatWindowEntryTextboxBorder) !important;
@@ -200,14 +195,6 @@ button[data-id=quick-reply-bubble-button]:focus {
 button[data-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 }
-
-/*****************************************************************************/
-/* Set quick reply buttons to be centered in the chat Window                 */
-/*****************************************************************************/
-/*.sc-euEtCV.KKTYm {
-	width: 110% !important;
-	place-content: center !important;
-}*/
 
 /*****************************************************************************/
 /* Set font and left margin so the adaptive card formatting used by 8x8 to   */
