@@ -121,20 +121,21 @@ h1.nugen__title {
 /*****************************************************************************/
 /* Set message entry box background, border and font color                   */
 /*****************************************************************************/
-.sc-iwajpm.kydRHc {
+/*.sc-iwajpm.kydRHc {
 	background: var(--chatWindowEntryTextboxBackgroundColor) !important;
 	color: var(--chatWindowEntryTextboxFontColor) !important;
-}
+}*/
 
-textarea.sc-jNnpgg.kLwVqJ {
+textarea[data-id=message-input-box] {
 	background: var(--chatWindowEntryTextboxBackgroundColor);
 	border: var(--chatWindowEntryTextboxBorder);
+	color: var(--chatWindowEntryTextboxFontColor) !important;
 }
 
 /*****************************************************************************/
 /* Set background color of send message button                               */
 /*****************************************************************************/
-.sc-bCwfaz.hrxVLf {
+button[data-id=nugen-send-message-button] {
 	background: var(--chatControlButtonBackgroundColor) !important;
 }
 
@@ -183,7 +184,7 @@ p {
 /*****************************************************************************/
 /* Set quick reply button background and font color and font size            */
 /*****************************************************************************/
-button[data-test-id=quick-reply-bubble-button] {
+button[data-id=quick-reply-bubble-button] {
 	background: var(--chatButtonBackgroundColor);
 	color: var(--chatButtonFontColor);
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
@@ -191,11 +192,11 @@ button[data-test-id=quick-reply-bubble-button] {
 	min-width: 75px;
 }
 
-button[data-test-id=quick-reply-bubble-button]:focus {
+button[data-id=quick-reply-bubble-button]:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
-button[data-test-id=quick-reply-bubble-button]:hover {
+button[data-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 }
 
