@@ -190,12 +190,12 @@ button[data-id=quick-reply-bubble-button] {
 
 button[data-id=quick-reply-bubble-button]:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
-	border: var(--chatButtonBorder);
+	border: var(--chatButtonBorder) !important;
 }
 
 button[data-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
-	border: var(--chatButtonBorder);
+	border: var(--chatButtonBorder) !important;
 }
 
 /*****************************************************************************/
