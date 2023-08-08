@@ -226,10 +226,12 @@ button[data-id=quick-reply-bubble-button]:hover {
 
 .ac-pushButton.style-default.ac-selectable:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
+	border: var(--chatButtonBorder) !important;
 }
 
 .ac-pushButton.style-default.ac-selectable:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
+	border: var(--chatButtonBorder) !important;
 }
 
 .ac-actionSet {
