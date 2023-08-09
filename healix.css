@@ -16,15 +16,16 @@
 	--chatDownloadCobrowseMenuVisibility: hidden;   /*Allowed values are "hidden" or "visible" */
 	--chatMessageBackgroundColor: #f5f7f3;
 	--chatMessageFontColor: #223f3b;
-	--chatMessageFontSize: 0.85rem;
+	--chatMessageFontSize: 0.8rem;
+	--chatMessageCardFontSize: 0.8rem;
+	--chatMessageSenderFontSize: 0.9rem;
 	--chatMessageBorder: 0px solid #223f3b;
 	--chatMessageHypertextFontColor: #223f3b;
 	--chatMessageHypertextFontWeight: 600;
 	--chatButtonBackgroundColor: #223f3b;
 	--chatButtonFocusBackgroundColor: #5cc87a;
 	--chatButtonFontColor: #f5f7f3;
-	--chatButtonFontSize: 0.85rem;
-	--chatButtonQuickReplyFontSize: 0.75rem;
+	--chatButtonFontSize: 0.75rem;
 	--chatButtonBorder: 0px solid #223f3b;
 	--chatSecondaryButtonBackgroundColor: #f5f7f3;
 	--chatSecondaryButtonFontColor: #223f3b;
@@ -56,11 +57,13 @@ body, input[type="text"], textarea, button, select {
 /* Note: The word "Bot" will be visible if the user highlights the text      */
 /*****************************************************************************/
 .chat-msg-sender[aria-label="Bot"]::before {
+	font-size: var(--chatMessageSenderFontSize);
 	content: var(--chatbotName) " " !important;
 	color: var(--chatMessageFontColor);
 }
 
 .chat-msg-sender {
+	font-size: var(--chatMessageSenderFontSize) !important;
 	color: var(--chatMessageBackgroundColor) !important;
 }
 
@@ -70,14 +73,22 @@ body, input[type="text"], textarea, button, select {
 /* Remove the comment markers below (and add to method 1) to use this method */
 /*****************************************************************************/
 /*.chat-msg-sender[aria-label="Bot"]::before {
+	font-size: var(--chatMessageSenderFontSize) !important;
 	content: var(--chatbotName) " (" !important;
 	color: var(--chatMessageFontColor);
 }
 
 .chat-msg-sender[aria-label="Bot"]::after {
+	font-size: var(--chatMessageSenderFontSize) !important;
 	content: ")" !important;
 	color: var(--chatMessageFontColor);
-} */
+} 
+
+.chat-msg-sender {
+	font-size: var(--chatMessageSenderFontSize) !important;
+}
+
+*/
 
 /*****************************************************************************/
 /* Set chat window title font size and minimum height                        */
@@ -183,7 +194,7 @@ p {
 button[data-id=quick-reply-bubble-button] {
 	background: var(--chatButtonBackgroundColor);
 	color: var(--chatButtonFontColor);
-	font-size: var(--chatButtonQuickReplyFontSize) !important;
+	font-size: var(--chatButtonFontSize) !important;
 	border: var(--chatButtonBorder);
 	min-width: 75px;
 }
@@ -205,10 +216,20 @@ button[data-id=quick-reply-bubble-button]:hover {
 /*****************************************************************************/
 .ac-textBlock {
 	font-family: inherit !important;
-	font-size: var(--chatButtonFontSize) !important;
+	font-size: var(--chatMessageCardFontSize) !important;
 	line-height: inherit !important;
 	margin-left: -15px;
 	color: var(--chatMessageFontColor) !important;
+}
+
+.ac-input-container {
+	margin-left: -15px;
+}
+
+.ac-input {
+	outline: none !important;
+	font-family: inherit !important;
+	font-size: var(--chatMessageCardFontSize) !important;
 }
 
 /*****************************************************************************/
@@ -216,20 +237,20 @@ button[data-id=quick-reply-bubble-button]:hover {
 /* size and remove unnecessary bottom margin                                 */
 /* Update wrap to allow for more than 2 buttons to display                   */
 /*****************************************************************************/
-.ac-pushButton.style-default.ac-selectable {
-	background: var(--chatButtonBackgroundColor);
-	color: var(--chatButtonFontColor);
+.ac-pushButton {
+	background: var(--chatButtonBackgroundColor) !important;
+	color: var(--chatButtonFontColor) !important;
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	font-family: inherit !important;
-	border: var(--chatButtonBorder);
+	border: var(--chatButtonBorder) !important;
 }
 
-.ac-pushButton.style-default.ac-selectable:focus {
+.ac-pushButton:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 	border: var(--chatButtonBorder) !important;
 }
 
-.ac-pushButton.style-default.ac-selectable:hover {
+.ac-pushButton:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 	border: var(--chatButtonBorder) !important;
 }
