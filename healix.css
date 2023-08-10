@@ -183,15 +183,25 @@ svg[width="14"] {
 .chat-log-msg {
 	background: var(--chatMessageBackgroundColor) !important;
 	border: var(--chatMessageBorder);
-	color: var(--chatMessageFontColor);
+	color: var(--chatMessageFontColor) !important;
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
 	width: 90%;
 	border-radius: 0px 20px 20px 20px;
-	padding: 15px;
+	padding: 15px 25px 15px 25px;
 }
 
+.chat-error-msg {
+	background: var(--chatMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	position: relative;
+	font-size: var(--chatMessageFontSize) !important;
+	font-family: inherit !important;
+	width: 90%;
+	border-radius: 0px 20px 20px 20px;
+	padding: 15px 25px 15px 25px;
+}
 a {
 	color: var(--chatMessageHypertextFontColor);
 	font-weight: var(--chatMessageHypertextFontWeight) !important;
@@ -199,6 +209,10 @@ a {
 
 p {
 	font-size: inherit !important;
+}
+
+span {
+	color: inherit !important;
 }
 
 /*****************************************************************************/
