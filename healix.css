@@ -9,11 +9,11 @@
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
 :root {
-	--chatbotName: "Felix"; 						/*Note emojis and "url(http://image.png)" links for images are allowed */
+	--chatbotName: "Felix"; 						/*Note: emojis and "url(http://image.png)" style links for images are allowed */
 	--chatTitleFontSize: 1.25rem;
 	--chatControlButtonBackgroundColor: #eb8c4b;
 	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
-	--chatDownloadCobrowseMenuVisibility: hidden;   /*Allowed values are "hidden" or "visible" */
+	--chatDownloadCobrowseMenuVisibility: hidden;   /*Note: Allowed values are "hidden" or "visible" */
 	--chatMessageBackgroundColor: #f5f7f3;
 	--chatMessageFontColor: #223f3b;
 	--chatMessageFontSize: 0.8rem;
@@ -62,9 +62,12 @@ body, input[type="text"], textarea, button, select {
 	color: var(--chatMessageFontColor);
 }
 
+.chat-msg-sender[aria-label="Bot"] {
+	color: var(--chatMessageBackgroundColor) !important;
+}
+
 .chat-msg-sender {
 	font-size: var(--chatMessageSenderFontSize) !important;
-	color: var(--chatMessageBackgroundColor) !important;
 }
 
 /*****************************************************************************/
@@ -86,9 +89,7 @@ body, input[type="text"], textarea, button, select {
 
 .chat-msg-sender {
 	font-size: var(--chatMessageSenderFontSize) !important;
-}
-
-*/
+}*/
 
 /*****************************************************************************/
 /* Set chat window title font size and minimum height                        */
