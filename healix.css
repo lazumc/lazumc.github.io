@@ -180,6 +180,18 @@ svg[width="14"] {
 	font-size: var(--chatMessageFontSize) !important;
 }
 
+.chat-log-msg {
+	background: var(--chatMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatMessageFontColor);
+	position: relative;
+	font-size: var(--chatMessageFontSize) !important;
+	font-family: inherit !important;
+	width: 90%;
+	border-radius: 0px 10px 10px 10px;
+	padding: 15px;
+}
+
 a {
 	color: var(--chatMessageHypertextFontColor);
 	font-weight: var(--chatMessageHypertextFontWeight) !important;
