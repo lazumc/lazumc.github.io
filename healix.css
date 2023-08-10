@@ -9,7 +9,7 @@
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
 :root {
-	--chatbotName: "Felix";
+	--chatbotName: "Felix"; 						/*Note emojis and "url(http://image.png)" links for images are allowed */
 	--chatTitleFontSize: 1.25rem;
 	--chatControlButtonBackgroundColor: #eb8c4b;
 	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
