@@ -13,7 +13,8 @@
 	--chatTitleFontSize: 1.25rem;
 	--chatControlButtonBackgroundColor: #eb8c4b;
 	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
-	--chatDownloadCobrowseMenuVisibility: hidden;   /*Note: Allowed values are "hidden" or "visible" */
+	--chatActionMenuVisibility: visible;            /*Note: Allowed values are "hidden" or "visible" */
+	--chatCobrowseVisibility: hidden;
 	--chatMessageBackgroundColor: #f5f7f3;
 	--chatMessageFontColor: #223f3b;
 	--chatMessageFontSize: 0.8rem;
@@ -106,7 +107,18 @@ h1.nugen__title {
 /* Hide the 8x8 download transcript and co-browse menu button                */
 /*****************************************************************************/
 .message-actions.js-message-actions {
-	visibility: var(--chatDownloadCobrowseMenuVisibility);
+	visibility: var(--chatActionMenuVisibility);
+}
+
+a[aria-label="Download transcript"]{
+	font-size: 0.75rem !important;
+	color: var(--chatMessageFontColor) !important;
+}
+
+a[aria-label="Co-browsing"]{
+	font-size: 0.75rem !important;
+	color: var(--chatMessageFontColor) !important;
+	visibility: var(--chatCobrowseVisibility);
 }
 
 /*****************************************************************************/
