@@ -225,6 +225,10 @@ p {
 	font-size: inherit !important;
 }
 
+h3 {
+	font-size: var(--chatMessageFontSize) !important;
+}
+
 span {
 	color: inherit !important;
 }
