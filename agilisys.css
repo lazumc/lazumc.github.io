@@ -32,7 +32,7 @@
 	--chatSecondaryButtonFontColor: #3a58f5;
 	--chatSecondaryButtonBorder: 1px solid #3a58f5;
 	--chatWindowBackgroundColor: #ffffff;
-	--chatWindowEntryAreaBackgroundColor: #f5f7f3;
+	--chatWindowEntryAreaBackgroundColor: #eeeeee;
 	--chatWindowEntryTextboxBackgroundColor: #ffffff;
 	--chatWindowEntryTextboxFontColor: #000000;
 	--chatWindowEntryTextboxBorder: 1px solid #3a58f5;
@@ -112,9 +112,20 @@ h1.nugen__title {
 	visibility: var(--chatActionMenuVisibility);
 }
 
+a[aria-label="Hide chat menu options"]:hover{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
+a[aria-label="Hide chat menu options"]:focus{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
 a[aria-label="Download transcript"]{
 	font-size: 0.75rem !important;
 	color: var(--chatMessageFontColor) !important;
+	border: 0px !important;
 }
 
 a[aria-label="Co-browsing"]{
