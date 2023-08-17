@@ -10,7 +10,7 @@
 /*****************************************************************************/
 :root {
 	--chatbotName: url(https://lazumc.github.io/images/dragon.gif) " "; 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
-	--chatTitleFontSize: 1rem;
+	--chatTitleFontSize: 0.95rem;
 	--chatControlButtonBackgroundColor: #00adbb;
 	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
 	--chatActionMenuVisibility: visible;            /*Note: Allowed values are "hidden" or "visible" */
