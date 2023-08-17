@@ -112,6 +112,16 @@ h1.nugen__title {
 	visibility: var(--chatActionMenuVisibility);
 }
 
+a[aria-label="Show chat menu options"]:hover{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
+a[aria-label="Show chat menu options"]:focus{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
 a[aria-label="Hide chat menu options"]:hover{
 	outline: 0px solid var(--chatButtonBackgroundColor) !important;
 	border: 0px solid var(--chatWindowBackgroundColor) !important;
