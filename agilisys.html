@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body min-height="100vh", max-width="800px", bgcolor="#dddddd">
+<table border="0">
+<tbody valign="bottom">
+  <tr>
+    <td><img src="https://lazumc.github.io/images/agilisys.JPG"><td>
+    <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
+    <td><div id="__8x8-chat-button-container-script_702173213648c2794ce3df0.63172546" align="right" valign="bottom"></div></td>
+  </tr>
+</tbody>
+</table>
+<!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+<script type="text/javascript">
+    window.__8x8Chat = {
+        uuid: "script_702173213648c2794ce3df0.63172546",
+        tenant: "YWdpbGlzeXMwMQ",
+        channel: "North Somerset Waste PROD",
+        channelUuid: "X-oxbDNpTRS_YKdCRbeu0g",
+        domain: "https://vcc-eu5.8x8.com",
+        path: "/.",
+        buttonContainerId: "__8x8-chat-button-container-script_702173213648c2794ce3df0.63172546",
+        align: "right"
+    };
+
+    (function() {
+        var se = document.createElement("script");
+        se.type = "text/javascript";
+        se.async = true;
+        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+
+        var os = document.getElementsByTagName("script")[0];
+        os.parentNode.insertBefore(se, os);
+    })();
+</script>
+</body>
+
+</html>
