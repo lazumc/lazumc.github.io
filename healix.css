@@ -229,6 +229,7 @@ span {
 
 /*****************************************************************************/
 /* Set quick reply button background and font color and font size            */
+/* Allow quick replies to use 100% of message window                         */
 /*****************************************************************************/
 button[data-id=quick-reply-bubble-button] {
 	background: var(--chatButtonBackgroundColor);
@@ -246,6 +247,10 @@ button[data-id=quick-reply-bubble-button]:focus {
 button[data-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
 	border: var(--chatButtonBorder) !important;
+}
+
+div[id^="quick-replies-"] {
+	max-width: inherit !important
 }
 
 /*****************************************************************************/
