@@ -183,7 +183,7 @@ button[data-id=nugen-send-message-button] {
 }
 
 /*****************************************************************************/
-/* Set background and text color of close chat window button                 */
+/* Set background, outline and text color of close chat window button        */
 /*****************************************************************************/
 .end {
 	background: var(--chatControlButtonBackgroundColor) !important;
@@ -191,6 +191,11 @@ button[data-id=nugen-send-message-button] {
 
 svg[width="14"] {
 	fill: var(--chatControlButtonFontColor) !important;
+}
+
+.control:focus {
+    outline: 2px solid var(--chatControlButtonBackgroundColor) !important;
+    border: 2px solid var(--chatControlButtonFontColor) !important
 }
 
 /*****************************************************************************/
