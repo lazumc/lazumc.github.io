@@ -21,6 +21,7 @@
 		onInit: function (bus) {
 		   var userLang = navigator.language || navigator.userLanguage;
 		   bus.publish("chat:set-language", userLang);
+		   bus.publish("chat:set-variables", {"browserLanguage":userLang});
 		}
     };
 
