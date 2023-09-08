@@ -20,7 +20,7 @@
 		stylesheetURL: "https://lazumc.github.io/healix.css",
 		onInit: function (bus) {
 		   var userLang = navigator.language || navigator.userLanguage;
-		   bus.publish("chat:set-language", "pt");
+		   bus.publish("chat:set-language", userLang);
 		}
     };
 
