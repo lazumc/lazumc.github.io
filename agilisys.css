@@ -9,7 +9,7 @@
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
 :root {
-	--chatbotName: url(https://lazumc.github.io/images/dragon5.gif) " Virtual Agent"; 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
+	--chatbotName: url(https://lazumc.github.io/images/dragon.gif) " Virtual Agent"; 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
 	--chatTitleFontSize: 0.95rem;
 	--chatControlButtonBackgroundColor: #00adbb;
 	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
@@ -66,7 +66,7 @@ body, input[type="text"], textarea, button, select {
 }
 
 .chat-msg-sender[aria-label="Bot"] {
-	color: var(--chatMessageFontColor) !important;
+	color: var(--chatMessageBackgroundColor) !important;
 }
 
 .chat-msg-sender {
