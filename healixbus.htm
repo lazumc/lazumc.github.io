@@ -19,13 +19,15 @@
         align: "right",
 		stylesheetURL: "https://lazumc.github.io/healix.css",
 		onInit: function (bus) {
+		   window.bus = bus;
 		   var userLang = navigator.language || navigator.userLanguage;
 		   bus.publish("chat:set-language", userLang.substr(0,2));
 		   <!--bus.publish("chat:resize:window", {"height": "300px", "width": "200px"}); -->
-		   bus.publish("attachInfo", {
-			"additionalProperties.firstName": "John",
-			"additionalProperties.lastName":  "Doe",
-			"additionalProperties.age":        25
+		   bus.publish("customer:set-info", {
+			"firstName": "John",
+			"lastName":  "Doe",
+			"age":        25.
+			"UserAgent": window.navigator.userAgent
 			});
 		}
     };
