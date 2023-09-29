@@ -23,15 +23,10 @@
 		   bus.publish("chat:set-language", userLang.substr(0,2));
 		   <!--bus.publish("chat:resize:window", {"height": "300px", "width": "200px"}); -->
 		   bus.publish("customer:set-info", {
-			"First name": "John",
-			"Last name":  "Doe",
-			"Age":        25,
-			"Premium":    true,
-			"UserAgent": window.navigator.userAgent
+			"additionalProperties.firstName": "John",
+			"additionalProperties.lastName":  "Doe",
+			"additionalProperties.age":        25
 			});
-		   bus.subscribe("customer:info-sent", function(data) {
-            console.log(data);
-            });
 		}
     };
 
