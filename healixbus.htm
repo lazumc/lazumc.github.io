@@ -24,8 +24,8 @@
 		   bus.publish("chat:set-language", userLang.substr(0,2));
 		   <!--bus.publish("chat:resize:window", {"height": "300px", "width": "200px"}); -->
 		   bus.publish("chat:set-variables", {
-			"firstName": "John",
-			"_lastName":  "Doe",
+			"$firstName": "John",
+			"$lastName":  "Doe",
 			"age":        25,
 			"UserAgent": window.navigator.userAgent
 			});
