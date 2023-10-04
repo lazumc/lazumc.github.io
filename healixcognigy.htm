@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Define styling for Cognigy chat button and chat window -->
+<style>
+[data-cognigy-webchat-root].webchat-root {
+    --chatFontFamily: "Neue Montreal", "Inter", "sans-serif";
+	--chatTitleFontSize: 1.25rem;
+   	--chatTitleBackgroundColor: #f5f7f3;
+ 	--chatTitleFontColor: #223f3b;
+    --chatCloseButtonBackgroundColor: #eb8c4b;
+	--chatMessageBackgroundColor: #f5f7f3;
+	--chatMessageFontColor: #223f3b;
+	--chatMessageFontSize: 0.8rem;
+	--chatMessageBorder: 0px solid #223f3b;
+	--chatMessageHypertextFontColor: #223f3b;
+	--chatMessageHypertextFontWeight: 600;
+	--chatButtonBackgroundColor: #223f3b;
+	--chatButtonFocusBackgroundColor: #5cc87a;
+	--chatButtonFontColor: #f5f7f3;
+	--chatButtonFontSize: 0.75rem;
+	--chatButtonBorder: 0px solid #223f3b;
+	--chatWindowBackgroundColor: #deebda;
+	--chatWindowEntryAreaBackgroundColor: #f5f7f3;
+  }
+
+  .custom-webchat-button {
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    color: #223f3b;
+    padding: 15px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .custom-webchat-button-text {
+    position:relative;
+    left:2px;
+    bottom: 3px;
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat-toggle].webchat-toggle-button {
+    display: none;
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat {
+    width: 380px;
+    height:593px;
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    box-shadow: none;
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat .webchat-header-bar {
+    background: var(--chatTitleBackgroundColor);
+    min-height: 75px;
+    box-shadow: none;
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat .webchat-header-title {
+    font-family: var(--chatFontFamily);
+    font-size: var(--chatTitleFontSize);
+    color: var(--chatTitleFontColor);
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat .webchat-chat-history {
+    background-color: var(--chatWindowBackgroundColor);
+  }
+
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat .webchat-header-close-button {
+    background-color: var(--chatCloseButtonBackgroundColor);
+    border-radius: 10px !important;
+    font-size: var(--chatMessageFontSize);
+  }
+
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat a {
+    color: var(--chatMessageHypertextFontColor);
+    font-weight: var(--chatMessageHypertextFontWeight);
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat .regular-message {
+    border: var(--chatMessageBorder);
+    background: var(--chatMessageBackgroundColor);
+    color: var(--chatMessageColor);
+    box-shadow: none;
+    font-family: var(--chatFontFamily);
+    font-size: var(--chatMessageFontSize);
+  }
+  
+  [data-cognigy-webchat-root] .webchat-quick-reply-template-header-message { 
+  	border:var(--chatMessageBorder);
+  	border-radius: 0;
+    box-shadow: none !important;
+    background: var(--chatMessageBackgroundColor) !important;
+    color: var(--chatMessageColor) !important;
+    font-family: var(--chatFontFamily);
+    font-size: var(--chatMessageFontSize);
+  }
+  
+  [data-cognigy-webchat-root] .webchat-quick-reply-template-replies-container .webchat-quick-reply-template-reply {
+    border: var(--chatButtonBorder);
+    color: var(--chatButtonFontColor);
+    background: var(--chatButtonBackgroundColor);
+    font-family: var(--chatFontFamily);
+    font-size: var(--chatButtonFontSize);
+    font-weight: 600;
+    min-width: 75px !important;
+  }
+  
+  [data-cognigy-webchat-root] .webchat-quick-reply-template-replies-container .webchat-quick-reply-template-reply:hover {
+    background: var(--chatButtonFocusBackgroundColor);
+    color: var(--chatButtonFontColor);
+  }
+  
+  [data-cognigy-webchat-root] .webchat-quick-reply-template-replies-container .webchat-quick-reply-template-reply:focus {
+    background: var(--chatButtonFocusBackgroundColor);
+    color: var(--chatButtonFontColor);
+    box-shadow: none !important;
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat .webchat-input {
+    background: var(--chatWindowEntryAreaBackgroundColor);
+    font-family: var(--chatFontFamily);
+    font-size: var(--chatMessageFontSize);
+    color: var(--chatMessageFontColor);
+    box-shadow: none !important;
+  }
+  
+  [data-cognigy-webchat-root] [data-cognigy-webchat].webchat a[id="cognigyBrandingLink"] { 
+    visibility: hidden !important;
+  }
+</style
+ 
+</head>
+
+<body bgcolor="#dddddd">
+
+<!-- Image file to simulate Healix live page. -->
+<img src="https://lazumc.github.io/images/healixnew.png">
+
+<!-- New button to invoke chat calling the launchChat() function. -->
+<button
+  onclick="launchChat()"
+  class="custom-webchat-button"
+  value="Open Chat"
+>Chat
+</button
+
+<!--Required to access Cognigy chat code -->
+<script src="https://github.com/Cognigy/WebchatWidget/releases/latest/download/webchat.js"></script>
+
+<!--Required to initalize Cognigy chat -->
+<script>
+	initWebchat(
+		"https://endpoint-app-uk.cognigy.ai/37fd43812ecf823a36692d522ce52bb97a1889ba63d7739a405eb29350158f44"
+	).then(webchat => {
+    window.cognigyWebchat = webchat;});
+
+function launchChat() 
+{
+   window.cognigyWebchat.toggle()
+}
+    
+</script>
+
+</body>
+</html> 
