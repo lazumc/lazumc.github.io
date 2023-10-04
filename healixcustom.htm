@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+  .custom-webchat-button {
+    border-radius: 30px;
+    border: none;;
+    background-color: white;
+    color: #223f3b;
+    padding: 10px 30px 10px 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    line-height: 15px;
+  }
+  
+  .custom-webchat-button-text {
+    position:relative;
+    left:2px;
+    bottom: 3px;
+  }
+  </style>
+</head>
+
+<body bgcolor="#dddddd">
+
+<!-- Image file to simulate Healix live page. -->
+<img src="https://lazumc.github.io/images/healixnew.png">
+
+<!-- New button to invoke chat calling the launchChat() function. -->
+<button
+  id="custom-webchat-toggle-button"
+  onclick="launchChat()"
+  class="custom-webchat-button"
+  value="Open Chat"
+>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="15pt" height="12pt" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+		<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#eb8c4b" stroke="none">
+		<path d="M135 2421 c-22 -10 -54 -34 -72 -52 -66 -70 -63 -32 -63 -851 0 -702 1 -745 19 -783 10 -22 34 -54 52 -72 57 -53 93 -63 239 -63 l130 0 0 -260 c0 -252 1 -260 21 -270 16 -9 26 -8 43 4 13 8 148 130 300 270 l276 256 653 0 c728 0 694 -3 764 71 66 70 63 32 63 849 0 817 3 779 -63 849 -18 18 -50 42 -72 52 -38 18 -90 19 -1145 19 -1055 0 -1107 -1 -1145 -19z"/>
+		</g>
+	</svg>
+	<span class="custom-webchat-button-text">Chat</span>
+</button>
+
+<!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
+<div id="__8x8-chat-button-container-script_21324096476454d75fee12e5.32827548" style="position:fixed;top:35px;right:20px;visibility:hidden;"></div>
+
+<!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+<script type="text/javascript">
+    window.__8x8Chat = {
+        uuid: "script_21324096476454d75fee12e5.32827548",
+        tenant: "aGVhbGl4aW5zdXJhbmNlc2UwMQ",
+        channel: "Felix - Dev",
+        channelUuid: "F38FxaWjRW2MfPzyLxDabQ",
+        domain: "https://vcc-eu8.8x8.com",
+        path: "/.",
+        buttonContainerId: "__8x8-chat-button-container-script_21324096476454d75fee12e5.32827548",
+        align: "right",
+		stylesheetURL: "https://lazumc.github.io/healix.css",
+		<!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
+		onInit: function (bus) {
+		   window.bus = bus;
+		}
+    };
+
+    (function() {
+        var se = document.createElement("script");
+        se.type = "text/javascript";
+        se.async = true;
+        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+
+        var os = document.getElementsByTagName("script")[0];
+        os.parentNode.insertBefore(se, os);
+    })();
+</script>
+
+<!-- New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work. -->
+<script>
+function launchChat() 
+{
+   bus.publish("chat:trigger-chat-window")
+}   
+</script>
+
+</body>
+
+</html>
