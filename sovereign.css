@@ -9,7 +9,7 @@
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
 :root {
-	--chatbotName: url(https://lazumc.github.io/images/sng35.png) " Virtual Agent"; 						/*Note: emojis and "url(http://image.png)" style links for images are allowed */
+	--chatbotName: url(https://lazumc.github.io/images/sovereign-s.png); 						/*Note: emojis and "url(http://image.png)" style links for images are allowed */
 	--chatTitleFontSize: 1.25rem;
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
