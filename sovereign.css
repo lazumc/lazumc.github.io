@@ -17,7 +17,8 @@
 	--chatControlButtonFontColor: #ffffff;          /*Note: The send button image will always be white */
 	--chatActionMenuVisibility: visible;            /*Note: Allowed values are "hidden" or "visible" */
 	--chatCobrowseVisibility: hidden;
-	--chatMessageBackgroundColor: #cdcdcd;
+	--chatIncomingMessageBackgroundColor: #cdcdcd;
+	--chatOutgoingMessageBackgroundColor: #acd6c8;
 	--chatMessageFontColor: #000000;
 	--chatMessageFontSize: 0.8rem;
 	--chatMessageCardFontSize: 0.8rem;
