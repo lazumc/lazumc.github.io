@@ -10,7 +10,7 @@
 /*****************************************************************************/
 :root {
 	--chatbotName: url(https://lazumc.github.io/images/sovereign-s.png); 						/*Note: emojis and "url(http://image.png)" style links for images are allowed */
-	--chatTitleFontSize: 1.25rem;
+	--chatTitleFontSize: 1.5rem;
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
 	--chatControlButtonBackgroundColor: #a8d1e5;
