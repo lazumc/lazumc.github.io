@@ -19,6 +19,8 @@
 	--chatCobrowseVisibility: hidden;
 	--chatIncomingMessageBackgroundColor: #cdcdcd;
 	--chatOutgoingMessageBackgroundColor: #acd6c8;
+	--chatErrorMessageBackgroundColor: #f5c7c7;
+	--chatErrorMessageFontColor: #000000;
 	--chatMessageFontColor: #000000;
 	--chatMessageFontSize: 0.8rem;
 	--chatMessageCardFontSize: 0.8rem;
@@ -220,11 +222,13 @@ svg[width="14"] {
 }
 
 .chat-error-msg {
-	background: var(--chatIncomingMessageBackgroundColor) !important;
+	background: var(--chatErrorMessageBackgroundColor) !important;
+	color: var(--chatErrorMessageFontColor) !important;
 	border: var(--chatMessageBorder);
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
+	font-style: normal;
 	width: 90%;
 	border-radius: 0px !important;
 	padding: 10px 15px 10px 15px !important;
@@ -237,10 +241,14 @@ a {
 
 p {
 	font-size: inherit !important;
+	font-style: inherit !important;
+	font-weight: inherit !important;
 }
 
 span {
 	color: inherit !important;
+	font-style: inherit !important;
+	font-weight: inherit !important;
 }
 
 /*****************************************************************************/
@@ -266,7 +274,8 @@ button[data-id=quick-reply-bubble-button]:hover {
 }
 
 div[id^="quick-replies-"] {
-	max-width: inherit !important
+	max-width: inherit !important;
+	margin-top: -15px !important;
 }
 
 button {
