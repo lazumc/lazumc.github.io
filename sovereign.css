@@ -46,9 +46,22 @@
 /*****************************************************************************/
 /* Font family (use default unless customer has their own font family to use */
 /*****************************************************************************/
-body, input[type="text"], textarea, button, select, span {
+body, input[type="text"], textarea, button, select, span, p, label {
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important
 }
+
+/*****************************************************************************/
+/* Pre-chat form introduction text and positioning                           */
+/*****************************************************************************/
+.intro {
+	font-weight: 600 !important;
+	font-size: 1rem !important;
+}
+
+.main {
+	justify-content: start !important;
+}
+
 
 /*****************************************************************************/
 /*****************************************************************************/
