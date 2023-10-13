@@ -22,8 +22,8 @@
 	--chatErrorMessageBackgroundColor: #f5c7c7;
 	--chatErrorMessageFontColor: #000000;
 	--chatMessageFontColor: #000000;
-	--chatMessageFontSize: 0.8rem;
-	--chatMessageCardFontSize: 0.8rem;
+	--chatMessageFontSize: 0.9rem;
+	--chatMessageCardFontSize: 0.9rem;
 	--chatMessageSenderFontSize: 0.95rem;
 	--chatMessageBorder: 0px solid #000000;
 	--chatMessageHypertextFontColor: #000000;
@@ -31,7 +31,7 @@
 	--chatButtonBackgroundColor: #a8d1e5;
 	--chatButtonFocusBackgroundColor: #acd6c8;
 	--chatButtonFontColor: #000000;
-	--chatButtonFontSize: 0.75rem;
+	--chatButtonFontSize: 0.9rem;
 	--chatButtonBorder: 0px solid #000000;
 	--chatSecondaryButtonBackgroundColor: #a8d1e5;
 	--chatSecondaryButtonFontColor: #000000;
