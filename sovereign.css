@@ -81,11 +81,13 @@ body, input[type="text"], textarea, button, select, span {
 /*****************************************************************************/
 h1.nugen__title {
 	font-size: var(--chatTitleFontSize) !important;
+	line-height: 50px !important;
 }
 
 .nugen__header {
 	min-height: 75px;
 	background-color: var(--chatTitleBackgroundColor) !important;
+	border-radius: 0px !important;
 }
 
 /*****************************************************************************/
