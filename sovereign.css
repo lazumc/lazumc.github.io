@@ -9,12 +9,13 @@
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
 :root {
-	--chatbotName: url(https://lazumc.github.io/images/sovereign-s.png); 						/*Note: emojis and "url(http://image.png)" style links for images are allowed */
+	--chatbotName: url(https://lazumc.github.io/images/sovereign-s.png); 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
+	--chatMessageAvatar: url(https://lazumc.github.io/images/sovereign-s.png) " ";	/*Note: Add a space after any image file */
 	--chatTitleFontSize: 1.5rem;
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
 	--chatControlButtonBackgroundColor: #a8d1e5;
-	--chatControlButtonFontColor: #000000;          /*Note: The send button image will always be white */
+	--chatControlButtonFontColor: \;          /*Note: The send button image will always be white */
 	--chatActionMenuVisibility: visible;            /*Note: Allowed values are "hidden" or "visible" */
 	--chatCobrowseVisibility: hidden;
 	--chatIncomingMessageBackgroundColor: #cdcdcd;
@@ -74,11 +75,14 @@ body, input[type="text"], textarea, button, select, span, p, label {
 /* METHOD 1: Hide the word "bot" my making it the background color           */
 /* Note: The word "Bot" will be visible if the user highlights the text      */
 /*****************************************************************************/
-.chat-msg-sender[aria-label="Bot"]::before {
-	font-size: var(--chatMessageSenderFontSize);
-	content: var(--chatbotName) " " !important;
+.chat-msg-sender::before {
+	content: var(--chatAgentMessageAvatar) " "!important;
 	color: var(--chatMessageFontColor);
 	vertical-align: middle !important;
+}
+
+.chat-msg-sender[aria-label="Bot"]::before {
+	content: var(--chatBotMessageAvatar) " " var(--chatBotName) !important;
 }
 
 .chat-msg-sender[aria-label="Bot"] {
@@ -87,6 +91,7 @@ body, input[type="text"], textarea, button, select, span, p, label {
 
 .chat-msg-sender {
 	font-size: var(--chatMessageSenderFontSize) !important;
+	font-weight: 600 !important;
 }
 
 /*****************************************************************************/
@@ -225,15 +230,17 @@ svg[width="14"] {
 }
 
 .chat-log-msg {
-	background: var(--chatIncomingMessageBackgroundColor) !important;
+	background: var(--chatLogMessageBackgroundColor) !important;
 	border: var(--chatMessageBorder);
 	color: var(--chatMessageFontColor) !important;
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
+	font-style: normal;
+	font-weight: 600;
 	width: 90%;
 	border-radius: 0px !important;
-	padding: 0px 15px 0px 15px !important;
+	padding: 10px 15px 10px 15px !important;
 }
 
 .chat-error-msg {
@@ -244,6 +251,7 @@ svg[width="14"] {
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
 	font-style: normal;
+	font-weight: 600;
 	width: 90%;
 	border-radius: 0px !important;
 	padding: 10px 15px 10px 15px !important;
@@ -254,14 +262,9 @@ a {
 	font-weight: var(--chatMessageHypertextFontWeight) !important;
 }
 
-p {
-	font-size: inherit !important;
-	font-style: inherit !important;
-	font-weight: inherit !important;
-}
-
-span {
+p, span {
 	color: inherit !important;
+	font-size: inherit !important;
 	font-style: inherit !important;
 	font-weight: inherit !important;
 }
