@@ -9,8 +9,9 @@
 /* Note: Chat title font and background color set in 8x8 chat design         */
 /*****************************************************************************/
 :root {
-	--chatbotName: url(https://lazumc.github.io/images/sovereign-s.png); 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
-	--chatMessageAvatar: url(https://lazumc.github.io/images/sovereign-s.png) " ";	/*Note: Add a space after any image file */
+	--chatBotName: ""; 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
+	--chatBotMessageAvatar: url(https://lazumc.github.io/images/sovereign-s.png) " ";	/*Note: Add a space after any image file */
+	--chatAgenttMessageAvatar: url(https://lazumc.github.io/images/sovereign-s.png) " ";	/*Note: Add a space after any image file */
 	--chatTitleFontSize: 1.5rem;
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
