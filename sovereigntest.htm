@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Give page very basic compatiblity with smart phone screen -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <style>
+<!-- Force chat window to width 480px, no inset and no rounded edges -->
+<!-- Note: Cannot force height here as JS uses height attribute to make chat window open/close -->
 	.__8x8Chat-Container {
 		border-radius: 0px !important;
 		width: 480px !important;
 		filter: box-shadow(0px 0px 5px #000000) !important;
 		inset: auto 0px 0px auto !important;
 	}
-	
+
+<!-- Force chat to fill width of smart phone screen-->
 	@media screen and (max-width: 480px){
 		.__8x8Chat-Container {
 			width: 100% !important;
 		}
 	}
-	
+
+<!-- Style chat button-->
 	img[alt="Chat Now"]{
     width: 80px; 
     height 80px; 
