@@ -43,7 +43,7 @@
 		color: #fff;
 		border: 2px solid #000000;
 		border-radius: 0px;
-		filter: box-shadow(0px 0px 5px #000000)
+		box-shadow: rgba(41, 41, 41, 0.25) 0px 2px 20px;
 		z-index: 1;
 		height: 120px;
 		width: 300px;
@@ -60,6 +60,7 @@
 		border-radius: 0px;
 		min-height: 20px;
 		font-size: 1.5rem;
+		font-weight: 600;
 	}
 
 	.tooltipBody {
@@ -71,16 +72,24 @@
 	
 	.closeButton {
 		position: absolute;
-		top: 10px;
+		top: 15px;
 		right: 10px;
 		cursor: pointer;
 		color: #000000;
 	}
-
-	.closeImage {
-		transform: rotate(180deg);
+	
+	.tooltipButton {
+		background: #a8d1e5;
+		padding: 10px;
+		border: 0px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		min-width: 40%;
 	}
-
+	
+	.tooltipButton:hover, .tooltipButton:focus {
+		background: #a8d1e5;
+	}
 </style>
 </head>
 <body bgcolor="#dddddd" style="width: 100%; max-width: 100%">
@@ -107,6 +116,9 @@
   </div>
   <div class="tooltipBody" id="tooltipBody">
 	<span class="tooltipText" id="tooltipText">Placeholder message.</span>
+  </div>
+  <div class="tooltipFooter" id="tooltipFooter">
+	<button class="tooltipButton" onclick="launchChat()">Ask Me Now</button>
   </div>
 </div>
 
@@ -143,7 +155,8 @@
 <script>
 function launchChat() 
 {
-   bus.publish("chat:trigger-chat-window")
+   hideTooltip();
+   bus.publish("chat:trigger-chat-window");
 }   
 </script>
 
@@ -152,7 +165,6 @@ const button = document.getElementById("myButton");
 const tooltip = document.getElementById("tooltip");
 const tooltipText = document.getElementById("tooltipText");
 const closeButton = document.getElementById("closeButton");
-const closeImage = document.getElementById("closeImage");
 
 // Messages to display in the tooltip
 const messages = [
@@ -167,7 +179,6 @@ let currentMessageIndex = 0;
 function showTooltip() {
   tooltip.style.display = "block";
   tooltipText.innerHTML = messages[currentMessageIndex];
-  closeImage.style.transform = "rotate(360deg)";
   currentMessageIndex = (currentMessageIndex + 1) % messages.length;
 };
 
