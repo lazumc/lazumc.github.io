@@ -156,8 +156,7 @@ let currentMessageIndex = 0;
 // Function to show the tooltip
 function showTooltip() {
   tooltip.style.display = "block";
-  tooltipText.innerHTML = $messages[currentMessageIndex];
- 
+  tooltipText.innerHTML = messages[currentMessageIndex];
   currentMessageIndex = (currentMessageIndex + 1) % messages.length;
 };
 
