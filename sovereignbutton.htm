@@ -99,7 +99,7 @@
 	</span>
   </div>
   <div class="tooltipBody" id="tooltipBody">
-	<span class="tooltipText" id="tooltipText">Placeholder messgae.</span>
+	<span class="tooltipText" id="tooltipText">Placeholder message.</span>
   </div>
 </div>
 
@@ -173,7 +173,7 @@ closeButton.addEventListener("click", () => {
 });
 
 // Set a timeout to show the tooltip after 15 seconds
-setTimeout(showTooltip, 5000); // 5,000 milliseconds = 5 seconds
+setInterval(showTooltip, 5000); // 5,000 milliseconds = 5 seconds
 
 // Show the tooltip when hovering over the button
 button.addEventListener("mouseover", () => {
