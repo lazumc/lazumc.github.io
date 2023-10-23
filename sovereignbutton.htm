@@ -47,6 +47,8 @@
 		z-index: 1;
 		height: 80px;
 		width: 200px;
+		bottom: 50px;
+        left:20px;
 	}
 	
 	.close-button {
@@ -136,13 +138,6 @@ button.addEventListener("mouseout", () => {
   tooltip.style.display = "none";
 });
 
-// Position the tooltip relative to the button
-button.addEventListener("mousemove", (event) => {
-  const x = event.clientX;
-  const y = event.clientY;
-  tooltip.style.left = x + 10 + "px";
-  tooltip.style.top = y + 10 + "px";
-});
 </script>
 
 </body>
