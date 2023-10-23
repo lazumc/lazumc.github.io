@@ -207,6 +207,8 @@ const tooltipInterval=setInterval(showTooltip, 5000); // 5,000 milliseconds = 5 
 // Show the tooltip when hovering over the button
 button.addEventListener("mouseover", () => {
   tooltip.style.display = "block";
+  clearInterval(tooltipInterval);
+  tooltipInterval=setInterval(showTooltip, 5000); // 5,000 milliseconds = 5 seconds
 });
 
 </script>
