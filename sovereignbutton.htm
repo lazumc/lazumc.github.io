@@ -48,6 +48,13 @@
 		height: 80px;
 		width: 200px;
 	}
+	
+	.close-button {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		cursor: pointer;
+	}
 </style>
 </head>
 <body bgcolor="#dddddd" style="width: 100%; max-width: 100%">
@@ -56,6 +63,7 @@
 
 <!-- New button to invoke chat calling the launchChat() function. -->
 <button id="myButton" onclick="launchChat()" class="custom-webchat-button">
+  <span class="close-button" id="closeButton">&times;</span>
   <span class="custom-webchat-button-text">Chat</span>
 </button>
 
@@ -104,6 +112,19 @@ function launchChat()
 <script type="text/javascript">
 const button = document.getElementById("myButton");
 const tooltip = document.getElementById("tooltip");
+
+// Function to show the tooltip
+function showTooltip() {
+  tooltip.style.display = "block";
+}
+
+// Close the tooltip when the close button is clicked
+closeButton.addEventListener("click", () => {
+  hideTooltip();
+});
+
+// Set a timeout to show the tooltip after 15 seconds
+setTimeout(showTooltip, 15000); // 15,000 milliseconds = 15 seconds
 
 // Show the tooltip when hovering over the button
 button.addEventListener("mouseover", () => {
