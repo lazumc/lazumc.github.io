@@ -106,17 +106,17 @@ const button = document.getElementById("myButton");
 const tooltip = document.getElementById("tooltip");
 
 // Show the tooltip when hovering over the button
-div.addEventListener("mouseover", () => {
+button.addEventListener("mouseover", () => {
   tooltip.style.display = "block";
 });
 
 // Hide the tooltip when the mouse leaves the button
-div.addEventListener("mouseout", () => {
+button.addEventListener("mouseout", () => {
   tooltip.style.display = "none";
 });
 
 // Position the tooltip relative to the button
-div.addEventListener("mousemove", (event) => {
+button.addEventListener("mousemove", (event) => {
   const x = event.clientX;
   const y = event.clientY;
   tooltip.style.left = x + 10 + "px";
