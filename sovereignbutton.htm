@@ -56,6 +56,7 @@
 		top: 5px;
 		right: 5px;
 		cursor: pointer;
+		color: #fff;
 	}
 </style>
 </head>
@@ -65,14 +66,16 @@
 
 <!-- New button to invoke chat calling the launchChat() function. -->
 <button id="myButton" onclick="launchChat()" class="custom-webchat-button">
-  <span class="close-button" id="closeButton">&times;</span>
   <span class="custom-webchat-button-text">Chat</span>
 </button>
 
 <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
 <div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="position:fixed; bottom:20px; right:20px; border:0px; width: 80px; height 80px; border-radius: 50%">
 </div>
-<div class="tooltip" id="tooltip">This is the tooltip text.</div>
+<div class="tooltip" id="tooltip">
+  <span class="close-button" id="closeButton">&times;</span>
+This is the tooltip text.
+</div>
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
@@ -114,6 +117,7 @@ function launchChat()
 <script type="text/javascript">
 const button = document.getElementById("myButton");
 const tooltip = document.getElementById("tooltip");
+const closeButton = document.getElementById("closeButton");
 
 // Function to show the tooltip
 function showTooltip() {
@@ -134,9 +138,9 @@ button.addEventListener("mouseover", () => {
 });
 
 // Hide the tooltip when the mouse leaves the button
-button.addEventListener("mouseout", () => {
-  tooltip.style.display = "none";
-});
+//button.addEventListener("mouseout", () => {
+//  tooltip.style.display = "none";
+//});
 
 </script>
 
