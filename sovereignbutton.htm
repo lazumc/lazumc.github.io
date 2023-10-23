@@ -159,7 +159,7 @@ let currentMessageIndex = 0;
 function showTooltip() {
   tooltip.style.display = "block";
   tooltipText.innerHTML = messages[currentMessageIndex];
-  closeButton.transform = "rotate(360deg)";
+  closeButton.style.transform = "rotate(360deg)";
   currentMessageIndex = (currentMessageIndex + 1) % messages.length;
 };
 
