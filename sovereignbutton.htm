@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Give page very basic compatiblity with smart phone screen -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+	/* Force chat window to width 480px, no inset and no rounded edges */
+	/* Note: Cannot force height here as JS uses height attribute to make chat window open/close */
+	.__8x8Chat-Container {
+		border-radius: 0px !important;
+		width: 480px !important;
+		filter: box-shadow(0px 0px 5px #000000) !important;
+		inset: auto 0px 0px auto !important;
+	}
+
+	/* Force chat to fill width of smart phone screen */
+	@media screen and (max-width: 480px){
+		.__8x8Chat-Container {
+			width: 100% !important;
+		}
+	}
+
+	/* Style chat button */
+	img[alt="Chat Now"]{
+		width: 80px; 
+		height: 80px; 
+		border-radius: 50%;
+	}
+	
+	#tooltip {
+		display: none;
+		position: absolute;
+		background-color: #333;
+		color: #fff;
+		padding: 10px;
+		border-radius: 5px;
+		z-index: 1;
+		height: 80px;
+		width: 200px;
+	}
+</style>
+</head>
+<body bgcolor="#dddddd" style="width: 100%; max-width: 100%">
+
+<img src="https://lazumc.github.io/images/sovereign.png" width="100%">
+
+<!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
+<div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="position:fixed; bottom:20px; right:20px; border:0px; width: 80px; height 80px; border-radius: 50%">
+<div class="tooltip" id="tooltip">This is the tooltip text.</div>
+</div>
+
+<!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+<script type="text/javascript">
+    window.__8x8Chat = {
+        uuid: "script_101037146064e36bd89b5038.39282807",
+        tenant: "c292ZXJlaWduaG91c2luZzAx",
+        channel: "CSMC Bot Web Chat - Test",
+        channelUuid: "gpoQXp5HSAaEFuwou8bxkA",
+        domain: "https://vcc-eu6.8x8.com",
+        path: "/.",
+        buttonContainerId: "__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807",
+        stylesheetURL: "https://lazumc.github.io/sovereign.css",
+        align: "right"
+    };
+
+    (function() {
+        var se = document.createElement("script");
+        se.type = "text/javascript";
+        se.async = true;
+        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+
+        var os = document.getElementsByTagName("script")[0];
+        os.parentNode.insertBefore(se, os);
+    })();
+</script>
+
+<script type="text/javascript">
+const button = document.getElementById("__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807");
+const tooltip = document.getElementById("tooltip");
+
+// Show the tooltip when hovering over the button
+div.addEventListener("mouseover", () => {
+  tooltip.style.display = "block";
+});
+
+// Hide the tooltip when the mouse leaves the button
+div.addEventListener("mouseout", () => {
+  tooltip.style.display = "none";
+});
+
+// Position the tooltip relative to the button
+div.addEventListener("mousemove", (event) => {
+  const x = event.clientX;
+  const y = event.clientY;
+  tooltip.style.left = x + 10 + "px";
+  tooltip.style.top = y + 10 + "px";
+});
+</script>
+
+</body>
+</html>
+
