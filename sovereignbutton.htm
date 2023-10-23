@@ -37,12 +37,11 @@
 	}
 	
 	
-	#tooltip {
+	.tooltip {
 		display: none;
 		position: absolute;
 		background-color: #333;
 		color: #fff;
-		padding: 10px;
 		border-radius: 0px;
 		z-index: 1;
 		height: 80px;
@@ -51,16 +50,19 @@
         left:20px;
 	}
 	
-	#tooltipHeader {
-		display: none;
-		position: absolute;
+	.tooltipHeader {
 		background-color: #aaa;
-		color: #0000;
+		color: #000;
 		padding: 10px;
 		border-radius: 0px;
-		z-index: 1;
-		height: 20px;
-		width: 200px;
+		min-height: 20px;
+	}
+
+	.tooltipBody {
+		background-color: #000;
+		color: #aaa;
+		padding: 10px;
+		border-radius: 0px;
 	}
 	
 	.close-button {
@@ -68,7 +70,7 @@
 		top: 5px;
 		right: 5px;
 		cursor: pointer;
-		color: #0000;
+		color: #000;
 	}
 </style>
 </head>
@@ -133,11 +135,23 @@ function launchChat()
 <script type="text/javascript">
 const button = document.getElementById("myButton");
 const tooltip = document.getElementById("tooltip");
+const tooltipBody = document.getElementById("tooltipBody");
 const closeButton = document.getElementById("closeButton");
+
+// Messages to display in the tooltip
+const messages = [
+  "This is the first message.",
+  "This is the second message.",
+  "This is the third message.",
+];
+
+let currentMessageIndex = 0;
 
 // Function to show the tooltip
 function showTooltip() {
   tooltip.style.display = "block";
+  tooltip.innerHTML = ${messages[currentMessageIndex]};
+  currentMessageIndex = (currentMessageIndex + 1) % messages.length;
 }
 
 // Function to hide the tooltip
@@ -157,11 +171,6 @@ setTimeout(showTooltip, 5000); // 5,000 milliseconds = 5 seconds
 button.addEventListener("mouseover", () => {
   tooltip.style.display = "block";
 });
-
-// Hide the tooltip when the mouse leaves the button
-//button.addEventListener("mouseout", () => {
-//  tooltip.style.display = "none";
-//});
 
 </script>
 
