@@ -36,6 +36,11 @@
         left:20px;
 	}
 	
+	.custom-webchat-button-image {
+		width: 80px; 
+		height: 80px; 
+		border-radius: 50%;
+	}
 	
 	.tooltip {
 		display: none;
@@ -87,7 +92,8 @@
 
 <!-- New button to invoke chat calling the launchChat() function. -->
 <button id="myButton" onclick="launchChat()" class="custom-webchat-button">
-  <span class="custom-webchat-button-text">Chat</span>
+  <!--<span class="custom-webchat-button-text">Chat</span> -->
+  <img class="custom-webchat-button-image" src="https://lazumc.github.io/images/SNG logo - Black.png">
 </button>
 
 <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
