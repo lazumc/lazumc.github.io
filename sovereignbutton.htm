@@ -67,8 +67,8 @@
 	
 	.close-button {
 		position: absolute;
-		top: 5px;
-		right: 5px;
+		top: 15px;
+		right: 10px;
 		cursor: pointer;
 		color: #000;
 	}
@@ -89,7 +89,13 @@
 <div class="tooltip" id="tooltip">
   <div class="tooltipHeader">
 	<span class="tooltipHeaderText">Chat with Me.</span>
-	<span class="close-button" id="closeButton">&times;</span></div>
+	<span class="close-button" id="closeButton">
+	  <svg role="presentation" width="14" height="14" viewBox="0 0 14 14" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+		<title>Close</title>
+		<path d="M13.5303 1.53033C13.8232 1.23744 13.8232 0.762563 13.5303 0.46967C13.2374 0.176777 12.7626 0.176777 12.4697 0.46967L7 5.93934L1.53033 0.469671C1.23744 0.176778 0.762563 0.176778 0.46967 0.469671C0.176777 0.762564 0.176777 1.23744 0.46967 1.53033L5.93934 7L0.469671 12.4697C0.176777 12.7626 0.176777 13.2374 0.469671 13.5303C0.762564 13.8232 1.23744 13.8232 1.53033 13.5303L7 8.06066L12.4697 13.5303C12.7626 13.8232 13.2374 13.8232 13.5303 13.5303C13.8232 13.2374 13.8232 12.7626 13.5303 12.4697L8.06066 7L13.5303 1.53033Z"></path>
+      </svg>
+	</span>
+  </div>
   <div class="tooltipBody">
 	<span class="tooltipText">I can shat with you about.</span>
   </div>
