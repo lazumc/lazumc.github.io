@@ -43,12 +43,24 @@
 		background-color: #333;
 		color: #fff;
 		padding: 10px;
-		border-radius: 5px;
+		border-radius: 0px;
 		z-index: 1;
 		height: 80px;
 		width: 200px;
-		bottom: 80px;
+		bottom: 120px;
         left:20px;
+	}
+	
+	#tooltipHeader {
+		display: none;
+		position: absolute;
+		background-color: #aaa;
+		color: #0000;
+		padding: 10px;
+		border-radius: 0px;
+		z-index: 1;
+		height: 20px;
+		width: 200px;
 	}
 	
 	.close-button {
@@ -56,7 +68,7 @@
 		top: 5px;
 		right: 5px;
 		cursor: pointer;
-		color: #fff;
+		color: #0000;
 	}
 </style>
 </head>
@@ -73,8 +85,12 @@
 <div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="position:fixed; bottom:20px; right:20px; border:0px; width: 80px; height 80px; border-radius: 50%">
 </div>
 <div class="tooltip" id="tooltip">
-  <span class="close-button" id="closeButton">&times;</span>
-This is the tooltip text.
+  <div class="tooltipHeader">
+	<span class="tooltipHeaderText">Chat with Me.</span>
+	<span class="close-button" id="closeButton">&times;</span></div>
+  <div class="tooltipBody">
+	<span class="tooltipText">I can shat with you about.</span>
+  </div>
 </div>
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
