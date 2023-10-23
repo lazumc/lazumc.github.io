@@ -97,7 +97,7 @@
 	</span>
   </div>
   <div class="tooltipBody" id="tooltipBody">
-	<span class="tooltipText">Placeholder messgae.</span>
+	<span class="tooltipText" id="tooltipText">Placeholder messgae.</span>
   </div>
 </div>
 
@@ -158,12 +158,12 @@ function showTooltip() {
   tooltip.style.display = "block";
   tooltipText.innerHTML = ${messages[currentMessageIndex]};
   currentMessageIndex = (currentMessageIndex + 1) % messages.length;
-}
+};
 
 // Function to hide the tooltip
 function hideTooltip() {
   tooltip.style.display = "none";
-}
+};
 
 // Close the tooltip when the close button is clicked
 closeButton.addEventListener("click", () => {
