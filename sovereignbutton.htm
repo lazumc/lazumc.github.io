@@ -96,8 +96,8 @@
       </svg>
 	</span>
   </div>
-  <div class="tooltipBody">
-	<span class="tooltipText">I can shat with you about.</span>
+  <div class="tooltipBody" id="tooltipBody">
+	<span class="tooltipText">Placeholder messgae.</span>
   </div>
 </div>
 
@@ -141,7 +141,7 @@ function launchChat()
 <script type="text/javascript">
 const button = document.getElementById("myButton");
 const tooltip = document.getElementById("tooltip");
-const tooltipBody = document.getElementById("tooltipBody");
+const tooltipText = document.getElementById("tooltipText");
 const closeButton = document.getElementById("closeButton");
 
 // Messages to display in the tooltip
@@ -156,7 +156,7 @@ let currentMessageIndex = 0;
 // Function to show the tooltip
 function showTooltip() {
   tooltip.style.display = "block";
-  tooltip.innerHTML = ${messages[currentMessageIndex]};
+  tooltipText.innerHTML = ${messages[currentMessageIndex]};
   currentMessageIndex = (currentMessageIndex + 1) % messages.length;
 }
 
