@@ -140,7 +140,7 @@
         buttonContainerId: "__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807",
         stylesheetURL: "https://lazumc.github.io/sovereign.css",
         align: "right",
-		<!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
+		// Triggered on initialisation to define window.bus which is  used to launch chat in custom button
 		onInit: function (bus) {
 		   window.bus = bus;
 		}
@@ -155,19 +155,16 @@
         var os = document.getElementsByTagName("script")[0];
         os.parentNode.insertBefore(se, os);
     })();
-</script>
 
-<!-- New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work. -->
-<script>
+// New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
+
 function launchChat() 
 {
    hideChatInvite();
    bus.publish("chat:trigger-pre-chat");
 }   
-</script>
 
-<!-- Code and functions to add a customer designed chat invite -->
-<script type="text/javascript">
+// Code and functions to add a customer designed chat invite
 const chatInvite = document.getElementById("chatInvite");
 const chatInviteText = document.getElementById("chatInviteText");
 const chatInviteChatButton = document.getElementById("chatInviteChatButton");
