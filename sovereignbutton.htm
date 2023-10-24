@@ -20,23 +20,16 @@
 		}
 	}
 
-	/* Style chat button */
-	img[alt="Chat Now"]{
-		width: 80px; 
-		height: 80px; 
-		border-radius: 50%;
-	}
-	
-	.custom-webchat-button-image {
+	.chatButtonImage {
 		width: 80px; 
 		height: 80px; 
 		border-radius: 50%;
 		position: fixed;
         bottom: 20px;
-        left:20px;
+        right:20px;
 	}
 	
-	.tooltip {
+	.chatInviteContainer {
 		display: none;
 		position: fixed;
 		background-color: #ffffff;
@@ -48,12 +41,12 @@
 		height: 200px;
 		width: 300px;
 		bottom: 120px;
-        left:20px;
+        right:20px;
 		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 		font-size: 0.9rem;
 	}
 	
-	.tooltipHeader {
+	.chatInviteHeader {
 		background-color: #a8d1e5;
 		color: #000000;
 		padding: 10px;
@@ -63,7 +56,7 @@
 		font-weight: 600;
 	}
 
-	.tooltipBody {
+	.chatInviteBody {
 		background-color: #ffffff;
 		color: #000000;
 		padding: 10px;
@@ -71,7 +64,7 @@
 		min-height: 40px;
 	}
 	
-	.tooltipFooter {
+	.chatInviteFooter {
 		background-color: #ffffff;
 		color: #000000;
 		padding: 10px;
@@ -79,7 +72,7 @@
 		min-height: 20px;
 	}
 
-	.closeButton {
+	.chatInviteCloseButton {
 		position: absolute;
 		top: 0px;
 		right: 10px;
@@ -87,7 +80,7 @@
 		color: #000000;
 	}
 	
-	.tooltipButton {
+	.chatInviteLaunchChatButton {
 		background: #a8d1e5;
 		padding: 10px;
 		border: 0px;
@@ -96,7 +89,7 @@
 		min-width: 40%;
 	}
 	
-	.tooltipButton:hover, .tooltipButton:focus {
+	.chatInviteLaunchChatButton:hover, .chatInviteLaunchChatButton:focus {
 		background: #acd6c8;
 	}
 </style>
@@ -105,29 +98,31 @@
 
 <img src="https://lazumc.github.io/images/sovereign.png" width="100%">
 
-<!-- New button to invoke chat calling the launchChat() function. -->
-<button id="myButton" onclick="launchChat()" class="custom-webchat-button">
-  <img class="custom-webchat-button-image" src="https://lazumc.github.io/images/SNG logo - Black.png">
+<!-- Customer designed button to invoke chat calling the launchChat() function. -->
+<button id="chatButton" onclick="launchChat()" class="chatButton">
+  <img class="chatButtonImage" src="https://lazumc.github.io/images/SNG logo - Black.png">
 </button>
 
-<!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
-<div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="position:fixed; bottom:20px; right:20px; border:0px; width: 80px; height 80px; border-radius: 50%">
+<!-- Code snippet for in-built 8x8 chat button - set to hidden. -->
+<div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="visiblity: hidden;">
 </div>
-<div class="tooltip" id="tooltip">
-  <div class="tooltipHeader">
-	<span class="tooltipHeaderText">Ask me</span>
-	<span class="closeButton" id="closeButton">
+
+<!-- Customer designed chat invite. -->
+<div class="chatInviteContainer" id="chatInviteContainer">
+  <div class="chatInviteHeader">
+	<span class="chatInviteHeaderText">Ask me</span>
+	<span class="chatInviteCloseButton" id="chatInviteCloseButton">
 	  <svg id="closeImage" class="closeImage" role="presentation" width="14" height="14" viewBox="0 0 14 14" fill="#000000" xmlns="http://www.w3.org/2000/svg">
 		<title>Close</title>
 		<path d="M13.5303 1.53033C13.8232 1.23744 13.8232 0.762563 13.5303 0.46967C13.2374 0.176777 12.7626 0.176777 12.4697 0.46967L7 5.93934L1.53033 0.469671C1.23744 0.176778 0.762563 0.176778 0.46967 0.469671C0.176777 0.762564 0.176777 1.23744 0.46967 1.53033L5.93934 7L0.469671 12.4697C0.176777 12.7626 0.176777 13.2374 0.469671 13.5303C0.762564 13.8232 1.23744 13.8232 1.53033 13.5303L7 8.06066L12.4697 13.5303C12.7626 13.8232 13.2374 13.8232 13.5303 13.5303C13.8232 13.2374 13.8232 12.7626 13.5303 12.4697L8.06066 7L13.5303 1.53033Z"></path>
       </svg>
 	</span>
   </div>
-  <div class="tooltipBody" id="tooltipBody">
-	<span class="tooltipText" id="tooltipText">Placeholder message.</span>
+  <div class="chatInviteBody" id="chatInviteBody">
+	<span class="chatInviteText" id="chatInviteText">Placeholder message.</span>
   </div>
-  <div class="tooltipFooter" id="tooltipFooter" align="center">
-	<button class="tooltipButton" onclick="launchChat()">Ask Me Now</button>
+  <div class="chatInviteFooter" id="chatInviteFooter" align="center">
+	<button class="chatInviteLaunchChatButton" onclick="launchChat()">Ask Me Now</button>
   </div>
 </div>
 
@@ -169,48 +164,42 @@ function launchChat()
 }   
 </script>
 
+<!-- Code and functions to add a customer designed chat invite -->
 <script type="text/javascript">
-const button = document.getElementById("myButton");
-const tooltip = document.getElementById("tooltip");
-const tooltipText = document.getElementById("tooltipText");
-const closeButton = document.getElementById("closeButton");
+const chatInvite = document.getElementById("chatInviteContainer");
+const chatInviteText = document.getElementById("chatInviteText");
+const chatInviteLaunchChatButton = document.getElementById("chatInviteLaunchChatButton");
 
-// Messages to display in the tooltip
+// Messages to display in the chat invite
 const messages = [
   "about booking a new repair, or",
   "about an upcoming appointment, or",
   "about your rent or service charge account.",
 ];
 
-let currentMessageIndex = 0;
-
-// Function to show the tooltip
+// Function to show the chat invite
 function showTooltip() {
-  tooltipText.innerHTML = messages[currentMessageIndex];
-  tooltip.style.display = "block";
+  chatInviteText.innerHTML = messages[currentMessageIndex];
+  chatInvite.style.display = "block";
   currentMessageIndex = (currentMessageIndex + 1) % messages.length;
 };
 
-// Function to hide the tooltip
+// Function to hide the chat invite
 function hideTooltip() {
-  tooltip.style.display = "none";
+  chatInvite.style.display = "none";
   clearInterval(tooltipInterval);
 };
 
-// Close the tooltip when the close button is clicked
-closeButton.addEventListener("click", () => {
+// Set inital message to display
+let currentMessageIndex = 0;
+
+// Close the chat invite when the close button is clicked
+chatInviteLaunchChatButton.addEventListener("click", () => {
   hideTooltip();
 });
 
-// Set a timeout to show the tooltip after 5 seconds
+// Set a timeout to show the chat invite after 5 seconds
 const tooltipInterval=setInterval(showTooltip, 5000); // 5,000 milliseconds = 5 seconds
-
-// Show the tooltip when hovering over the button
-button.addEventListener("mouseover", () => {
-  tooltipText.innerHTML = "about booking a new repair, an upcoming appointment or your rent or service charge account.";
-  tooltip.style.display = "block";
-  clearInterval(tooltipInterval);
-});
 
 </script>
 
