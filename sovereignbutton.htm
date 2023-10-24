@@ -63,7 +63,7 @@
 		color: #000000;
 		padding: 10px;
 		border-radius: 0px;
-		min-height: 40px;
+		min-height: 20px;
 	}
 	
 	.chatInviteFooter {
@@ -185,7 +185,7 @@ function launchChat()
 // Code and functions to add a customer designed chat invite
 const chatInvite = document.getElementById("chatInvite");
 const chatInviteText = document.getElementById("chatInviteText");
-const chatInviteChatButton = document.getElementById("chatInviteChatButton");
+const chatInviteCloseButton = document.getElementById("chatInviteCloseButton");
 
 // Messages to display in the chat invite
 const chatInviteMessages = [
@@ -211,7 +211,7 @@ function hideChatInvite() {
 };
 
 // Close the chat invite when the close button is clicked
-chatInviteChatButton.addEventListener("click", () => {
+chatInviteCloseButton.addEventListener("click", () => {
   hideChatInvite();
 });
 
@@ -236,8 +236,8 @@ chatButton.addEventListener("mouseout", () => {
 chatButton.addEventListener("mousemove", (event) => {
   const x = event.clientX;
   const y = event.clientY;
-  chatTooltip.style.left = x + 10 + "px";
-  chatTooltip.style.top = y + 10 + "px";
+  chatTooltip.style.right = x - 10 + "px";
+  chatTooltip.style.bottom = y - 10 + "px";
 });
 
 </script>
