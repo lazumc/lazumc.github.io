@@ -20,6 +20,7 @@
 		}
 	}
 
+	/* Position and style customer defined chat button */
 	.chatButtonImage {
 		width: 80px; 
 		height: 80px; 
@@ -28,7 +29,8 @@
         bottom: 20px;
         right:20px;
 	}
-	
+
+	/* Position and style customer defined chat invite */	
 	.chatInviteContainer {
 		display: none;
 		position: fixed;
@@ -104,7 +106,7 @@
 </button>
 
 <!-- Code snippet for in-built 8x8 chat button - set to hidden. -->
-<div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="visiblity: hidden;">
+<div id="__8x8-chat-button-container-script_101037146064e36bd89b5038.39282807" style="visibility: hidden;">
 </div>
 
 <!-- Customer designed chat invite. -->
@@ -159,7 +161,7 @@
 <script>
 function launchChat() 
 {
-   hideTooltip();
+   hideChatInvite();
    bus.publish("chat:trigger-pre-chat");
 }   
 </script>
@@ -171,35 +173,35 @@ const chatInviteText = document.getElementById("chatInviteText");
 const chatInviteLaunchChatButton = document.getElementById("chatInviteLaunchChatButton");
 
 // Messages to display in the chat invite
-const messages = [
+const chatInviteMessages = [
   "about booking a new repair, or",
   "about an upcoming appointment, or",
   "about your rent or service charge account.",
 ];
 
 // Function to show the chat invite
-function showTooltip() {
-  chatInviteText.innerHTML = messages[currentMessageIndex];
+function showChatInvite() {
+  chatInviteText.innerHTML = chatInviteMessages[currentChatInviteMessageIndex];
   chatInvite.style.display = "block";
-  currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+  currentChatInviteMessageIndex = (currentChatInviteMessageIndex + 1) % chatInviteMessages.length;
 };
 
 // Function to hide the chat invite
-function hideTooltip() {
+function hideChatInvite() {
   chatInvite.style.display = "none";
-  clearInterval(tooltipInterval);
+  clearInterval(chatInviteInterval);
 };
 
-// Set inital message to display
-let currentMessageIndex = 0;
+// Set inital chat invite message to display
+let currentChatInviteMessageIndex = 0;
 
 // Close the chat invite when the close button is clicked
 chatInviteLaunchChatButton.addEventListener("click", () => {
-  hideTooltip();
+  hideChatInvite();
 });
 
 // Set a timeout to show the chat invite after 5 seconds
-const tooltipInterval=setInterval(showTooltip, 5000); // 5,000 milliseconds = 5 seconds
+const chatInviteInterval=setInterval(showChatInvite, 5000); // 5,000 milliseconds = 5 seconds
 
 </script>
 
