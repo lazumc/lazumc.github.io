@@ -179,6 +179,9 @@ const chatInviteMessages = [
   "about your rent or service charge account.",
 ];
 
+// Set inital chat invite message to display
+let currentChatInviteMessageIndex = 0;
+
 // Function to show the chat invite
 function showChatInvite() {
   chatInviteText.innerHTML = chatInviteMessages[currentChatInviteMessageIndex];
@@ -191,9 +194,6 @@ function hideChatInvite() {
   chatInvite.style.display = "none";
   clearInterval(chatInviteInterval);
 };
-
-// Set inital chat invite message to display
-let currentChatInviteMessageIndex = 0;
 
 // Close the chat invite when the close button is clicked
 chatInviteChatButton.addEventListener("click", () => {
