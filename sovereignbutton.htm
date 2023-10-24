@@ -170,7 +170,7 @@ function launchChat()
 <script type="text/javascript">
 const chatInvite = document.getElementById("chatInvite");
 const chatInviteText = document.getElementById("chatInviteText");
-const chatInviteLaunchChat = document.getElementById("chatInviteLaunchChat");
+const chatInviteChatButton = document.getElementById("chatInviteChatButton");
 
 // Messages to display in the chat invite
 const chatInviteMessages = [
@@ -196,7 +196,7 @@ function hideChatInvite() {
 let currentChatInviteMessageIndex = 0;
 
 // Close the chat invite when the close button is clicked
-chatInviteLaunchChat.addEventListener("click", () => {
+chatInviteChatButton.addEventListener("click", () => {
   hideChatInvite();
 });
 
