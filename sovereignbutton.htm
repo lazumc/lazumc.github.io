@@ -31,7 +31,7 @@
 	}
 
 	/* Position and style customer defined chat invite */	
-	.chatInviteContainer {
+	.chatInvite {
 		display: none;
 		position: fixed;
 		background-color: #ffffff;
@@ -82,7 +82,7 @@
 		color: #000000;
 	}
 	
-	.chatInviteLaunchChatButton {
+	.chatInviteChatButton {
 		background: #a8d1e5;
 		padding: 10px;
 		border: 0px;
@@ -91,7 +91,7 @@
 		min-width: 40%;
 	}
 	
-	.chatInviteLaunchChatButton:hover, .chatInviteLaunchChatButton:focus {
+	.chatInviteChatButton:hover, .chatInviteChatButton:focus {
 		background: #acd6c8;
 	}
 </style>
@@ -101,7 +101,7 @@
 <img src="https://lazumc.github.io/images/sovereign.png" width="100%">
 
 <!-- Customer designed button to invoke chat calling the launchChat() function. -->
-<button id="chatButton" onclick="launchChat()" class="chatButton">
+<button class="chatButton" id="chatButton" onclick="launchChat()">
   <img class="chatButtonImage" src="https://lazumc.github.io/images/SNG logo - Black.png">
 </button>
 
@@ -110,7 +110,7 @@
 </div>
 
 <!-- Customer designed chat invite. -->
-<div class="chatInviteContainer" id="chatInviteContainer">
+<div class="chatInvite" id="chatInvite">
   <div class="chatInviteHeader">
 	<span class="chatInviteHeaderText">Ask me</span>
 	<span class="chatInviteCloseButton" id="chatInviteCloseButton">
@@ -124,7 +124,7 @@
 	<span class="chatInviteText" id="chatInviteText">Placeholder message.</span>
   </div>
   <div class="chatInviteFooter" id="chatInviteFooter" align="center">
-	<button class="chatInviteLaunchChatButton" onclick="launchChat()">Ask Me Now</button>
+	<button class="chatInviteChatButton" id="chatInviteChatButton" onclick="launchChat()">Ask Me Now</button>
   </div>
 </div>
 
@@ -168,9 +168,9 @@ function launchChat()
 
 <!-- Code and functions to add a customer designed chat invite -->
 <script type="text/javascript">
-const chatInvite = document.getElementById("chatInviteContainer");
+const chatInvite = document.getElementById("chatInvite");
 const chatInviteText = document.getElementById("chatInviteText");
-const chatInviteLaunchChatButton = document.getElementById("chatInviteLaunchChatButton");
+const chatInviteLaunchChat = document.getElementById("chatInviteLaunchChat");
 
 // Messages to display in the chat invite
 const chatInviteMessages = [
@@ -196,7 +196,7 @@ function hideChatInvite() {
 let currentChatInviteMessageIndex = 0;
 
 // Close the chat invite when the close button is clicked
-chatInviteLaunchChatButton.addEventListener("click", () => {
+chatInviteLaunchChat.addEventListener("click", () => {
   hideChatInvite();
 });
 
