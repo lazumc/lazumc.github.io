@@ -1,0 +1,40 @@
+<script>
+    var isDesktop = matchMedia('screen and (min-width:1024px) and (hover:hover) and (pointer:fine)').matches;
+    if (isDesktop) {
+        window.__8x8Chat = {
+            uuid: "script_89071526064a2c7ed9960d2.34747066",
+            tenant: "aGVhbGl4aW5zdXJhbmNlc2UwMQ",
+            channel: "Felix",
+            channelUuid: "HMlHbAoGTAaJoaaiKgO_Bg",
+            domain: "https://vcc-eu8.8x8.com",
+            path: "/.",
+            buttonContainerId: "__8x8-chat-button-container-script_89071526064a2c7ed9960d2.34747066",
+            align: "right",
+            stylesheetURL: "https://<<TO BE CONFIRMED>>.css",
+            onInit: function (bus) {
+               window.bus = bus;
+               var chatbotBtn= document.getElementById('chatbot-btn');
+               if (chatbotBtn) {
+                    chatbotBtn.classList.add('is-loaded');
+               }
+            }
+        };
+        (function() {
+            var se = document.createElement("script");
+            se.type = "text/javascript";
+            se.async = true;
+            se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+            var os = document.getElementsByTagName("script")[0];
+            os.parentNode.insertBefore(se, os);
+        })();
+    }
+    function launchChat() {
+        if (bus) {
+            bus.publish("chat:trigger-chat-window")
+        }
+    }
+</script>
+
+
+<!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
+<div id="__8x8-chat-button-container-script_89071526064a2c7ed9960d2.34747066" style="visibility: hidden"></div>
