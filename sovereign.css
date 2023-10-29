@@ -10,8 +10,8 @@
 /*****************************************************************************/
 :root {
 	--chatBotName: ""; 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
-	--chatBotMessageAvatar: url(https://lazumc.github.io/images/sovereign-s.png) " ";	/*Note: Add a space after any image file */
-	--chatAgenttMessageAvatar: url(https://lazumc.github.io/images/sovereign-s.png) " ";	/*Note: Add a space after any image file */
+	--chatBotMessageAvatar: url(https://lazumc.github.io/images/sovereign-sng.png) " ";	/*Note: Add a space after any image file */
+	--chatAgentMessageAvatar: url(https://lazumc.github.io/images/sovereign-sng.png) " ";	/*Note: Add a space after any image file */
 	--chatTitleFontSize: 1.5rem;
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
