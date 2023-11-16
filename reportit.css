@@ -107,7 +107,6 @@ h1.nugen__title {
 .nugen__header {
 	min-height: 75px;
 	background-color: var(--chatTitleBackgroundColor) !important;
-	border-radius: var(--chatBorderRadius) !important;
 }
 
 /*****************************************************************************/
@@ -325,6 +324,10 @@ button {
 	font-size: var(--chatMessageCardFontSize) !important;
 }
 
+.ac-container {
+	padding: 0px 0px 0px 15px !important;
+}
+
 /*****************************************************************************/
 /* Set say, question, gallery node button background and font color and font */
 /* size and remove unnecessary bottom margin                                 */
@@ -336,8 +339,8 @@ button {
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	font-family: inherit !important;
 	border: var(--chatButtonBorder) !important;
-	margin-top: 10px;
-	margin-bottom: 0px;
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
 }
 
 .ac-pushButton:focus {
