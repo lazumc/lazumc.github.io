@@ -280,6 +280,8 @@ button[data-id=quick-reply-bubble-button] {
 	font-size: var(--chatButtonFontSize) !important;
 	border: var(--chatButtonBorder);
 	min-width: 75px;
+	margin-top: -15px;
+    margin-bottom: 22px;
 }
 
 button[data-id=quick-reply-bubble-button]:focus {
@@ -334,6 +336,8 @@ button {
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	font-family: inherit !important;
 	border: var(--chatButtonBorder) !important;
+	margin-top: 10px;
+	margin-bottom: 0px;
 }
 
 .ac-pushButton:focus {
