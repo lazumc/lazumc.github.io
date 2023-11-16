@@ -16,7 +16,7 @@
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
 	--chatControlButtonBackgroundColor: #a8d1e5;
-	--chatControlButtonFontColor: \;          		/*Note: The send button image will always be white */
+	--chatControlButtonFontColor: #000000;          /*Note: The send button image will always be white */
 	--chatActionMenuVisibility: visible;            /*Note: Allowed values are "hidden" or "visible" */
 	--chatCobrowseVisibility: hidden;
 	--chatIncomingMessageBackgroundColor: #cdcdcd;
@@ -25,8 +25,8 @@
 	--chatErrorMessageBackgroundColor: #f5c7c7;
 	--chatErrorMessageFontColor: #000000;
 	--chatMessageFontColor: #000000;
-	--chatMessageFontSize: 0.9rem;
-	--chatMessageCardFontSize: 0.9rem;
+	--chatMessageFontSize: 0.8rem;
+	--chatMessageCardFontSize: 0.8rem;
 	--chatMessageSenderFontSize: 0.95rem;
 	--chatMessageBorder: 0px solid #000000;
 	--chatMessageHypertextFontColor: #000000;
@@ -34,7 +34,7 @@
 	--chatButtonBackgroundColor: #a8d1e5;
 	--chatButtonFocusBackgroundColor: #acd6c8;
 	--chatButtonFontColor: #000000;
-	--chatButtonFontSize: 0.9rem;
+	--chatButtonFontSize: 0.8rem;
 	--chatButtonBorder: 0px solid #000000;
 	--chatSecondaryButtonBackgroundColor: #a8d1e5;
 	--chatSecondaryButtonFontColor: #000000;
@@ -45,7 +45,7 @@
 	--chatWindowEntryTextboxFontColor: #000000;
 	--chatWindowEntryTextboxBorder: 1px solid #cdcdcd;
 	--chatBorderRadius: 5px; 						/*Note: 5px is default and rounded, use 0px for angular */
-	--chatMessageBorderRadius: 20px; 				/*Note: 20px is default and rounded, use 0px for angular */
+	--chatMessageBorderRadius: 15px; 				/*Note: 20px is default and rounded, use 0px for angular */
 	--chatButtonBorderRadius: 5px;					/*Note: 5px is default and rounded, use 0px for angular */
 	--chatDigitButtonBorderRadius: 50%;				/*Note: 50% is default and rounded, use 0px for angular */
 }
@@ -101,10 +101,12 @@ body, input[type="text"], textarea, button, select {
 /*****************************************************************************/
 h1.nugen__title {
 	font-size: var(--chatTitleFontSize) !important;
+	line-height: 50px !important;
 }
 
 .nugen__header {
 	min-height: 75px;
+	background-color: var(--chatTitleBackgroundColor) !important;
 	border-radius: var(--chatBorderRadius) !important;
 }
 
@@ -227,7 +229,7 @@ svg[width="14"] {
 	color: var(--chatMessageFontColor);
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
-	border-radius: 0px var(--chatMessageBorderRadius) (--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
+	border-radius: 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
 	padding: 10px 15px 10px 15px !important;
 }
 
@@ -239,7 +241,7 @@ svg[width="14"] {
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
 	width: 90%;
-	border-radius: 0px var(--chatMessageBorderRadius) (--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
+	border-radius: 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
 	padding: 10px 15px 10px 15px !important;
 }
 
@@ -252,7 +254,7 @@ svg[width="14"] {
 	font-style: normal;
 	font-weight: 600;
 	width: 90%;
-	border-radius: 0px var(--chatMessageBorderRadius) (--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
+	border-radius: 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
 	padding: 10px 15px 10px 15px !important;
 }
 
