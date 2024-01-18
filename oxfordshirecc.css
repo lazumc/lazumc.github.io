@@ -47,9 +47,9 @@
     --chatWindowEntryTextboxBackgroundColor: #fcfcfc;
     --chatWindowEntryTextboxFontColor: #000000;
     --chatWindowEntryTextboxBorder: 1px solid #e0e2e5;
-    --chatBorderRadius: 5x;
-    --chatMessageBorderRadius: 16px;
-    --chatButtonBorderRadius: 15px;
+    --chatBorderRadius: 10px;
+    --chatMessageBorderRadius: 15px;
+    --chatButtonBorderRadius: 10px;
     --chatDigitButtonBorderRadius: 50%;
 }
 
