@@ -24,7 +24,7 @@
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #d9ecf6;
     --chatOutgoingMessageBackgroundColor: #dbeeea;
-    --chatLogMessageBackgroundColor: #e0e2e5;
+    --chatLogMessageBackgroundColor: #d9ecf6;
     --chatErrorMessageBackgroundColor: #f5c7c7;
     --chatErrorMessageFontColor: #000000;
     --chatMessageFontColor: #000000;
@@ -57,8 +57,7 @@
 /* Font family (use default unless customer has their own font family to use */
 /*****************************************************************************/
 
-body, input[type="text"], textarea, button, select {
-/*	font-family: "Segoe UI", "Myriad Pro", "Frutiger", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", "Arial", "sans-serif"; */
+body, input[type="text"], textarea, button, select, span {
 	font-family: "Open Sans" !important;
 }
 
@@ -247,6 +246,8 @@ svg[width="14"] {
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
+	font-style: normal;
+	text-align: left;
 	width: 90%;
 	border-radius: 0px !important;
 	padding: 10px 15px 10px 15px !important;
