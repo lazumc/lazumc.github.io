@@ -1,0 +1,217 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "Container",
+      "height": "auto",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Subject: Report of {{context.intent.toLowerCase()}}",
+          "weight": "Bolder",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "Address:",
+          "weight": "Bolder",
+          "separator": true
+        },
+        {
+          "type": "Input.Text",
+          "id": "edit_address",
+          "maxLength": 200,
+          "value": "{{context.report.address}}"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Additional Location Information:",
+          "weight": "Bolder",
+          "separator": true
+        },
+        {
+          "type": "Input.Text",
+          "id": "edit_location",
+          "maxLength": 200,
+          "value": "{{context.report.location}}",
+          "isMultiline": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "Vehicle Registration/Number Plate:",
+          "weight": "Bolder",
+          "separator": true
+        },
+        {
+          "type": "Input.Text",
+          "id": "edit_vehicleNumberPlate",
+          "maxLength": 10,
+          "value": "{{context.report.vehicleNumberPlate}}",
+          "isMultiline": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "Vehicle Make/Model/Colour:",
+          "weight": "Bolder",
+          "separator": true
+        },
+        {
+          "type": "Input.Text",
+          "id": "edit_vehicleMakeModelColour",
+          "maxLength": 50,
+          "value": "{{context.report.vehicleMakeModelColour}}",
+          "isMultiline": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "Length of Time Abandoned:",
+          "weight": "Bolder",
+          "separator": true
+        },
+        {
+          "type": "Input.ChoiceSet",
+          "id": "edit_duration",
+          "choices": [
+            {
+              "title": "Less than 1 week",
+              "value": "Less than 1 week"
+            },
+            {
+              "title": "1 to 2 weeks",
+              "value": "1 to 2 weeks"
+            },
+            {
+              "title": "2 to 4 weeks",
+              "value": "2 to 4 weeks"
+            },
+            {
+              "title": "More than a month",
+              "value": "More than a month"
+            }
+          ],
+          "isMultiSelect": false,
+          "style": "expanded",
+          "value": "{{context.report.duration}}"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Report Information:",
+          "weight": "Bolder",
+          "separator": true
+        },
+        {
+          "type": "Input.Text",
+          "id": "edit_reportInformation",
+          "maxLength": 500,
+          "value": "{{context.report.reportInformation}}",
+          "isMultiline": true
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Send",
+      "data": {
+        "sendForm": true
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Do Not Send",
+      "data": {
+        "sendForm": false
+      }
+    }
+  ]
+}
+
+
+
+
+
+  "addressesList": {
+    "length": 34,
+    "result": [
+      {
+        "summaryline": "Ashleigh, Chard Road, Drimpton, Beaminster, Dorset, DT8 3RF",
+        "buildingname": "Ashleigh",
+        "premise": "Ashleigh",
+        "street": "Chard Road",
+        "dependentlocality": "Drimpton",
+        "posttown": "Beaminster",
+        "county": "Dorset",
+        "postcode": "DT8 3RF"
+      },
+      {
+        "summaryline": "Bridge Farm, Chard Road, Drimpton, Beaminster, Dorset, DT8 3RF",
+        "buildingname": "Bridge Farm",
+        "premise": "Bridge Farm",
+        "street": "Chard Road",
+        "dependentlocality": "Drimpton",
+        "posttown": "Beaminster",
+        "county": "Dorset",
+        "postcode": "DT8 3RF"
+      },
+	  
+	  
+//
+// Workout the index for choices element and actions element
+//
+let choisesIndex = 0;
+let index =0;
+let actionsIndex = 0;
+adaptiveCard.body.forEach(e=>{
+    if(e.id == 'code'){
+      choisesIndex = index;
+    }else if(e.type== 'ActionSet'){
+      actionsIndex = index
+    }
+    index+=1
+
+});
+
+
+context.newBooking.availableSlots.forEach(e => {
+         
+         adaptiveCard.body[choisesIndex].choices.push(
+         {
+           "title": `${e.slot.formatted_timestamp} `,
+           "value": `${e.slot.timestamp}`
+             
+         });      
+         
+});
+
+
+
+AKIASKEBLTH5FW3PFBX4
+
+vwiCP9p+ozDNp/+XJKklzGmC81yUiSYqx44AH0f0
+arn:aws:s3:::ica-report-it
+s3://ica-report-it/Uploads/
+
+
+s3://ica-report-it/bot.png
+
+arn:aws:s3:::ica-report-it
+
+
+
+
+AKIASKEBLTH5B55I55CI
+6wE7aHNCW5LHXKK42HbqkCAjVn4UYmtFdVruOszE
+
+
+
+	onInit: function (bus) {
+           bus.publish("customer:set-info", {
+              "companyName": "Lambeth",
+              "postCodeDistrict": "Lambeth",
+              "privacyPolicyURL": "https://www.google.co.uk",
+              "botImageURL": "https://www.westminster.gov.uk/themes/custom/wcc/images/logo.png"
+            })
+	}W112AH","W112AN","W112AS","W112AW","W112QL","W112RJ","W112RN","W112RP","W112RR","W112RW","W24AA","W24AB","W24AD","W24AE","W24AL","W24AP","W24AT","W24AZ","W24BA","W24BB","W24BE","W24BG","W24BH","W24BQ","W24BZ","W24DG","W24DJ","W24DL","W24DP","W24DQ","W24EJ","W24HP","W24HR","W24HU","W24HZ","W24JA","W24JB","W24JE","W24JS","W24JT","W24JY","W24JZ","W24LA","W24LB","W24LD","W24LG","W24LL","W24LP","W24LQ","W24LS","W24NE","W24NG","W24NH","W24NJ","W24NP","W24NQ","W24NT","W24NU","W24NX","W24NY","W24PD","W24PH","W24PL","W24PR","W24PS","W24PT","W24PU","W24PW","W24PX","W24QB","W24RR","W24RS","W24RT","W24SA","W24SB","W24SN","W24SW","W24TE","W24TF","W24TQ","W24TS","W24TT","W24TU","W24UA","W24UH","W24UJ","W24UL","W24UP","W24UT","W24UU","W24UW","W24WA","W24WB","W24XW","W25AA","W25AD","W25AE","W25AG","W25AH","W25AJ","W25AL","W25AN","W25AP","W25AR","W25AS","W25BA","W25BB","W25BD","W25BE","W25BH","W25BL","W25BP","W25BS","W25BU","W25BX","W25BY","W25BZ","W25DA","W25DB","W25DD","W25DE","W25DH","W25DJ","W25DL","W25DN","W25DP","W25DR","W25DS","W25DT","W25DU","W25DX","W25EA","W25EB","W25ED","W25EE","W25EF","W25HL","W25HP","W25HR","W25HS","W25HT","W25HU","W25HW","W25HX","W25JE","W25JF","W25JG","W25JH","W25JJ","W25JL","W25JN","W25JP","W25JR","W25JS","W25JT","W25JU","W25JW","W25LH","W25LJ","W25LS","W25LT","W25LU","W25LX","W25NA","W25NJ","W25NR","W25NS","W25NT","W25NU","W25NX","W25PA","W25PB","W25PH","W25PJ","W25PL","W25PN","W25PR","W25PT","W25PU","W25PW","W25PX","W25QD","W25QE","W25QH","W25QL","W25QP","W25QR","W25QS","W25QT",
+                 "W25QU","W25QX"
