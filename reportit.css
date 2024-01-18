@@ -10,8 +10,8 @@
 /*****************************************************************************/
 :root {
 	--chatBotName: "Aurora"; 	/*Note: emojis and "url(http://image.png)" style links for images are allowed */
-	--chatBotMessageAvatar: url(https://lazumc.github.io/images/bot.svg);	/*Note: Add a space after any image file */
-	--chatAgentMessageAvatar: url(https://lazumc.github.io/images/bot.svg);	/*Note: Add a space after any image file */
+	--chatBotMessageAvatar: url(https://lazumc.github.io/images/bot.svg);
+	--chatAgentMessageAvatar: url(https://lazumc.github.io/images/bot.svg);
 	--chatTitleFontSize: 1.5rem;
 	--chatTitleBackgroundColor: #a8d1e5;
 	--chatSendButtonBackgroundColor: #000000;
@@ -47,7 +47,7 @@
 	--chatBorderRadius: 5px; 						/*Note: 5px is default and rounded, use 0px for angular */
 	--chatMessageBorderRadius: 15px; 				/*Note: 20px is default and rounded, use 0px for angular */
 	--chatButtonBorderRadius: 5px;					/*Note: 5px is default and rounded, use 0px for angular */
-	--chatDigitButtonBorderRadius: 50%;				/*Note: 50% is default and rounded, use 0px for angular */
+	--chatDigitButtonBorderRadius: 50%;				/*Note: 50% is default as circles, use 0px for angular */
 }
 
 /*****************************************************************************/
