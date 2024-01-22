@@ -12,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Open+Sans:400,600&display=swap');
 
 :root {
---chatBotName: "Oxley";
+	--chatBotName: "Oxley";
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/chatbot-avatar.svg);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/agent-avatar.svg);
     --chatTitleFontSize: 18px;
@@ -22,11 +22,11 @@
     --chatControlButtonFontColor: #fcfcfc;
     --chatActionMenuVisibility: hidden;
     --chatCobrowseVisibility: hidden;
-    --chatIncomingMessageBackgroundColor: #d9ecf6;
-    --chatOutgoingMessageBackgroundColor: #dbeeea;
-    --chatLogMessageBackgroundColor: #d9ecf6;
-    --chatErrorMessageBackgroundColor: #f5c7c7;
-    --chatErrorMessageFontColor: #000000;
+    --chatIncomingMessageBackgroundColor: #d3dfdd;
+    --chatOutgoingMessageBackgroundColor: #d3dfdd;
+    --chatLogMessageBackgroundColor: #d3dfdd;
+    --chatErrorMessageBackgroundColor: #fee6e6;
+    --chatErrorMessageFontColor: #ad0505;
     --chatMessageFontColor: #000000;
     --chatMessageFontSize: 0.8rem;
     --chatMessageCardFontSize: 0.8rem;
@@ -34,19 +34,19 @@
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
-    --chatButtonBackgroundColor: #3a78bb;
-    --chatButtonFocusBackgroundColor: #dbeeea;
-    --chatButtonFontColor: #ffffff;
+    --chatButtonBackgroundColor: #00483a;
+    --chatButtonFocusBackgroundColor: #24b137;
+    --chatButtonFontColor: #fcfcfc;
     --chatButtonFontSize: 0.8rem;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #e0e2e5;
+    --chatSecondaryButtonBackgroundColor: #d3dfdd;
     --chatSecondaryButtonFontColor: #000000;
     --chatSecondaryButtonBorder: 1px solid #000000;
     --chatWindowBackgroundColor: #fcfcfc;
     --chatWindowEntryAreaBackgroundColor: #fcfcfc;
     --chatWindowEntryTextboxBackgroundColor: #fcfcfc;
     --chatWindowEntryTextboxFontColor: #000000;
-    --chatWindowEntryTextboxBorder: 1px solid #e0e2e5;
+    --chatWindowEntryTextboxBorder: 1px solid #d3dfdd;
     --chatBorderRadius: 10px;
     --chatMessageBorderRadius: 15px;
     --chatButtonBorderRadius: 10px;
