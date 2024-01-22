@@ -6,15 +6,15 @@
 
 /*****************************************************************************/
 /* Declare color and sizing variables                                        */
-/* Note: Chat title font and background color set in 8x8 chat design         */
+/* Note: Declare any fonts to import first							         */
 /*****************************************************************************/
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Open+Sans:400,600&display=swap');
 
 :root {
---chatBotName: "Aurora";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/bot.svg);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/bot.svg);
+--chatBotName: "Oxley";
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/chatbot-avatar.svg);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/agent-avatar.svg);
     --chatTitleFontSize: 18px;
     --chatTitleBackgroundColor: #00483A;
     --chatSendButtonBackgroundColor: #000000;
@@ -36,7 +36,7 @@
     --chatMessageHypertextFontWeight: 600;
     --chatButtonBackgroundColor: #3a78bb;
     --chatButtonFocusBackgroundColor: #dbeeea;
-    --chatButtonFontColor: #000000;
+    --chatButtonFontColor: #ffffff;
     --chatButtonFontSize: 0.8rem;
     --chatButtonBorder: 0px solid #000000;
     --chatSecondaryButtonBackgroundColor: #e0e2e5;
