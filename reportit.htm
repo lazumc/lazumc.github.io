@@ -13,19 +13,19 @@
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 
 <script type="text/javascript">
-function launchChat(bus, latitude, longitude, accuracy) {
-	bus.publish("customer:set-info", {
-		"companyName": "Westminster Council",
-		"postCodeDistrict": "Westminster",
-		"privacyPolicyURL": "https://www.westminster.gov.uk/data-protection",
-		"botImageURL": "https://www.westminster.gov.uk/themes/custom/wcc/images/logo.png",
-		"defaultEmail": "matt.cunningham@8x8.com",
-		"positionLatitude": latitude,
-		"positionLongitude":  longitude,
-		"positionAccuracy":  accuracy,
-		"userDevice": navigator.userAgent
-		})
-	}
+	function launchChat(bus, latitude, longitude, accuracy) {
+			bus.publish("customer:set-info", {
+			"companyName": "Westminster Council",
+			"postCodeDistrict": "Westminster",
+			"privacyPolicyURL": "https://www.westminster.gov.uk/data-protection",
+			"botImageURL": "https://www.westminster.gov.uk/themes/custom/wcc/images/logo.png",
+			"defaultEmail": "matt.cunningham@8x8.com",
+			"positionLatitude": latitude,
+			"positionLongitude":  longitude,
+			"positionAccuracy":  accuracy,
+			"userDevice": navigator.userAgent
+			})
+		}
 </script>
 
 <script type="text/javascript">
