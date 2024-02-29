@@ -1,7 +1,7 @@
 //changing the bot name
 
 .chat-msg-sender[aria-label="Bot"]::before {
-	content: "Trajector Medical " !important;
+	content: Trajector Medical !important;
 	color: #000000;
 	vertical-align: middle !important;
 }
