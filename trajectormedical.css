@@ -1,9 +1,7 @@
-/*****************************************************************************/
-/* Change the bot name												         */
-/*****************************************************************************/
+/* Change the bot name*/
+
 :root {
 	--chatbotName: "Trajector Medical"; 
-	--chatTitleFontSize: 1.25rem;
 	--chatMessageBackgroundColor: #f1f1f1;
 	--chatMessageFontColor: #000000;
 	--chatMessageFontSize: 0.8rem;
