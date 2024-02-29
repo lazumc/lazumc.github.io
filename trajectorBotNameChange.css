@@ -1,19 +1,22 @@
-/*changing the bot name*/
+/* Change the bot name*/
 
 :root {
-	--chatbotName: "TrajectorMedical"; 
+	--chatbotName: "Trajector Medical"; 
+	--chatMessageBackgroundColor: #f1f1f1;
+	--chatMessageFontColor: #000000;
+	--chatMessageFontSize: 0.8rem;
 }
 
 .chat-msg-sender[aria-label="Bot"]::before {
-	font-size: 1em;
+	font-size: var(--chatMessageFontSize);
 	content: var(--chatbotName) " " !important;
-	color: #00000;
+	color: var(--chatMessageFontColor);
 }
 
 .chat-msg-sender[aria-label="Bot"] {
-	color: #f1f1f1 !important;
+	color: var(--chatMessageBackgroundColor) !important;
 }
 
 .chat-msg-sender {
-	font-size: 1em !important;
+	font-size: var(--chatMessageFontSize) !important;
 }
