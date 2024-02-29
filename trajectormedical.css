@@ -1,0 +1,30 @@
+/*****************************************************************************/
+/*****************************************************************************/
+/* PLEASE EDIT THE VARIABLES AND FONT FAMILY BELOW FOR YOUR CHATBOT          */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Change the bot name												         */
+/*****************************************************************************/
+:root {
+	--chatbotName: "Trajector Medical"; 
+	--chatTitleFontSize: 1.25rem;
+	--chatMessageBackgroundColor: #f1f1f1;
+	--chatMessageFontColor: #000000;
+	--chatMessageFontSize: 0.8rem;
+}
+
+.chat-msg-sender[aria-label="Bot"]::before {
+	font-size: var(--chatMessageFontSize);
+	content: var(--chatbotName) " " !important;
+	color: var(--chatMessageFontColor);
+}
+
+.chat-msg-sender[aria-label="Bot"] {
+	color: var(--chatMessageBackgroundColor) !important;
+}
+
+.chat-msg-sender {
+	font-size: var(--chatMessageFontSize) !important;
+}
