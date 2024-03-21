@@ -36,8 +36,8 @@
     --chatMessageHypertextFontWeight: 600;
     --chatButtonBackgroundColor: #00483a;
     --chatButtonFocusBackgroundColor: #24b137;
-    --chatButtonFontColor: #000000;
-    --chatButtonFocusFontColor: #fcfcfc;
+    --chatButtonFontColor: #fcfcfc;
+    --chatButtonFocusFontColor: #000000;
     --chatButtonFontSize: 0.8rem;
     --chatButtonBorder: 0px solid #000000;
     --chatSecondaryButtonBackgroundColor: #d3dfdd;
@@ -295,11 +295,13 @@ button[data-id=quick-reply-bubble-button] {
 
 button[data-id=quick-reply-bubble-button]:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
+	color: var(--chatButtonFocusFontColor);
 	border: var(--chatButtonBorder) !important;
 }
 
 button[data-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
+	color: var(--chatButtonFocusFontColor);
 	border: var(--chatButtonBorder) !important;
 }
 
