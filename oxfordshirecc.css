@@ -295,13 +295,13 @@ button[data-id=quick-reply-bubble-button] {
 
 button[data-id=quick-reply-bubble-button]:focus {
 	background: var(--chatButtonFocusBackgroundColor) !important;
-	color: var(--chatButtonFocusFontColor);
+	color: var(--chatButtonFocusFontColor) !important;
 	border: var(--chatButtonBorder) !important;
 }
 
 button[data-id=quick-reply-bubble-button]:hover {
 	background: var(--chatButtonFocusBackgroundColor) !important;
-	color: var(--chatButtonFocusFontColor);
+	color: var(--chatButtonFocusFontColor) !important;
 	border: var(--chatButtonBorder) !important;
 }
 
