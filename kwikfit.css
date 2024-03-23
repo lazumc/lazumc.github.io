@@ -9,7 +9,7 @@
 /* Note: Declare any fonts to import first							         */
 /*****************************************************************************/
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Open+Sans:400,600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sinkin-sans-400-regular')
 
 :root {
 	--chatBotName: "Finn";
@@ -59,11 +59,11 @@
 /*****************************************************************************/
 
 body, input[type="text"], textarea, button, select, span {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; !important;
+	font-family: "Sinkin Sans 400 Regular", Helvetica, Arial, sans-serif; !important;
 }
 
 h1.nugen__title {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; !important;
+	font-family: "Sinkin Sans 400 Regular", Helvetica, Arial, sans-serif; !important;
 }
 
 /*****************************************************************************/
