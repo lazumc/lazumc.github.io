@@ -176,6 +176,8 @@ a[aria-label="Co-browsing"]{
 /*****************************************************************************/
 .message-box {
 	background: var(--chatWindowEntryAreaBackgroundColor) !important;
+	padding-top: 10px !important;
+	max-height: 95px;
 }
 
 /*****************************************************************************/
