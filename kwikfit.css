@@ -16,7 +16,7 @@
 	--chatBotName: "Finn";
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
-    --chatTitleFontSize: 18px;
+    --chatTitleFontSize: 1rem;
     --chatTitleBackgroundColor: #1266c6;
     --chatSendButtonBackgroundColor: #1266c6;
     --chatControlButtonBackgroundColor: #1266c6;
@@ -25,13 +25,14 @@
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #eeeeee;
     --chatOutgoingMessageBackgroundColor: #eeeeee;
-    --chatLogMessageBackgroundColor: #eeeeee;
+    --chatLogMessageBackgroundColor: #1266c6;
+    --chatLogMessageFontColor: #ffb91d;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
     --chatMessageFontColor: #000000;
-    --chatMessageFontSize: 0.8rem;
-    --chatMessageCardFontSize: 0.8rem;
-    --chatMessageSenderFontSize: 0.95rem;
+    --chatMessageFontSize: 0.7rem;
+    --chatMessageCardFontSize: 0.7rem;
+    --chatMessageSenderFontSize: 0.75rem;
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
@@ -244,11 +245,12 @@ svg[width="14"] {
 .chat-log-msg {
 	background: var(--chatLogMessageBackgroundColor) !important;
 	border: var(--chatMessageBorder);
-	color: var(--chatMessageFontColor) !important;
+	color: var(--chatLogMessageFontColor) !important;
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
 	font-style: normal;
+	font-weight: 600;
 	text-align: left;
 	width: 90%;
 	border-radius: 0px !important;
@@ -258,6 +260,7 @@ svg[width="14"] {
 .chat-error-msg {
 	background: var(--chatErrorMessageBackgroundColor) !important;
 	border: var(--chatMessageBorder);
+	color: var(--chatErrorMessageFontColor);
 	position: relative;
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
