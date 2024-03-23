@@ -12,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Open+Sans:400,600&display=swap');
 
 :root {
-	--chatBotName: "";
+	--chatBotName: "Finn";
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
     --chatTitleFontSize: 18px;
@@ -59,11 +59,11 @@
 /*****************************************************************************/
 
 body, input[type="text"], textarea, button, select, span {
-	font-family: "Open Sans" !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; !important;
 }
 
 h1.nugen__title {
-	font-family: "Fira Sans" !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; !important;
 }
 
 /*****************************************************************************/
