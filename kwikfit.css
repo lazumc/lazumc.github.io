@@ -13,7 +13,7 @@
 @import url('https://fonts.cdnfonts.com/css/sinkin-sans-600-regular');
 
 :root {
-	--chatBotName: "Finn";
+    --chatBotName: "Tye";
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
     --chatTitleFontSize: 1rem;
@@ -42,7 +42,7 @@
     --chatButtonFocusFontColor: #ffffff;
     --chatButtonFontSize: 0.8rem;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #ecb22d;
+    --chatSecondaryButtonBackgroundColor: #ecb22d;
     --chatSecondaryButtonFontColor: #555;
     --chatSecondaryButtonBorder: 1px solid #ffb91d;
     --chatWindowBackgroundColor: #ffffff;
