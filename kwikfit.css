@@ -42,7 +42,7 @@
     --chatButtonFontSize: 0.8rem;
     --chatButtonBorder: 0px solid #000000;
     --chatSecondaryButtonBackgroundColor: #ecb22d;
-    --chatSecondaryButtonFontColor: #555;
+    --chatSecondaryButtonFontColor: #000;
     --chatSecondaryButtonBorder: 1px solid #ffb91d;
     --chatWindowBackgroundColor: #eeeeee;
     --chatWindowEntryAreaBackgroundColor: #ecb22d;
@@ -190,9 +190,7 @@ textarea[data-id=message-input-box] {
 	font-family: inherit !important;
 	font-size: var(--chatMessageFontSize) !important;
 	border-radius: var(--chatBorderRadius) !important;
-}
-
-	
+}	
 
 /*****************************************************************************/
 /* Set background color of send message button                               */
