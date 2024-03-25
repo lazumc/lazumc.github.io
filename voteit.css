@@ -1,41 +1,27 @@
 /*****************************************************************************/
-/*****************************************************************************/
-/* PLEASE EDIT THE VARIABLES AND FONT FAMILY BELOW FOR YOUR CHATBOT          */
-/*****************************************************************************/
-/*****************************************************************************/
-
-/*****************************************************************************/
 /* Declare color and sizing variables                                        */
-/* Note: Declare any fonts to import first							         */
 /*****************************************************************************/
 
 
 :root {
     --chatBotName: "Virtual Assistant";
+	--chatBotNameColor: #000000;
     --chatMessageBackgroundColor: #eeeeee
 }
 
-
 /*****************************************************************************/
-/*****************************************************************************/
-/* YOU SHOULD NOT NEED TO EDIT ANYTHING BELOW THIS POINT                     */
-/*****************************************************************************/
+/* Show bot name and hide word "Bot"                                         */
 /*****************************************************************************/
 
 .chat-msg-sender[aria-label="Bot"]::before {
-	content: var(--chatBotMessageAvatar) " " var(--chatBotName) !important;
+	content: var(--chatBotName) !important;
+	color: var(--chatBotNameColor)
 }
 
 .chat-msg-sender[aria-label="Bot"] {
 	color: var(--chatMessageBackgroundColor) !important;
 }
 
-/*****************************************************************************/
-/* Set message background and font color and font size of chat messages      */
-/* Also set the font color and weight for hyperlinks                         */
-/* The p element inherit is needed as outgoing chat messages, unlike inbound */
-/* chat message are embedded within p elements                               */
-/*****************************************************************************/
 .chat-outgoing-msg {
 	background: var(--chatMessageBackgroundColor) !important;
 }
