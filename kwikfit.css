@@ -39,7 +39,8 @@
     --chatButtonFocusBackgroundColor: #02477e;
     --chatButtonFontColor: #ffffff;
     --chatButtonFocusFontColor: #ffffff;
-    --chatButtonFontSize: 0.8rem;
+    --chatButtonFontSize: 0.7rem;
+	--chatButtonFontWeight: 400;
     --chatButtonBorder: 0px solid #000000;
     --chatSecondaryButtonBackgroundColor: #ecb22d;
     --chatSecondaryButtonFontColor: #000;
@@ -290,6 +291,7 @@ button[data-id=quick-reply-bubble-button] {
 	background: var(--chatButtonBackgroundColor);
 	color: var(--chatButtonFontColor);
 	font-size: var(--chatButtonFontSize) !important;
+	font-weight: var(--chatButtonFontWeight) !important;
 	border: var(--chatButtonBorder);
 	min-width: 75px;
 	margin-top: -20px;
