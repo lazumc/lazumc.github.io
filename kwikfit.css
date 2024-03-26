@@ -358,6 +358,7 @@ button {
 	background: var(--chatButtonBackgroundColor) !important;
 	color: var(--chatButtonFontColor) !important;
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
+	font-weight: var(--chatButtonFontWeight) !important;
 	font-family: inherit !important;
 	border: var(--chatButtonBorder) !important;
 	margin-top: 5px !important;
