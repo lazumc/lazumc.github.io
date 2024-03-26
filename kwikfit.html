@@ -90,6 +90,16 @@
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() 
 	{
+		if ("geolocation" in navigator) {
+			navigator.geolocation.getCurrentPosition((position) => {
+				bus.publish("customer:set-info", {
+					"positionLatitude": position.coords.latitude,
+					"positionLongitude":  position.coords.longitude,
+					"positionAccuracy":  position.coords.accuracy,
+					"userDevice": navigator.userAgent
+				})
+			})
+		}
 		bus.publish("chat:trigger-chat-window");
 	}
 
