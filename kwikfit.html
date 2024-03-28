@@ -32,6 +32,10 @@
     line-height: 15px;
   }
   
+  .scrolled-button {
+    padding: 15px 10px 10px 10px;
+  }
+  
   .custom-webchat-button-text {
     font-size: 0.8rem;
 	font-weight: 400;
@@ -42,6 +46,11 @@
     bottom: 6px;
   }
   
+   /* Hide the text when scrolled */
+  .scrolled-button-text {
+    display: none;
+  }
+  
  </style>
 </head>
 <body bgcolor="#eeeeee" style="width: 100%; max-width: 100%">
@@ -50,7 +59,7 @@
 <img src="https://lazumc.github.io/images/kwikfitbackground2.JPG" width="100%">
 <img src="https://lazumc.github.io/images/kwikfitbackground3.JPG" width="100%">
 
-<button onclick="launchChat()" class="custom-webchat-button">
+<button id="custom-webchat-button" class="custom-webchat-button" onclick="launchChat()" onmouseenter="showTextOnHover()" onmouseleave="hideTextOnLeave()">
   <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20pt" height="16pt" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
 	<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#ecb22d" stroke="none">
 	<path d="M135 2421 c-22 -10 -54 -34 -72 -52 -66 -70 -63 -32 -63 -851 0 -702 1 -745 19 -783 10 -22 34 -54 52 -72 57 -53 93 -63 239 -63 l130 0 0 -260 c0 -252 1 -260 21 -270 16 -9 26 -8 43 4 13 8 148 130 300 270 l276 256 653 0 c728 0 694 -3 764 71 66 70 63 32 63 849 0 817 3 779 -63 849 -18 18 -50 42 -72 52 -38 18 -90 19 -1145 19 -1055 0 -1107 -1 -1145 -19z"/>
@@ -102,6 +111,41 @@
 		}
 		bus.publish("chat:trigger-chat-window");
 	}
+
+    // Function to toggle text visibility based on scroll
+    function toggleTextVisibility() {
+        var button = document.getElementById('custom-webchat-button');    
+        var buttonText = document.getElementById('custom-webchat-button-text');
+    	if (window.scrollY > 200) {
+        	button.classList.add('scrolled-button');
+			buttonText.classList.add('scrolled-button-text');
+        } else {
+        	button.classList.remove('scrolled-button');
+        	buttonText.classList.remove('scrolled-button-text');
+        }
+    }
+
+    // Function to show text on hover
+    function showTextOnHover() {
+        var button = document.getElementById('custom-webchat-button');    
+        var buttonText = document.getElementById('custom-webchat-button-text');
+        button.classList.remove('scrolled-button');
+        buttonText.classList.remove('scrolled-button-text');
+    }
+
+    // Function to hide text on mouse leave
+    function hideTextOnLeave() {
+        var button = document.getElementById('custom-webchat-button');    
+        var buttonText = document.getElementById('custom-webchat-button-text');
+        // Check if the page is scrolled, if not, hide the text
+        if (window.scrollY > 200) {
+        	button.classList.add('scrolled-button');
+			buttonText.classList.add('scrolled-button-text');
+		}
+	}
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', toggleTextVisibility);
 
 </script>
 </body>
