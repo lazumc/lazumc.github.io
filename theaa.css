@@ -9,47 +9,48 @@
 /* Note: Declare any fonts to import first							         */
 /*****************************************************************************/
 
-@import url('https://fonts.cdnfonts.com/css/sinkin-sans-400-regular');
+@import url('https://fonts.cdnfonts.com/css/transport-heavy');
 
 :root {
-    --chatBotName: "Tye";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/kwikfit-avatar.svg);
+    --chatBotName: "Digital Assistant";
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/aalogo.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo.png);
     --chatTitleFontSize: 1rem;
-    --chatTitleBackgroundColor: #1266c6;
-    --chatSendButtonBackgroundColor: #1266c6;
-    --chatControlButtonBackgroundColor: #1266c6;
+	--chatTitleFontWeight: 400;
+    --chatTitleBackgroundColor: #ffcc00;
+    --chatSendButtonBackgroundColor: #2a2a2a;
+    --chatControlButtonBackgroundColor: #2a2a2a;
     --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: hidden;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
-    --chatOutgoingMessageBackgroundColor: #ffffff;
-    --chatLogMessageBackgroundColor: #1266c6;
-    --chatLogMessageFontColor: #ecb22d;
+    --chatOutgoingMessageBackgroundColor: #ffe192;
+    --chatLogMessageBackgroundColor: #2a2a2a;
+    --chatLogMessageFontColor: #ffffff;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
-    --chatMessageFontColor: #555;
+    --chatMessageFontColor: #2a2a2a;
     --chatMessageFontSize: 0.7rem;
     --chatMessageCardFontSize: 0.7rem;
     --chatMessageSenderFontSize: 0.75rem;
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
-    --chatButtonBackgroundColor: #1266c6;
-    --chatButtonFocusBackgroundColor: #02477e;
-    --chatButtonFontColor: #ffffff;
-    --chatButtonFocusFontColor: #ffffff;
+    --chatButtonBackgroundColor: #ffcc00;
+    --chatButtonFocusBackgroundColor: #ffe192;
+    --chatButtonFontColor: #2a2a2a;
+    --chatButtonFocusFontColor: #2a2a2a;
     --chatButtonFontSize: 0.7rem;
 	--chatButtonFontWeight: 400;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #ecb22d;
-    --chatSecondaryButtonFontColor: #000;
-    --chatSecondaryButtonBorder: 1px solid #ffb91d;
-    --chatWindowBackgroundColor: #eeeeee;
-    --chatWindowEntryAreaBackgroundColor: #ecb22d;
+    --chatSecondaryButtonBackgroundColor: #2a2a2a;
+    --chatSecondaryButtonFontColor: #fff;
+    --chatSecondaryButtonBorder: 1px solid #2a2a2a;
+    --chatWindowBackgroundColor: #f6f6f6;
+    --chatWindowEntryAreaBackgroundColor: #ffcc00;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
-    --chatWindowEntryTextboxBorder: 1px solid #d3dfdd;
+    --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
     --chatBorderRadius: 10px;
     --chatMessageBorderRadius: 15px;
     --chatButtonBorderRadius: 10px;
@@ -61,11 +62,11 @@
 /*****************************************************************************/
 
 body, input[type="text"], textarea, button, select, span {
-	font-family: "Sinkin Sans 400 Regular", Helvetica, Arial, sans-serif; !important;
+	font-family: "Transport", Helvetica, Arial, sans-serif; !important;
 }
 
 h1.nugen__title {
-	font-family: "Sinkin Sans 600 SemiBold", Helvetica, Arial, sans-serif; !important;
+	font-family: "Transport Heavy", Helvetica, Arial, sans-serif; !important;
 }
 
 /*****************************************************************************/
@@ -111,6 +112,7 @@ h1.nugen__title {
 /*****************************************************************************/
 h1.nugen__title {
 	font-size: var(--chatTitleFontSize) !important;
+	font-weight: var(--chatTitleFontWeight) !important;
 	line-height: 50px !important;
 }
 
