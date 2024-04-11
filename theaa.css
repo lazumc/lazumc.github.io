@@ -72,7 +72,7 @@
 /* Font family (use default unless customer has their own font family to use */
 /*****************************************************************************/
 
-body, input[type="text"], textarea, button, select, span {
+body, input[type="text"], textarea, select, span {
 	font-family: var(--chatFontFamily); !important;
 }
 
