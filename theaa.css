@@ -17,7 +17,7 @@
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
     --chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
-	--chatTitleFontWeight: 400;
+    --chatTitleFontWeight: 400;
     --chatTitleBackgroundColor: #ffcc00;
     --chatSendButtonBackgroundColor: #2a2a2a;
     --chatControlButtonBackgroundColor: #2a2a2a;
@@ -35,7 +35,7 @@
     --chatMessageFontSize: 0.8rem;
     --chatMessageCardFontSize: 0.7rem;
     --chatMessageSenderFontSize: 0.8rem;
-    --chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
+    --chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
     --chatMessageLineHeight: 1.1rem;
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
@@ -46,7 +46,7 @@
     --chatButtonFocusFontColor: #2a2a2a;
     --chatButtonFontFamily: "Transport", Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
-	--chatButtonFontWeight: 600;
+    --chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
     --chatSecondaryButtonBackgroundColor: #2a2a2a;
     --chatSecondaryButtonFontColor: #fff;
