@@ -15,7 +15,7 @@
     --chatBotName: "Digital Assistant";
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
-	--chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
+    --chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
 	--chatTitleFontWeight: 400;
     --chatTitleBackgroundColor: #ffcc00;
@@ -32,11 +32,11 @@
     --chatErrorMessageFontColor: #ad0505;
 	--chatMessageFontFamily: Arial, sans-serif;
     --chatMessageFontColor: #2a2a2a;
-    --chatMessageFontSize: 0.7rem;
+    --chatMessageFontSize: 0.8rem;
     --chatMessageCardFontSize: 0.7rem;
-    --chatMessageSenderFontSize: 0.75rem;
-	--chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
-	--chatMessageLineHeight: 1.1rem;
+    --chatMessageSenderFontSize: 0.8rem;
+    --chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
+    --chatMessageLineHeight: 1.1rem;
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
@@ -44,6 +44,7 @@
     --chatButtonFocusBackgroundColor: #ffe192;
     --chatButtonFontColor: #2a2a2a;
     --chatButtonFocusFontColor: #2a2a2a;
+    --chatButtonFontFamily: "Transport", Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
 	--chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
@@ -207,6 +208,7 @@ textarea[data-id=message-input-box] {
 /* Set background color of send message button                               */
 /*****************************************************************************/
 button[data-id=nugen-send-message-button] {
+	font-family: var(--chatButtonFontFamily) !important;
 	background: var(--chatControlButtonBackgroundColor) !important;
 }
 
@@ -330,6 +332,7 @@ div[id^="quick-replies-"] {
 
 button {
 	border-radius: var(--chatButtonBorderRadius) !important;
+	font-family: "Transport" !important;
 }
 
 /*****************************************************************************/
