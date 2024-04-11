@@ -14,7 +14,8 @@
 :root {
     --chatBotName: "Digital Assistant";
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
+	--chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
 	--chatTitleFontWeight: 400;
     --chatTitleBackgroundColor: #ffcc00;
@@ -29,10 +30,13 @@
     --chatLogMessageFontColor: #ffffff;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
+	--chatMessageFontFamily: Arial, sans-serif;
     --chatMessageFontColor: #2a2a2a;
     --chatMessageFontSize: 0.7rem;
     --chatMessageCardFontSize: 0.7rem;
     --chatMessageSenderFontSize: 0.75rem;
+	--chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
+	--chatMessageLineHeight: 1.1rem;
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
@@ -58,15 +62,21 @@
 }
 
 /*****************************************************************************/
+/*****************************************************************************/
+/* YOU SHOULD NOT NEED TO EDIT ANYTHING BELOW THIS POINT                     */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
 /* Font family (use default unless customer has their own font family to use */
 /*****************************************************************************/
 
 body, input[type="text"], textarea, button, select, span {
-	font-family: "Transport", Helvetica, Arial, sans-serif; !important;
+	font-family: var(--chatFontFamily); !important;
 }
 
 h1.nugen__title {
-	font-family: "Transport Heavy", Helvetica, Arial, sans-serif; !important;
+	font-family: var(--chatTitleFontFamily); !important;
 }
 
 /*****************************************************************************/
@@ -81,15 +91,13 @@ h1.nugen__title {
 	justify-content: start !important;
 }
 
-
 /*****************************************************************************/
-/*****************************************************************************/
-/* YOU SHOULD NOT NEED TO EDIT ANYTHING BELOW THIS POINT                     */
-/*****************************************************************************/
+/* Message avatar and bot name                                               */
 /*****************************************************************************/
 
 .chat-msg-sender::before {
 	content: var(--chatAgentMessageAvatar) " "!important;
+	font-family: var(--chatMessageSenderFontFamily) !important;
 	color: var(--chatMessageFontColor);
 	vertical-align: middle !important;
 }
@@ -229,6 +237,7 @@ svg[width="14"] {
 	border: var(--chatMessageBorder);
 	color: var(--chatMessageFontColor);
 	position: relative;
+	line-height: var(--chatMessageLineHeight);
 	font-size: var(--chatMessageFontSize) !important;
 	border-radius: var(--chatMessageBorderRadius) 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
 	padding: 10px 15px 10px 15px !important;
@@ -239,6 +248,7 @@ svg[width="14"] {
 	border: var(--chatMessageBorder);
 	color: var(--chatMessageFontColor);
 	position: relative;
+	line-height: var(--chatMessageLineHeight);
 	font-size: var(--chatMessageFontSize) !important;
 	border-radius: 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
 	padding: 10px 15px 10px 15px !important;
@@ -249,6 +259,7 @@ svg[width="14"] {
 	border: var(--chatMessageBorder);
 	color: var(--chatLogMessageFontColor) !important;
 	position: relative;
+	line-height: var(--chatMessageLineHeight);
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
 	font-style: normal;
@@ -264,6 +275,7 @@ svg[width="14"] {
 	border: var(--chatMessageBorder);
 	color: var(--chatErrorMessageFontColor);
 	position: relative;
+	line-height: var(--chatMessageLineHeight);
 	font-size: var(--chatMessageFontSize) !important;
 	font-family: inherit !important;
 	font-style: normal;
