@@ -12,26 +12,26 @@
 @import url('https://fonts.cdnfonts.com/css/roboto');
 
 :root {
-    --chatBotName: "Digital Assistant";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
+    --chatBotName: "Buddy Cow";
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/cow-avatar.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/cow-avatar.png);
     --chatTitleFontFamily: Roboto, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
     --chatTitleFontWeight: 400;
-    --chatTitleBackgroundColor: #ffcc00;
-    --chatSendButtonBackgroundColor: #2a2a2a;
-    --chatControlButtonBackgroundColor: #2a2a2a;
+    --chatTitleBackgroundColor: #d2091b;
+    --chatSendButtonBackgroundColor: #1a1a1a;
+    --chatControlButtonBackgroundColor: #1a1a1a;
     --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: hidden;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
-    --chatOutgoingMessageBackgroundColor: #ffe192;
-    --chatLogMessageBackgroundColor: #2a2a2a;
+    --chatOutgoingMessageBackgroundColor: #ffffff;
+    --chatLogMessageBackgroundColor: #1a1a1a;
     --chatLogMessageFontColor: #ffffff;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
-    --chatFontFamily: Arial, sans-serif;
-    --chatMessageFontColor: #2a2a2a;
+    --chatFontFamily: Roboto, Arial, sans-serif;
+    --chatMessageFontColor: #1a1a1a;
     --chatMessageFontSize: 0.8rem;
     --chatMessageCardFontSize: 0.7rem;
     --chatMessageSenderFontSize: 0.8rem;
@@ -40,19 +40,19 @@
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
-    --chatButtonBackgroundColor: #ffcc00;
+    --chatButtonBackgroundColor: #2a2a2a;
     --chatButtonFocusBackgroundColor: #ffe192;
-    --chatButtonFontColor: #2a2a2a;
+    --chatButtonFontColor: #ffffff;
     --chatButtonFocusFontColor: #2a2a2a;
     --chatButtonFontFamily: Roboto, Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
     --chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #2a2a2a;
+    --chatSecondaryButtonBackgroundColor: #d2091b;
     --chatSecondaryButtonFontColor: #fff;
-    --chatSecondaryButtonBorder: 1px solid #2a2a2a;
+    --chatSecondaryButtonBorder: 1px solid #d2091b;
     --chatWindowBackgroundColor: #f6f6f6;
-    --chatWindowEntryAreaBackgroundColor: #ffcc00;
+    --chatWindowEntryAreaBackgroundColor: #d2091b;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
     --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
@@ -418,6 +418,7 @@ button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[a
 /* Note: Impact on the pre-chat window is to be confirmed                    */
 /*****************************************************************************/
 .nugen__btn, .nugen__btn--primary {
+	font-family: var(--chatButtonFontFamily) !important;
 	background: var(--chatButtonBackgroundColor) !important;
 	color: var(--chatButtonFontColor) !important;
 	border: var(--chatButtonBorder) !important;
