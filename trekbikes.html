@@ -26,7 +26,6 @@
 		border: 2px solid #2a2a2a;
 		background-color: #ffffff;
 		padding: 15px 15px 10px 10px;
-		box-shadow: inset 0 1px 0px #fff0b3 !important;
 		cursor: pointer;
 		position: fixed;
 		bottom: 20px;
@@ -48,10 +47,84 @@
 		bottom: 3px;
 	}
   
-   /* Hide the text when scrolled */
+   /* Hide the button text when scrolled */
 	.scrolled-button-text {
 		display: none;
 	}
+	
+	/* Position and style customer defined chat invite */	
+	.chatInvite {
+		display: block;
+		position: fixed;
+		background-color: #ffffff;
+		color: #fff;
+		border: 2px solid #000000;
+		border-radius: 0px;
+		box-shadow: rgba(41, 41, 41, 0.25) 0px 2px 20px;
+		z-index: 1;
+		height: 150px;
+		width: 300px;
+		bottom: 90px;
+        right:20px;
+		font-family: Roboto,sans-serif;
+		font-size: 0.9rem;
+	}
+	
+	.chatInviteHeader {
+		background-color: #d2091b;
+		color: #ffffff;
+		padding: 10px;
+		border-radius: 0px;
+		min-height: 20px;
+		font-size: 1rem;
+		font-weight: 600;
+        bottom: 3px;
+	}
+
+	.chatInviteBody {
+		background-color: #ffffff;
+		color: #000000;
+		padding: 10px;
+		border-radius: 0px;
+		min-height: 20px;
+	}
+	
+	.chatInviteFooter {
+		background-color: #ffffff;
+		color: #000000;
+		padding: 10px;
+		border-radius: 0px;
+		min-height: 20px;
+	}
+
+	.chatInviteCloseButton {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		cursor: pointer;
+		color: #ffffff;
+	}
+	
+	.chatInviteCloseButtonImage {
+		padding: 2px;
+		background: #000000;
+		fill: #2a2a2a;
+	}
+	
+	.chatInviteChatButton {
+		background: #2a2a2a;
+        color: #ffffff;
+		padding: 10px;
+		border: 0px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		min-width: 40%;
+	}
+	
+	.chatInviteChatButton:hover, .chatInviteChatButton:focus {
+		background: #dc0000;
+	}
+	
  </style>
 </head>
 <body bgcolor="#000000" style="width: 100%; max-width: 100%">
@@ -71,6 +144,26 @@
   </svg>
   <span id="custom-webchat-button-text" class="custom-webchat-button-text">Chat</span>
 </button>
+
+<!-- Customer designed chat invite. -->
+<div class="chatInvite" id="chatInvite">
+  <div class="chatInviteHeader">
+  	<span class="chatInviteHeaderAvatar"><img src="https://lazumc.github.io/images/cow-avatar.png"></span>
+	<span class="chatInviteHeaderText" style="vertical-align:top; line-height: 30px">Chat with Buddy Cow</span>
+	<span class="chatInviteCloseButton" id="chatInviteCloseButton">
+	  <svg id="chatInviteCloseButtonImage" class="chatInviteCloseButtonImage" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+        <title>Close Invitation</title>
+        <path d="M13.5303 1.53033C13.8232 1.23744 13.8232 0.762563 13.5303 0.46967C13.2374 0.176777 12.7626 0.176777 12.4697 0.46967L7 5.93934L1.53033 0.469671C1.23744 0.176778 0.762563 0.176778 0.46967 0.469671C0.176777 0.762564 0.176777 1.23744 0.46967 1.53033L5.93934 7L0.469671 12.4697C0.176777 12.7626 0.176777 13.2374 0.469671 13.5303C0.762564 13.8232 1.23744 13.8232 1.53033 13.5303L7 8.06066L12.4697 13.5303C12.7626 13.8232 13.2374 13.8232 13.5303 13.5303C13.8232 13.2374 13.8232 12.7626 13.5303 12.4697L8.06066 7L13.5303 1.53033Z"></path>
+      </svg> 
+	</span>
+  </div>
+  <div class="chatInviteBody" id="chatInviteBody">
+	<span class="chatInviteText" id="chatInviteText">Let's chat about a new bike.</span>
+  </div>
+  <div class="chatInviteFooter" id="chatInviteFooter" align="center">
+	<button class="chatInviteChatButton" id="chatInviteChatButton" onclick="launchChat()">Let's Chat</button>
+  </div>
+</div>
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
@@ -101,8 +194,8 @@
     })();
     
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
-	function launchChat() 
-	{
+	function launchChat() {
+		hideChatInvite();
 		bus.publish("chat:trigger-chat-window");
 	}
 
@@ -140,6 +233,42 @@
 
     // Attach scroll event listener
     window.addEventListener('scroll', toggleTextVisibility);
+	
+	// Code and functions to add a customer designed chat invite
+	const chatInvite = document.getElementById("chatInvite");
+	const chatInviteText = document.getElementById("chatInviteText");
+	const chatInviteCloseButton = document.getElementById("chatInviteCloseButton");
+
+	// Messages to display in the chat invite
+	const chatInviteMessages = [
+  	"Let's chat about getting you a new bike.",
+  	"Let's chat about a repair for your bike.",
+  	"Let's chat about parts and accessories.",
+	];
+ 
+    // Set inital chat invite message to display
+	let currentChatInviteMessageIndex = 0;
+
+	// Function to show the chat invite
+	function showChatInvite() {
+  		chatInviteText.innerHTML = chatInviteMessages[currentChatInviteMessageIndex];
+  		chatInvite.style.display = "block";
+  		currentChatInviteMessageIndex = (currentChatInviteMessageIndex + 1) % chatInviteMessages.length;
+	};
+
+	// Set a timeout to show the chat invite after 5 seconds
+	const chatInviteInterval=setInterval(showChatInvite, 5000); // 5,000 milliseconds = 5 seconds
+
+	// Function to hide the chat invite
+	function hideChatInvite() {
+  		chatInvite.style.display = "none";
+  		clearInterval(chatInviteInterval);
+	};
+
+	// Close the chat invite when the close button is clicked
+	chatInviteCloseButton.addEventListener("click", () => {
+  		hideChatInvite();
+	});
 
 </script>
 </body>
