@@ -56,10 +56,10 @@
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
     --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
-    --chatBorderRadius: 10px;
-    --chatMessageBorderRadius: 15px;
-    --chatButtonBorderRadius: 10px;
-    --chatDigitButtonBorderRadius: 50%;
+    --chatBorderRadius: 0px;
+    --chatMessageBorderRadius: 0px;
+    --chatButtonBorderRadius: 0px;
+    --chatDigitButtonBorderRadius: 0%;
 }
 
 /*****************************************************************************/
@@ -128,6 +128,7 @@ h1.nugen__title {
 .nugen__header {
 	min-height: 75px;
 	background-color: var(--chatTitleBackgroundColor) !important;
+	border-radius: var(--chatBorderRadius) !important;
 }
 
 /*****************************************************************************/
