@@ -288,6 +288,8 @@
 	const chatInvite = document.getElementById("chatInvite");
 	const chatInviteText = document.getElementById("chatInviteText");
 	const chatInviteCloseButton = document.getElementById("chatInviteCloseButton");
+	const chatInviteBodyImage = document.getElementById("chatInviteBodyImage");
+	var chatInviteInterval = null;
 
 	// Messages to display in the chat invite
 	const chatInviteMessages = [
@@ -326,7 +328,9 @@
 	// Function to hide the chat invite
 	function hideChatInvite() {
   		chatInvite.style.display = "none";
-  		clearInterval(chatInviteInterval);
+        if (chatInviteInterval) {
+  			clearInterval(chatInviteInterval);
+        }
 	};
 
 	// Close the chat invite when the close button is clicked
