@@ -41,9 +41,9 @@
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
     --chatButtonBackgroundColor: #2a2a2a;
-    --chatButtonFocusBackgroundColor: #ffe192;
+    --chatButtonFocusBackgroundColor: #d2091b;
     --chatButtonFontColor: #ffffff;
-    --chatButtonFocusFontColor: #2a2a2a;
+    --chatButtonFocusFontColor: #ffffff;
     --chatButtonFontFamily: Roboto, Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
     --chatButtonFontWeight: 600;
@@ -51,7 +51,7 @@
     --chatSecondaryButtonBackgroundColor: #d2091b;
     --chatSecondaryButtonFontColor: #fff;
     --chatSecondaryButtonBorder: 1px solid #d2091b;
-    --chatWindowBackgroundColor: #f6f6f6;
+    --chatWindowBackgroundColor: #f0f6f6;
     --chatWindowEntryAreaBackgroundColor: #d2091b;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
