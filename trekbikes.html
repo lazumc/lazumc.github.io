@@ -64,7 +64,7 @@
 		z-index: 1;
 		height: 240px;
 		width: 300px;
-		bottom: 90px;
+		bottom: 150px;
         right:20px;
 		font-family: Roboto,sans-serif;
 		font-size: 0.9rem;
@@ -105,19 +105,37 @@
         flex: 1;
     }
     
-    .spin {
-        animation: spin; 
-        animation-duration: 3s;
+    .buddyCowBow {
+        animation: buddyCowBow; 
+        animation-duration: 1s;
         animation-iteration-count: 1;
     }
     
-    .spinAgain {
-        animation: spinAgain; 
-        animation-duration: 3s;
+    .buddyCowBowAgain {
+        animation: buddyCowBowAgain; 
+        animation-duration: 1s;
         animation-iteration-count: 1;
     }
     
-	.chatInviteFooter {
+    .buddyCowHop {
+        animation: buddyCowBow; 
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    
+    .buddyCowHopAgain {
+        animation: buddyCowBowAgain; 
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    
+   .buddyCowHopBig {
+        animation: buddyCowHopBig; 
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    
+    .chatInviteFooter {
 		background-color: #ffffff;
 		color: #000000;
 		padding: 10px;
@@ -153,21 +171,39 @@
 		background: #d2091b;
 	}
     
-    @keyframes spin {
+    @keyframes buddyCowBow {
         from {
-            transform: rotate(0deg);
+            transform: rotate(330deg);
         }
         to {
             transform: rotate(360deg);
         }
     }
     
-    @keyframes spinAgain {
+    @keyframes buddyCowBowAgain {
+        from {
+            transform: rotate(330deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes buddyCowHop {
         from {
             transform: rotate(0deg);
         }
         to {
-            transform: rotate(360deg);
+            transform: rotate(330deg);
+        }
+    }
+    
+    @keyframes buddyCowHopAgain {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(330deg);
         }
     }
  </style>
@@ -181,16 +217,20 @@
 <img src="https://lazumc.github.io/images/trekbikesbackground5.JPG" width="100%">
 <img src="https://lazumc.github.io/images/trekbikesbackground6.JPG" width="100%">
 
-<button id="custom-webchat-button" class="custom-webchat-button" onclick="launchChat()" onmouseenter="showTextOnHover()" onmouseleave="hideTextOnLeave()">
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20pt" height="16pt" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
-	<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-	<path d="M135 2421 c-22 -10 -54 -34 -72 -52 -66 -70 -63 -32 -63 -851 0 -702 1 -745 19 -783 10 -22 34 -54 52 -72 57 -53 93 -63 239 -63 l130 0 0 -260 c0 -252 1 -260 21 -270 16 -9 26 -8 43 4 13 8 148 130 300 270 l276 256 653 0 c728 0 694 -3 764 71 66 70 63 32 63 849 0 817 3 779 -63 849 -18 18 -50 42 -72 52 -38 18 -90 19 -1145 19 -1055 0 -1107 -1 -1145 -19z"/>
-	</g>
-  </svg>
-  <span id="custom-webchat-button-text" class="custom-webchat-button-text">Chat</span>
+<button id="custom-webchat-button" class="custom-webchat-button" onclick="launchChat()" onmouseenter="animateImageOnHover()" onmouseleave="hideImageOnLeave()">
+	<span id="custom-webchat-button-text" class="custom-webchat-button-text">
+		<img id="custom-webchat-button-image" class="buddyCowHop" src="https://lazumc.github.io/images/cow-on-bike.png" width="80px">
+	</span>
+	<span id="custom-webchat-button-chatimage" class="custom-webchat-button-chatimage" style="vertical-align:top">
+  	<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20pt" height="16pt" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+		<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+		<path d="M135 2421 c-22 -10 -54 -34 -72 -52 -66 -70 -63 -32 -63 -851 0 -702 1 -745 19 -783 10 -22 34 -54 52 -72 57 -53 93 -63 239 -63 l130 0 0 -260 c0 -252 1 -260 21 -270 16 -9 26 -8 43 4 13 8 148 130 300 270 l276 256 653 0 c728 0 694 -3 764 71 66 70 63 32 63 849 0 817 3 779 -63 849 -18 18 -50 42 -72 52 -38 18 -90 19 -1145 19 -1055 0 -1107 -1 -1145 -19z"/>
+		</g>
+  	</svg>
+	</span>
 </button>
 
-<!-- Customer designed chat invite. -->
+<!-- Customer designed chat invite. -->https://lazumc.github.io/images/cow-on-bike.png
 <div class="chatInvite" id="chatInvite">
   <div class="chatInviteHeader">
   	<span class="chatInviteHeaderAvatar"><img src="https://lazumc.github.io/images/cow-avatar.png"></span>
@@ -206,7 +246,7 @@
   	<div class="chatInviteBodyText">
 	 	<p id="chatInviteText">Let's chat about a new bike.</p>
     </div>
-    <div id="chatInviteBodyImage" class="chatInviteBodyImage spin">
+    <div id="chatInviteBodyImage" class="chatInviteBodyImage buddyCowBow">
     	<img src="https://lazumc.github.io/images/buddycow.png" width="80px">
     </div>
   </div>
@@ -245,6 +285,8 @@
     
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() {
+        //var buttonImage = document.getElementById('custom-webchat-button-image');
+        //buttonImage.classList.toggle('buddyCowHopBig');
 		hideChatInvite();
 		bus.publish("chat:trigger-chat-window");
 	}
@@ -253,7 +295,7 @@
     function toggleTextVisibility() {
         var button = document.getElementById('custom-webchat-button');    
         var buttonText = document.getElementById('custom-webchat-button-text');
-    	if (window.scrollY > 200) {
+    	if (window.scrollY > 300) {
         	button.classList.add('scrolled-button');
 			buttonText.classList.add('scrolled-button-text');
         } else {
@@ -263,19 +305,21 @@
     }
 
     // Function to show text on hover
-    function showTextOnHover() {
+    function animateImageOnHover() {
         var button = document.getElementById('custom-webchat-button');    
         var buttonText = document.getElementById('custom-webchat-button-text');
+        var buttonImage = document.getElementById('custom-webchat-button-image');
+        restart_hopAnimation(buttonImage);
         button.classList.remove('scrolled-button');
         buttonText.classList.remove('scrolled-button-text');
     }
 
     // Function to hide text on mouse leave
-    function hideTextOnLeave() {
+    function hideImageOnLeave() {
         var button = document.getElementById('custom-webchat-button');    
         var buttonText = document.getElementById('custom-webchat-button-text');
         // Check if the page is scrolled, if not, hide the text
-        if (window.scrollY > 200) {
+        if (window.scrollY > 300) {
         	button.classList.add('scrolled-button');
 			buttonText.classList.add('scrolled-button-text');
 		}
@@ -288,8 +332,8 @@
 	const chatInvite = document.getElementById("chatInvite");
 	const chatInviteText = document.getElementById("chatInviteText");
 	const chatInviteCloseButton = document.getElementById("chatInviteCloseButton");
-	const chatInviteBodyImage = document.getElementById("chatInviteBodyImage");
-	var chatInviteInterval = null;
+    const chatInviteBodyImage = document.getElementById("chatInviteBodyImage");
+    var chatInviteInterval = null;
 
 	// Messages to display in the chat invite
 	const chatInviteMessages = [
@@ -301,16 +345,20 @@
     // Set inital chat invite message to display
 	let currentChatInviteMessageIndex = 0;
     
-    // Function to force image to spin
-    function restart_animation(element) {
-   		element.classList.toggle('spinAgain')
+    // Functions to force animation
+    function restart_bowAnimation(element) {
+   		element.classList.toggle('buddyCowBowAgain')
+	}
+    
+    function restart_hopAnimation(element) {
+   		element.classList.toggle('buddyCowHopAgain')
 	}
 
 	// Function to update the text in the chat invite
 	function updateChatInvite() {
   		chatInviteText.innerHTML = chatInviteMessages[currentChatInviteMessageIndex];
   		currentChatInviteMessageIndex = (currentChatInviteMessageIndex + 1) % chatInviteMessages.length;
-		restart_animation(chatInviteBodyImage)
+		restart_bowAnimation(chatInviteBodyImage)
 	};
     
     // Function to show the chat invite
@@ -318,7 +366,7 @@
   		chatInviteText.innerHTML = chatInviteMessages[currentChatInviteMessageIndex];
   		chatInvite.style.display = "block";
   		currentChatInviteMessageIndex = (currentChatInviteMessageIndex + 1) % chatInviteMessages.length;
-        setInterval(updateChatInvite, 10000); // 5,000 milliseconds = 5 seconds
+        chatInviteInterval = setInterval(updateChatInvite, 10000); // 5,000 milliseconds = 5 seconds
 	};
 
 	// Set a timeout to show the chat invite after 5 seconds
