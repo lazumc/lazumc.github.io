@@ -279,8 +279,6 @@
     
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() {
-        //var buttonImage = document.getElementById('custom-webchat-button-image');
-        //buttonImage.classList.toggle('buddyCowHopBig');
 		hideChatInvite();
 		bus.publish("chat:trigger-chat-window");
 	}
