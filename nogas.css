@@ -13,8 +13,8 @@
 
 :root {
     --chatBotName: "Digital Assistant";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/abc-avatar.png);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/abc-avatar.png);
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/nogas-avatar.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/nogas-avatar.png);
     --chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
     --chatTitleFontWeight: 400;
