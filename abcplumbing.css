@@ -13,8 +13,8 @@
 
 :root {
     --chatBotName: "Digital Assistant";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/abc-avatar.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/abc-avatar.png);
     --chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
     --chatTitleFontWeight: 400;
@@ -52,7 +52,7 @@
     --chatSecondaryButtonFontColor: #000;
     --chatSecondaryButtonBorder: 1px solid #2a2a2a;
     --chatWindowBackgroundColor: #f6f6f6;
-    --chatWindowEntryAreaBackgroundColor: #0a58aa;
+    --chatWindowEntryAreaBackgroundColor: #aacd34;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
     --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
