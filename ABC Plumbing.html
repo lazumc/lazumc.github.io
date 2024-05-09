@@ -23,7 +23,7 @@
 	.custom-webchat-button {
 		border-radius: 5px;
 		border: 2px solid #2a2a2a;
-		background-color: #80ff80;
+		background-color: #aacd34;
 		padding: 15px 15px 10px 10px;
 		cursor: pointer;
 		position: fixed;
@@ -53,19 +53,27 @@
     
     .title-box {
     	font-family: transport;
-        background-color: #80ff80;
+        background-color: #aacd34;
         color: #2a2a2a;
     	padding:  0px 20px 0px 20px;
-    	border: 1px solid #ccc;
+    	border: 2px solid #2a2a2a;
     	border-radius: 5px;
     	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     	position: fixed;
-		top: 20px;
-		left: 20px;
+		top: 30px;
+		left: 30px;
+  	}
+    
+    .logo {
+    	position: fixed;
+		top: 30px;
+		right: 20px;
   	}
  </style>
 </head>
 <body bgcolor="#f6f6f6" style="width: 100%; max-width: 100%">
+
+<img class="logo" src="https://lazumc.github.io/images/abc-logo.JPG">
 
 <img src="https://lazumc.github.io/images/abcplumbing.jpeg" width="100%">
 <img src="https://lazumc.github.io/images/abcplumbing.jpeg" width="100%">
@@ -95,7 +103,7 @@
         domain: "https://vcc-eu12.8x8.com",
         path: "/.",
         buttonContainerId: "__8x8-chat-button-container-script_19130994296617de1d721264.95233608",
-        stylesheetURL: "https://lazumc.github.io/theaa.css",
+        stylesheetURL: "https://lazumc.github.io/abcplumbing.css",
         align: "right",
         <!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
 		onInit: function (bus) {
