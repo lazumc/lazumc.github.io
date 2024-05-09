@@ -1,0 +1,440 @@
+/*****************************************************************************/
+/*****************************************************************************/
+/* PLEASE EDIT THE VARIABLES AND FONT FAMILY BELOW FOR YOUR CHATBOT          */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Declare color and sizing variables                                        */
+/* Note: Declare any fonts to import first                                   */
+/*****************************************************************************/
+
+@import url('https://fonts.cdnfonts.com/css/transport-heavy');
+
+:root {
+    --chatBotName: "Digital Assistant";
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/aalogo2.png);
+    --chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
+    --chatTitleFontSize: 1.5rem;
+    --chatTitleFontWeight: 400;
+    --chatTitleBackgroundColor: #aacd34;
+    --chatSendButtonBackgroundColor: #0a58aa;
+    --chatControlButtonBackgroundColor: #0a58aa;
+    --chatControlButtonFontColor: #ffffff;
+    --chatActionMenuVisibility: hidden;
+    --chatCobrowseVisibility: hidden;
+    --chatIncomingMessageBackgroundColor: #ffffff;
+    --chatOutgoingMessageBackgroundColor: #ffffff;
+    --chatLogMessageBackgroundColor: #0a58aa;
+    --chatLogMessageFontColor: #ffffff;
+    --chatErrorMessageBackgroundColor: #fee6e6;
+    --chatErrorMessageFontColor: #ad0505;
+    --chatFontFamily: Arial, sans-serif;
+    --chatMessageFontColor: #2a2a2a;
+    --chatMessageFontSize: 0.8rem;
+    --chatMessageCardFontSize: 0.7rem;
+    --chatMessageSenderFontSize: 0.8rem;
+    --chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
+    --chatMessageLineHeight: 1.1rem;
+    --chatMessageBorder: 0px solid #000000;
+    --chatMessageHypertextFontColor: #000000;
+    --chatMessageHypertextFontWeight: 600;
+    --chatButtonBackgroundColor: #0a58aa;
+    --chatButtonFocusBackgroundColor: #557c95;
+    --chatButtonFontColor: #ffffff;
+    --chatButtonFocusFontColor: #2a2a2a;
+    --chatButtonFontFamily: "Transport", Arial, sans-serif;
+    --chatButtonFontSize: 0.8rem;
+    --chatButtonFontWeight: 600;
+    --chatButtonBorder: 0px solid #000000;
+    --chatSecondaryButtonBackgroundColor: #a4cc3e;
+    --chatSecondaryButtonFontColor: #000;
+    --chatSecondaryButtonBorder: 1px solid #2a2a2a;
+    --chatWindowBackgroundColor: #f6f6f6;
+    --chatWindowEntryAreaBackgroundColor: #0a58aa;
+    --chatWindowEntryTextboxBackgroundColor: #ffffff;
+    --chatWindowEntryTextboxFontColor: #000000;
+    --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
+    --chatBorderRadius: 10px;
+    --chatMessageBorderRadius: 15px;
+    --chatButtonBorderRadius: 10px;
+    --chatDigitButtonBorderRadius: 50%;
+}
+
+/*****************************************************************************/
+/*****************************************************************************/
+/* YOU SHOULD NOT NEED TO EDIT ANYTHING BELOW THIS POINT                     */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Font family (use default unless customer has their own font family to use */
+/*****************************************************************************/
+
+body, input[type="text"], textarea, select, span {
+	font-family: var(--chatFontFamily); !important;
+}
+
+h1.nugen__title {
+	font-family: var(--chatTitleFontFamily); !important;
+}
+
+/*****************************************************************************/
+/* Pre-chat form introduction text and positioning                           */
+/*****************************************************************************/
+.intro {
+	font-weight: 600 !important;
+	font-size: 1rem !important;
+}
+
+.main {
+	justify-content: start !important;
+}
+
+/*****************************************************************************/
+/* Message avatar and bot name                                               */
+/*****************************************************************************/
+
+.chat-msg-sender::before {
+	content: var(--chatAgentMessageAvatar) " "!important;
+	font-family: var(--chatMessageSenderFontFamily) !important;
+	color: var(--chatMessageFontColor);
+	vertical-align: middle !important;
+}
+
+.chat-msg-sender[aria-label="Bot"]::before {
+	content: var(--chatBotMessageAvatar) " " var(--chatBotName) !important;
+}
+
+.chat-msg-sender[aria-label="Bot"] {
+	color: var(--chatIncomingMessageBackgroundColor) !important;
+}
+
+.chat-msg-sender {
+	font-size: var(--chatMessageSenderFontSize) !important;
+	font-weight: 600 !important;
+}
+
+/*****************************************************************************/
+/* Set chat window title font size and minimum height                        */
+/*****************************************************************************/
+h1.nugen__title {
+	font-size: var(--chatTitleFontSize) !important;
+	font-weight: var(--chatTitleFontWeight) !important;
+	line-height: 50px !important;
+}
+
+.nugen__header {
+	min-height: 75px;
+	background-color: var(--chatTitleBackgroundColor) !important;
+}
+
+/*****************************************************************************/
+/* Hide the 8x8 download transcript and co-browse menu button                */
+/*****************************************************************************/
+.message-actions.js-message-actions {
+	visibility: var(--chatActionMenuVisibility);
+}
+
+a[aria-label="Show chat menu options"]:hover{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
+a[aria-label="Show chat menu options"]:focus{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
+a[aria-label="Hide chat menu options"]:hover{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
+a[aria-label="Hide chat menu options"]:focus{
+	outline: 0px solid var(--chatButtonBackgroundColor) !important;
+	border: 0px solid var(--chatWindowBackgroundColor) !important;
+}
+
+a[aria-label="Download transcript"]{
+	font-size: 0.75rem !important;
+	color: var(--chatMessageFontColor) !important;
+	border: 0px !important;
+}
+
+a[aria-label="Co-browsing"]{
+	font-size: 0.75rem !important;
+	color: var(--chatMessageFontColor) !important;
+	visibility: var(--chatCobrowseVisibility);
+}
+
+/*****************************************************************************/
+/* Set background color for chat container                                   */
+/*****************************************************************************/
+.container, .nugen__inner-container, .nugen__main, .nugen__message-history, .nugen__content-loading {
+	background: var(--chatWindowBackgroundColor) !important;
+}
+
+/*****************************************************************************/
+/* Set background color for message window                                   */
+/*****************************************************************************/
+.message-wrapper {
+	background: var(--chatWindowBackgroundColor) !important;
+}
+
+/*****************************************************************************/
+/* Set background color for message entry area                               */
+/*****************************************************************************/
+.message-box {
+	background: var(--chatWindowEntryAreaBackgroundColor) !important;
+	padding-top: 10px !important;
+	max-height: 95px;
+}
+
+/*****************************************************************************/
+/* Set message entry box background, border and font color                   */
+/*****************************************************************************/
+textarea[data-id=message-input-box] {
+	background: var(--chatWindowEntryTextboxBackgroundColor) !important;
+	border: var(--chatWindowEntryTextboxBorder) !important;
+	color: var(--chatWindowEntryTextboxFontColor) !important;
+	font-family: inherit !important;
+	font-size: var(--chatMessageFontSize) !important;
+	border-radius: var(--chatBorderRadius) !important;
+}	
+
+/*****************************************************************************/
+/* Set background color of send message button                               */
+/*****************************************************************************/
+button[data-id=nugen-send-message-button] {
+	font-family: var(--chatButtonFontFamily) !important;
+	background: var(--chatControlButtonBackgroundColor) !important;
+}
+
+/*****************************************************************************/
+/* Set background, outline and text color of close chat window button        */
+/*****************************************************************************/
+.end, .close {
+	background: var(--chatControlButtonBackgroundColor) !important;
+}
+
+svg[width="14"] {
+	fill: var(--chatControlButtonFontColor) !important;
+}
+
+.control:focus {
+    outline: 2px solid var(--chatControlButtonBackgroundColor) !important;
+    border: 2px solid var(--chatControlButtonFontColor) !important
+}
+
+/*****************************************************************************/
+/* Set message background and font color and font size of chat messages      */
+/* Also set the font color and weight for hyperlinks                         */
+/* The p element inherit is needed as outgoing chat messages, unlike inbound */
+/* chat message are embedded within p elements                               */
+/*****************************************************************************/
+.chat-outgoing-msg {
+	background: var(--chatOutgoingMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatMessageFontColor);
+	position: relative;
+	line-height: var(--chatMessageLineHeight);
+	font-size: var(--chatMessageFontSize) !important;
+	border-radius: var(--chatMessageBorderRadius) 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
+	padding: 10px 15px 10px 15px !important;
+}
+
+.chat-incoming-msg {
+	background: var(--chatIncomingMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatMessageFontColor);
+	position: relative;
+	line-height: var(--chatMessageLineHeight);
+	font-size: var(--chatMessageFontSize) !important;
+	border-radius: 0px var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) var(--chatMessageBorderRadius) !important;
+	padding: 10px 15px 10px 15px !important;
+}
+
+.chat-log-msg {
+	background: var(--chatLogMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatLogMessageFontColor) !important;
+	position: relative;
+	line-height: var(--chatMessageLineHeight);
+	font-size: var(--chatMessageFontSize) !important;
+	font-family: inherit !important;
+	font-style: normal;
+	font-weight: 600;
+	text-align: left;
+	width: 100%;
+	border-radius: 0px !important;
+	padding: 10px 15px 10px 15px !important;
+}
+
+.chat-error-msg {
+	background: var(--chatErrorMessageBackgroundColor) !important;
+	border: var(--chatMessageBorder);
+	color: var(--chatErrorMessageFontColor);
+	position: relative;
+	line-height: var(--chatMessageLineHeight);
+	font-size: var(--chatMessageFontSize) !important;
+	font-family: inherit !important;
+	font-style: normal;
+	font-weight: 600;
+	width: 100%;
+	border-radius: 0px !important;
+	padding: 10px 15px 10px 15px !important;
+}
+
+a {
+	color: var(--chatMessageHypertextFontColor);
+	font-weight: var(--chatMessageHypertextFontWeight) !important;
+}
+
+p, span {
+	color: inherit !important;
+	font-size: inherit !important;
+	font-style: inherit !important;
+	font-weight: inherit !important;
+}
+
+/*****************************************************************************/
+/* Set quick reply button background and font color and font size            */
+/* Allow quick replies to use 100% of message window                         */
+/*****************************************************************************/
+button[data-id=quick-reply-bubble-button] {
+	background: var(--chatButtonBackgroundColor);
+	color: var(--chatButtonFontColor);
+	font-size: var(--chatButtonFontSize) !important;
+	font-weight: var(--chatButtonFontWeight) !important;
+	border: var(--chatButtonBorder);
+	min-width: 75px;
+	margin-top: -20px;
+    margin-bottom: 28px;
+}
+
+button[data-id=quick-reply-bubble-button]:focus {
+	background: var(--chatButtonFocusBackgroundColor) !important;
+	color: var(--chatButtonFocusFontColor) !important;
+	border: var(--chatButtonBorder) !important;
+}
+
+button[data-id=quick-reply-bubble-button]:hover {
+	background: var(--chatButtonFocusBackgroundColor) !important;
+	color: var(--chatButtonFocusFontColor) !important;
+	border: var(--chatButtonBorder) !important;
+}
+
+div[id^="quick-replies-"] {
+	max-width: inherit !important
+}
+
+button {
+	border-radius: var(--chatButtonBorderRadius) !important;
+	font-family: "Transport" !important;
+}
+
+/*****************************************************************************/
+/* Set font and left margin so the adaptive card formatting used by 8x8 to   */
+/* display a say/question node with buttons looks like a standard say node.  */
+/* This also reduces size of title text in a gallery                         */
+/*****************************************************************************/
+.ac-textBlock {
+	font-family: inherit !important;
+	font-size: var(--chatMessageCardFontSize) !important;
+	line-height: inherit !important;
+	margin-left: -15px;
+	color: var(--chatMessageFontColor) !important;
+}
+
+.ac-input-container {
+	margin-left: -15px;
+}
+
+.ac-input {
+	outline: none !important;
+	font-family: inherit !important;
+	font-size: var(--chatMessageCardFontSize) !important;
+}
+
+.ac-container {
+	padding: 0px 0px 0px 10px !important;
+}
+
+.ac-columnSet {
+	margin-left: -10px !important;
+}
+
+/*****************************************************************************/
+/* Set say, question, gallery node button background and font color and font */
+/* size and remove unnecessary bottom margin                                 */
+/* Update wrap to allow for more than 2 buttons to display                   */
+/*****************************************************************************/
+.ac-pushButton {
+	background: var(--chatButtonBackgroundColor) !important;
+	color: var(--chatButtonFontColor) !important;
+	font-size: var(--chatButtonQuickReplyFontSize) !important;
+	font-weight: var(--chatButtonFontWeight) !important;
+	font-family: inherit !important;
+	border: var(--chatButtonBorder) !important;
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+
+.ac-pushButton:focus {
+	background: var(--chatButtonFocusBackgroundColor) !important;
+	color: var(--chatButtonFocusFontColor) !important;
+	border: var(--chatButtonBorder) !important;
+}
+
+.ac-pushButton:hover {
+	background: var(--chatButtonFocusBackgroundColor) !important;
+	color: var(--chatButtonFocusFontColor) !important;
+	border: var(--chatButtonBorder) !important;
+}
+
+.ac-actionSet {
+	flex-wrap: wrap !important;
+}
+
+/*****************************************************************************/
+/* Set buttons for digits 1-10 as 40px circles                               */
+/*****************************************************************************/
+button[aria-label="1"], button[aria-label="2"], button[aria-label="3"], button[aria-label="4"], button[aria-label="5"] {
+	min-width: 40px !important;
+	border-radius: var(--chatDigitButtonBorderRadius);
+}
+
+button[aria-label="6"], button[aria-label="7"], button[aria-label="8"], button[aria-label="9"], button[aria-label="10"] {
+	min-width: 40px !important;
+	border-radius: var(--chatDigitButtonBorderRadius);
+}
+
+/*****************************************************************************/
+/* Set background and font color of primary "yes" button on the close window */
+/* this primary button is also used on the invite for "chat now".            */
+/* Also set the secondary "no" button on the close window.                   */
+/* Note: Impact on the pre-chat window is to be confirmed                    */
+/*****************************************************************************/
+.nugen__btn, .nugen__btn--primary {
+	background: var(--chatButtonBackgroundColor) !important;
+	color: var(--chatButtonFontColor) !important;
+	border: var(--chatButtonBorder) !important;
+}
+
+.nugen__btn--secondary {
+	background: var(--chatSecondaryButtonBackgroundColor) !important;
+	color: var(--chatSecondaryButtonFontColor) !important;
+	border: var(--chatSecondaryButtonBorder) !important;
+}
+
+.nugen__btn--primary:hover, .nugen__btn--primary:focus {
+	outline: 2px solid var(--chatButtonBackgroundColor) !important;
+	border: 1px solid var(--chatWindowBackgroundColor) !important;
+}
+
+.nugen__btn--secondary:hover, .nugen__btn--secondary:focus {
+	outline: 2px solid var(--chatSecondaryButtonBackgroundColor) !important;
+	border: 1px solid var(--chatWindowBackgroundColor) !important;
+}
