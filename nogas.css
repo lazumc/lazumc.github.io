@@ -48,8 +48,8 @@
     --chatButtonFontSize: 0.8rem;
     --chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #7bb257;
-    --chatSecondaryButtonFontColor: #000;
+    --chatSecondaryButtonBackgroundColor: #2a2a2a;
+    --chatSecondaryButtonFontColor: #fff;
     --chatSecondaryButtonBorder: 1px solid #2a2a2a;
     --chatWindowBackgroundColor: #f6f6f6;
     --chatWindowEntryAreaBackgroundColor: #7bb257;
