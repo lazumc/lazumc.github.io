@@ -13,21 +13,22 @@
 
 :root {
     --chatBotName: "Digital Assistant";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/lcc-avatar.png);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/lcc-avatar.png);
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/nogas-avatar.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/nogas-avatar.png);
     --chatTitleFontFamily: "Transport Heavy", Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.5rem;
     --chatTitleFontWeight: 400;
-    --chatTitleBackgroundColor: #7bb257;
-    --chatSendButtonBackgroundColor: #000000;
-    --chatControlButtonBackgroundColor: #000000;
+	--chatTitleFontColor: #dcd9eb;
+    --chatTitleBackgroundColor: #2b2360;
+    --chatSendButtonBackgroundColor: #e62721;
+    --chatControlButtonBackgroundColor: #e62721;
     --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: hidden;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
     --chatOutgoingMessageBackgroundColor: #ffffff;
-    --chatLogMessageBackgroundColor: #7bb257;
-    --chatLogMessageFontColor: #000000;
+    --chatLogMessageBackgroundColor: #2b2360;
+    --chatLogMessageFontColor: #dcd9eb;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
     --chatFontFamily: Arial, sans-serif;
@@ -40,19 +41,19 @@
     --chatMessageBorder: 0px solid #000000;
     --chatMessageHypertextFontColor: #000000;
     --chatMessageHypertextFontWeight: 600;
-    --chatButtonBackgroundColor: #7bb257;
-    --chatButtonFocusBackgroundColor: #a4cc79;
-    --chatButtonFontColor: #000000;
-    --chatButtonFocusFontColor: #000000;
+    --chatButtonBackgroundColor: #2b2360;
+    --chatButtonFocusBackgroundColor: #5c749c;
+    --chatButtonFontColor: #dcd9eb;
+    --chatButtonFocusFontColor: #ffffff;
     --chatButtonFontFamily: "Transport", Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
     --chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #2a2a2a;
-    --chatSecondaryButtonFontColor: #fff;
+    --chatSecondaryButtonBackgroundColor: #dcd9eb;
+    --chatSecondaryButtonFontColor: #222;
     --chatSecondaryButtonBorder: 1px solid #2a2a2a;
     --chatWindowBackgroundColor: #f6f6f6;
-    --chatWindowEntryAreaBackgroundColor: #7bb257;
+    --chatWindowEntryAreaBackgroundColor: #5c749c;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
     --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
@@ -122,6 +123,7 @@ h1.nugen__title {
 h1.nugen__title {
 	font-size: var(--chatTitleFontSize) !important;
 	font-weight: var(--chatTitleFontWeight) !important;
+	color: var(--chatTitleFontColor) !important;
 	line-height: 50px !important;
 }
 
