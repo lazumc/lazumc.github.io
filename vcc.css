@@ -19,9 +19,9 @@
     --chatTitleFontSize: 1.5rem;
     --chatTitleFontWeight: 400;
 	--chatTitleFontColor: #ffffff;
-    --chatTitleBackgroundColor: #d1022d;
-    --chatSendButtonBackgroundColor: #2a2a2a;
-    --chatControlButtonBackgroundColor: #2a2a2a;
+    --chatTitleBackgroundColor: #2a2a2a;
+    --chatSendButtonBackgroundColor: #d1022d;
+    --chatControlButtonBackgroundColor: #d1022d;
     --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: hidden;
     --chatCobrowseVisibility: hidden;
@@ -53,7 +53,7 @@
     --chatSecondaryButtonFontColor: #ffffff;
     --chatSecondaryButtonBorder: 1px solid #2a2a2a;
     --chatWindowBackgroundColor: #f6f6f6;
-    --chatWindowEntryAreaBackgroundColor: #d1022d;
+    --chatWindowEntryAreaBackgroundColor: #2a2a2a;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
     --chatWindowEntryTextboxFontColor: #000000;
     --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
