@@ -19,14 +19,15 @@
     --chatTitleFontSize: 1.5rem;
     --chatTitleFontWeight: 400;
     --chatTitleBackgroundColor: #ffcc00;
-    --chatSendButtonBackgroundColor: #2a2a2a;
-    --chatControlButtonBackgroundColor: #2a2a2a;
+	--chatTitleFontColor: #2a2a2a;
+    --chatSendButtonBackgroundColor: #444444;
+    --chatControlButtonBackgroundColor: #444444;
     --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: hidden;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
     --chatOutgoingMessageBackgroundColor: #ffe192;
-    --chatLogMessageBackgroundColor: #2a2a2a;
+    --chatLogMessageBackgroundColor: #444444;
     --chatLogMessageFontColor: #ffffff;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
@@ -37,24 +38,24 @@
     --chatMessageSenderFontSize: 0.8rem;
     --chatMessageSenderFontFamily: "Transport", Arial, sans-serif;
     --chatMessageLineHeight: 1.1rem;
-    --chatMessageBorder: 0px solid #000000;
-    --chatMessageHypertextFontColor: #000000;
+    --chatMessageBorder: 0px solid #2a2a2a;
+    --chatMessageHypertextFontColor: #2a2a2a;
     --chatMessageHypertextFontWeight: 600;
     --chatButtonBackgroundColor: #ffcc00;
-    --chatButtonFocusBackgroundColor: #ffe192;
-    --chatButtonFontColor: #2a2a2a;
-    --chatButtonFocusFontColor: #2a2a2a;
+    --chatButtonFocusBackgroundColor: #006a6e;
+    --chatButtonFontColor: #444444;
+    --chatButtonFocusFontColor: #ffffff;
     --chatButtonFontFamily: "Transport", Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
     --chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #2a2a2a;
-    --chatSecondaryButtonFontColor: #fff;
+    --chatSecondaryButtonBackgroundColor: #006a6e;
+    --chatSecondaryButtonFontColor: #ffffff;
     --chatSecondaryButtonBorder: 1px solid #2a2a2a;
     --chatWindowBackgroundColor: #f6f6f6;
-    --chatWindowEntryAreaBackgroundColor: #ffcc00;
+    --chatWindowEntryAreaBackgroundColor: #006a6e;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
-    --chatWindowEntryTextboxFontColor: #000000;
+    --chatWindowEntryTextboxFontColor: #2a2a2a;
     --chatWindowEntryTextboxBorder: 1px solid #2a2a2a;
     --chatBorderRadius: 10px;
     --chatMessageBorderRadius: 15px;
@@ -127,7 +128,9 @@ h1.nugen__title {
 
 .nugen__header {
 	min-height: 75px;
+	color: var(--chatTitleFontColor) !important;
 	background-color: var(--chatTitleBackgroundColor) !important;
+	border-radius: 0px !important;
 }
 
 /*****************************************************************************/
