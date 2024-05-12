@@ -347,6 +347,11 @@ button {
 /* display a say/question node with buttons looks like a standard say node.  */
 /* This also reduces size of title text in a gallery                         */
 /*****************************************************************************/
+
+div[data-message-type="AdaptiveCardundefined"] {
+	min-width: 300px !important
+}
+
 .ac-textBlock {
 	font-family: inherit !important;
 	font-size: var(--chatMessageCardFontSize) !important;
@@ -367,6 +372,7 @@ button {
 
 .ac-container {
 	padding: 0px 0px 0px 10px !important;
+	min-width: 90% !important;
 }
 
 .ac-columnSet {
@@ -383,7 +389,7 @@ button {
 	color: var(--chatButtonFontColor) !important;
 	font-size: var(--chatButtonQuickReplyFontSize) !important;
 	font-weight: var(--chatButtonFontWeight) !important;
-	font-family: inherit !important;
+	font-family: var(--chatButtonFontFamily) !important;
 	border: var(--chatButtonBorder) !important;
 	margin-top: 5px !important;
 	margin-bottom: 5px !important;
