@@ -216,6 +216,7 @@ textarea[data-id=message-input-box] {
 /*****************************************************************************/
 button[data-id=nugen-send-message-button] {
 	background: var(--chatControlButtonBackgroundColor) !important;
+	border-radius: 5px !important;
 }
 
 /*****************************************************************************/
