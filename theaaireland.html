@@ -61,6 +61,9 @@
 <img src="https://lazumc.github.io/images/theaairelandbackground3.JPG" width="100%">
 <img src="https://lazumc.github.io/images/theaairelandbackground4.JPG" width="100%">
 
+<!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
+<div id="__8x8-chat-button-container-script_12435943386640f96e96c1c4.66779383" style="visibility: hidden"></div>
+
 <button id="custom-webchat-button" class="custom-webchat-button" onclick="launchChat()" onmouseenter="showTextOnHover()" onmouseleave="hideTextOnLeave()">
   <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20pt" height="16pt" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
 	<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
@@ -73,13 +76,13 @@
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
     window.__8x8Chat = {
-        uuid: "script_19130994296617de1d721264.95233608",
-        tenant: "cHNlbWVhaWNhZGVtbzAx",
-        channel: "the AA Demo",
-        channelUuid: "JFDBtd9sTkCBMV7qw8IxvA",
-        domain: "https://vcc-eu12.8x8.com",
+        uuid: "script_12435943386640f96e96c1c4.66779383",
+        tenant: "dGhlYWF4MDE",
+        channel: "Digital Assistant - Dev",
+        channelUuid: "cgWoVxU6ReuIbg3q0aYh1Q",
+        domain: "https://vcc-eu9.8x8.com",
         path: "/.",
-        buttonContainerId: "__8x8-chat-button-container-script_19130994296617de1d721264.95233608",
+        buttonContainerId: "__8x8-chat-button-container-script_12435943386640f96e96c1c4.66779383",
         stylesheetURL: "https://lazumc.github.io/theaaireland.css",
         align: "right",
         <!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
@@ -101,16 +104,6 @@
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() 
 	{
-		if ("geolocation" in navigator) {
-			navigator.geolocation.getCurrentPosition((position) => {
-				bus.publish("customer:set-info", {
-					"positionLatitude": position.coords.latitude,
-					"positionLongitude":  position.coords.longitude,
-					"positionAccuracy":  position.coords.accuracy,
-					"userDevice": navigator.userAgent
-				})
-			})
-		}
 		bus.publish("chat:trigger-chat-window");
 	}
 
