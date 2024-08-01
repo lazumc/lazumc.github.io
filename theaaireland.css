@@ -372,6 +372,7 @@ div[data-message-type="AdaptiveCardundefined"] {
 
 .ac-container {
 	padding: 0px 0px 0px 10px !important;
+	width: 90% !important;
 	min-width: 90% !important;
 }
 
