@@ -105,7 +105,11 @@
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() 
 	{
-		bus.publish("customer:set-info", {"userID": "<unknown>", "userDevice": navigator.userAgent});
+		var userDevice = "Desktop";
+		if (/android/i.test(navigator.userAgent || /iPhone/i.test(navigator.userAgent)) {
+			userDevice = "Mobile"
+		}
+		bus.publish("customer:set-info", {"userID": "<unknown>", "userAgent": navigator.userAgent, "userDevice": userDevice, "userPage": "\lazumc.github.io\theaaireland.html"});
 		bus.publish("chat:trigger-chat-window");
 	}
 
