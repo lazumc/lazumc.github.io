@@ -106,7 +106,8 @@
 	function launchChat() 
 	{
 		var userDevice = "Desktop";
-		if (/android/i.test(navigator.userAgent || /iPhone/i.test(navigator.userAgent)) {
+		var deviceRegEx = /android|iphone/i;
+		if (deviceRegEx.test(navigator.userAgent) || deviceRegEx.test(navigator.userAgent)) {
 			userDevice = "Mobile"
 		}
 		bus.publish("customer:set-info", {"userID": "<unknown>", "userAgent": navigator.userAgent, "userDevice": userDevice, "userPage": "\lazumc.github.io\theaaireland.html"});
