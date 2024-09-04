@@ -5,7 +5,7 @@
 :root {
     --chatBotName: "Stella";
     --chatIncomingMessageBackgroundColor: #f1f1f1;
-	--chatMessageFontColor: #292929;
+    --chatMessageFontColor: #292929;
 }
 
 /*****************************************************************************/
