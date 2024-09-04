@@ -4,7 +4,8 @@
 
 :root {
     --chatBotName: "Stella";
-    --chatIncomingMessageBackgroundColor: #ffffff;
+    --chatIncomingMessageBackgroundColor: #e0e0e0;
+	--chatMessageFontColor: #292929;
 }
 
 /*****************************************************************************/
@@ -13,6 +14,7 @@
 
 .chat-msg-sender[aria-label="Bot"]::before {
 	content: var(--chatBotName) !important;
+	color: var(--chatMessageFontColor);
 }
 
 .chat-msg-sender[aria-label="Bot"] {
