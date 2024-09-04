@@ -1,0 +1,27 @@
+/*****************************************************************************/
+/* Declare color and sizing variables                                        */
+/*****************************************************************************/
+
+:root {
+    --chatBotName: "Stella";
+    --chatIncomingMessageBackgroundColor: #ffffff;
+}
+
+/*****************************************************************************/
+/* Message avatar and bot name                                               */
+/*****************************************************************************/
+
+.chat-msg-sender[aria-label="Bot"]::before {
+	content: var(--chatBotName) !important;
+}
+
+.chat-msg-sender[aria-label="Bot"] {
+	color: var(--chatIncomingMessageBackgroundColor) !important;
+}
+
+/*****************************************************************************/
+/* Set message background and font color so "bot" is invisible               */
+/*****************************************************************************/
+.chat-incoming-msg {
+	background: var(--chatIncomingMessageBackgroundColor) !important;
+}
