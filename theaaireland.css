@@ -145,7 +145,7 @@ h1.nugen__title {
 }
 
 svg.js-text {
-	fill : var(--chatTitleFontColor) !important;
+	fill: var(--chatTitleFontColor) !important;
 }
 
 a[aria-label="Show chat menu options"]:hover{
