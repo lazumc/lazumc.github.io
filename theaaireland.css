@@ -23,7 +23,7 @@
     --chatSendButtonBackgroundColor: #000000;
     --chatControlButtonBackgroundColor: #000000;
     --chatControlButtonFontColor: #ffffff;
-    --chatActionMenuVisibility: hidden;
+    --chatActionMenuVisibility: visible;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
     --chatOutgoingMessageBackgroundColor: #ffffff;
@@ -142,6 +142,10 @@ h1.nugen__title {
 /*****************************************************************************/
 .message-actions.js-message-actions {
 	visibility: var(--chatActionMenuVisibility);
+}
+
+svg.js-text {
+	fill : var(--chatTitleFontColor) !important;
 }
 
 a[aria-label="Show chat menu options"]:hover{
