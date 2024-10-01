@@ -21,7 +21,7 @@
 	}
  </style>
 </head>
-<body bgcolor="#f6f6f6" style="width: 100%; max-width: 100%" onload="launchChat()">
+<body bgcolor="#f6f6f6" style="width: 100%; max-width: 100%">
 
 <img src="https://lazumc.github.io/images/activeassessor.jpg" width="100%">
 
@@ -43,6 +43,7 @@
         <!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
 		onInit: function (bus) {
 		   window.bus = bus;
+		   launchChat()
 		}
     };
 
@@ -66,15 +67,15 @@
 		const getUserId = urlParams.get('id');
 		if (getUserId) {
 			userId = getUserId
-		}
+		};
 		const getUserFullName = urlParams.get('fullName');
 		if (getUserFullName) {
 			userFullName = getUserFullName
-		}
+		};
 		const getUserPhone = urlParams.get('phone');
 		if (getUserPhone) {
 			userPhone = getUserPhone
-		}
+		};
 		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", fullName": userFullName, "phone": userPhone});
 		bus.publish("chat:trigger-chat-window");
 	}
