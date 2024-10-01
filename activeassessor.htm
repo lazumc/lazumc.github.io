@@ -21,12 +21,15 @@
 	}
  </style>
 </head>
-<body bgcolor="#f6f6f6" style="width: 100%; max-width: 100%">
+<body bgcolor="#ffffff" style="width: 100%; max-width: 100%; font-family:arial">
 
-<img src="https://lazumc.github.io/images/activeassessor.jpg" width="100%">
+<h1 style="color:#fb5b05">8x8 Active Assessor</h1>
+<h2 style="color:#375267">Customer Survey</h2>
+<p style="color:#2a2a2a">Please wait for survey to load...</p>
+<img src="https://lazumc.github.io/images/activeassessor.jpg" width="100%" >
 
 <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
-<div id="__8x8-chat-button-container-script_113114169966fbe1bc019698.42740957" style="visibility: hidden"></div>
+<div id="__8x8-chat-button-container-script_113114169966fbe1bc019698.42740957" ></div>
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
@@ -43,7 +46,7 @@
         <!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
 		onInit: function (bus) {
 		   window.bus = bus;
-		   launchChat()
+           launchChat();
 		}
     };
 
@@ -61,8 +64,8 @@
 	function launchChat() 
 	{
 		var userId = "none";
-		var fullName = "none";
-		var phone = "none";
+		var userFullName = "none";
+		var userPhone = "none";
 		const urlParams = new URLSearchParams(window.location.search);
 		const getUserId = urlParams.get('id');
 		if (getUserId) {
@@ -76,8 +79,9 @@
 		if (getUserPhone) {
 			userPhone = getUserPhone
 		};
-		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", fullName": userFullName, "phone": userPhone});
-		bus.publish("chat:trigger-chat-window");
+		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", "fullName": userFullName, "phone": userPhone});
+
+        bus.publish("chat:trigger-chat-window");
 	}
 
 
