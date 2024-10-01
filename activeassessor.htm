@@ -71,16 +71,16 @@
 		if (getUserId) {
 			userId = getUserId
 		};
-		const getUserFullName = urlParams.get('fullName');
+		const getUserFullName = urlParams.get('name');
 		if (getUserFullName) {
 			userFullName = getUserFullName
 		};
-		const getUserPhone = urlParams.get('phone');
+		const getUserPhone = urlParams.get('tel');
 		if (getUserPhone) {
 			userPhone = getUserPhone
 		};
-		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", "fullName": userFullName, "phone": userPhone});
-
+		
+		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", "fullName": userFullName, "telephone": userPhone});
         bus.publish("chat:trigger-chat-window");
 	}
 
