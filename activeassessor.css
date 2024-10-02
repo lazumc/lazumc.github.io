@@ -14,18 +14,18 @@
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/icahomes-avatar.png);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/icahomes-avatar.png);
     --chatTitleFontFamily: Helvetica, Arial, sans-serif;
-    --chatTitleFontSize: 1.5rem;
-    --chatTitleFontWeight: 400;
+    --chatTitleFontSize: 1.8rem;
+    --chatTitleFontWeight: 600;
     --chatTitleBackgroundColor: #81eaff;
 	--chatTitleFontColor: #000000;
-    --chatSendButtonBackgroundColor: #375267;
+    --chatSendButtonBackgroundColor: #ff5a01;
     --chatControlButtonBackgroundColor: #375267;
     --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: visible;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
     --chatOutgoingMessageBackgroundColor: #ffffff;
-    --chatLogMessageBackgroundColor: #444444;
+    --chatLogMessageBackgroundColor: #ff5a01;
     --chatLogMessageFontColor: #ffffff;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
@@ -39,17 +39,17 @@
     --chatMessageBorder: 0px solid #2a2a2a;
     --chatMessageHypertextFontColor: #2a2a2a;
     --chatMessageHypertextFontWeight: 600;
-    --chatButtonBackgroundColor: #ffcc00;
-    --chatButtonFocusBackgroundColor: #006a6e;
+    --chatButtonBackgroundColor: #ff5a01;
+    --chatButtonFocusBackgroundColor: #375267;
     --chatButtonFontColor: #000000;
     --chatButtonFocusFontColor: #ffffff;
     --chatButtonFontFamily: Helvetica, Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
     --chatButtonFontWeight: 400;
     --chatButtonBorder: 0px solid #000000;
-    --chatSecondaryButtonBackgroundColor: #006a6e;
+    --chatSecondaryButtonBackgroundColor: #375267;
     --chatSecondaryButtonFontColor: #ffffff;
-    --chatSecondaryButtonBorder: 1px solid #2a2a2a;
+    --chatSecondaryButtonBorder: 1px solid #375267;
     --chatWindowBackgroundColor: #f6f6f6;
     --chatWindowEntryAreaBackgroundColor: #375267;
     --chatWindowEntryTextboxBackgroundColor: #ffffff;
@@ -217,7 +217,7 @@ textarea[data-id=message-input-box] {
 /* Set background color of send message button                               */
 /*****************************************************************************/
 button[data-id=nugen-send-message-button] {
-	background: var(--chatControlButtonBackgroundColor) !important;
+	background: var(--chatSendButtonBackgroundColor) !important;
 	border-radius: 5px !important;
 }
 
