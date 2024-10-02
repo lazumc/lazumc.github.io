@@ -37,16 +37,19 @@
     --chatMessageSenderFontFamily: Helvetica, Arial, sans-serif;
     --chatMessageLineHeight: 1.1rem;
     --chatMessageBorder: 0px solid #2a2a2a;
+    --chatMessageBorderRadius: 15px;
     --chatMessageHypertextFontColor: #2a2a2a;
     --chatMessageHypertextFontWeight: 600;
     --chatButtonBackgroundColor: #ff5a01;
     --chatButtonFocusBackgroundColor: #375267;
-    --chatButtonFontColor: #000000;
+    --chatButtonFontColor: #ffffff;
     --chatButtonFocusFontColor: #ffffff;
     --chatButtonFontFamily: Helvetica, Arial, sans-serif;
     --chatButtonFontSize: 0.8rem;
-    --chatButtonFontWeight: 400;
+    --chatButtonFontWeight: 600;
     --chatButtonBorder: 0px solid #000000;
+	--chatButtonBorderRadius: 15px;
+    --chatDigitButtonBorderRadius: 50%;
     --chatSecondaryButtonBackgroundColor: #375267;
     --chatSecondaryButtonFontColor: #ffffff;
     --chatSecondaryButtonBorder: 1px solid #375267;
@@ -56,9 +59,6 @@
     --chatWindowEntryTextboxFontColor: #2a2a2a;
     --chatWindowEntryTextboxBorder: 1px solid #ff5a01;
     --chatBorderRadius: 10px;
-    --chatMessageBorderRadius: 15px;
-    --chatButtonBorderRadius: 30px;
-    --chatDigitButtonBorderRadius: 50%;
 }
 
 /*****************************************************************************/
