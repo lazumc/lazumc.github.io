@@ -65,7 +65,10 @@
 	{
 		var userId = "none";
 		var userFullName = "none";
+		var userFirstName = "none";
+		var userLastName = "none";
 		var userPhone = "none";
+		var campaign = "none";
 		const urlParams = new URLSearchParams(window.location.search);
 		const getUserId = urlParams.get('id');
 		if (getUserId) {
@@ -75,12 +78,20 @@
 		if (getUserFullName) {
 			userFullName = getUserFullName
 		};
+		if (getUserFirstName) {
+			userFirstName = getUserFirstName
+		};
+		if (getUserLastName) {
+			userLastName = getUserLastName
+		};
 		const getUserPhone = urlParams.get('tel');
 		if (getUserPhone) {
 			userPhone = getUserPhone
 		};
-		
-		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", "fullName": userFullName, "telephone": userPhone});
+		if (getCampaign) {
+			campaign = getCampaign
+		};		
+		bus.publish("customer:set-info", {"id": userId, "idType": "localCRM", "fullName": userFullName, "firstName": userFirstName, "lastName": userLastName, "telephone": userPhone, "campaign": campaign});
         bus.publish("chat:trigger-chat-window");
 	}
 
