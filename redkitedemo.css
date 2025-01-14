@@ -14,7 +14,7 @@
     --chatBotMessageAvatar: url(https://lazumc.github.io/images/redkite-small.png);
     --chatAgentMessageAvatar: url(https://lazumc.github.io/images/redkite-small.png);
     --chatTitleFontFamily: Helvetica, Arial, sans-serif;
-    --chatTitleFontSize: 1.8rem;
+    --chatTitleFontSize: 1.6rem;
     --chatTitleFontWeight: 600;
     --chatTitleBackgroundColor: #20617f;
 	--chatTitleFontColor: #ffffff;
@@ -25,7 +25,7 @@
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
     --chatOutgoingMessageBackgroundColor: #ffffff;
-    --chatLogMessageBackgroundColor: #ff5a01;
+    --chatLogMessageBackgroundColor: #95c322;
     --chatLogMessageFontColor: #ffffff;
     --chatErrorMessageBackgroundColor: #fee6e6;
     --chatErrorMessageFontColor: #ad0505;
