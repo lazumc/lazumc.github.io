@@ -87,7 +87,7 @@
 </button>
 
 <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
-<div id="__8x8-chat-button-container-script_1049363971678557792e27f6.58430107" style="visibility:hidden"></div>
+<div id="__8x8-chat-button-container-script_dummy" style="visibility:hidden"></div>
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
@@ -98,13 +98,12 @@
         channelUuid: "IpQMPIK2RUGhR9SaI51pMQ",
         domain: "https://vcc-eu12.8x8.com",,
         path: "/.",
-        buttonContainerId: "__8x8-chat-button-container-script_1049363971678557792e27f6.58430107",
+        buttonContainerId: "__8x8-chat-button-container-script_dummy",
         stylesheetURL: "https://lazumc.github.io/redkitedemo.css",
         align: "right",
         <!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
 		onInit: function (bus) {
 		   window.bus = bus;
-           launchChat();
 		}
     };
 
@@ -121,10 +120,45 @@
     // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() 
 	{
-        bus.publish("chat:trigger-chat-window");
+		bus.publish("chat:trigger-chat-window");
 	}
 
+    // Function to toggle text visibility based on scroll
+    function toggleTextVisibility() {
+        var button = document.getElementById('custom-webchat-button');    
+        var buttonText = document.getElementById('custom-webchat-button-text');
+    	if (window.scrollY > 200) {
+        	button.classList.add('scrolled-button');
+			buttonText.classList.add('scrolled-button-text');
+        } else {
+        	button.classList.remove('scrolled-button');
+        	buttonText.classList.remove('scrolled-button-text');
+        }
+    }
+
+    // Function to show text on hover
+    function showTextOnHover() {
+        var button = document.getElementById('custom-webchat-button');    
+        var buttonText = document.getElementById('custom-webchat-button-text');
+        button.classList.remove('scrolled-button');
+        buttonText.classList.remove('scrolled-button-text');
+    }
+
+    // Function to hide text on mouse leave
+    function hideTextOnLeave() {
+        var button = document.getElementById('custom-webchat-button');    
+        var buttonText = document.getElementById('custom-webchat-button-text');
+        // Check if the page is scrolled, if not, hide the text
+        if (window.scrollY > 200) {
+        	button.classList.add('scrolled-button');
+			buttonText.classList.add('scrolled-button-text');
+		}
+	}
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', toggleTextVisibility);
 
 </script>
 </body>
-</html> 
+</html>
+
