@@ -11,16 +11,16 @@
 
 :root {
     --chatBotName: "Kitty";
-    --chatBotMessageAvatar: url(https://lazumc.github.io/images/redkite-small.png);
-    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/redkite-small.png);
+    --chatBotMessageAvatar: url(https://lazumc.github.io/images/redkite-avatar.png);
+    --chatAgentMessageAvatar: url(https://lazumc.github.io/images/redkite-avatar.png);
     --chatTitleFontFamily: Helvetica, Arial, sans-serif;
     --chatTitleFontSize: 1.6rem;
     --chatTitleFontWeight: 600;
     --chatTitleBackgroundColor: #20617f;
 	--chatTitleFontColor: #ffffff;
-    --chatSendButtonBackgroundColor: #ffffff;
-    --chatControlButtonBackgroundColor: #ffffff;
-    --chatControlButtonFontColor: #030303;
+    --chatSendButtonBackgroundColor: #6699fe;
+    --chatControlButtonBackgroundColor: #6699fe;
+    --chatControlButtonFontColor: #ffffff;
     --chatActionMenuVisibility: visible;
     --chatCobrowseVisibility: hidden;
     --chatIncomingMessageBackgroundColor: #ffffff;
