@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href='https://fonts.cdnfonts.com/css/transport-heavy' rel='stylesheet' type='text/css'>
+
 <style>
 	/* Force chat window to width 480px, no inset and no rounded edges */
 	/* Note: Cannot force height here as JS uses height attribute to make chat window open/close */
@@ -21,7 +23,7 @@
 	/* Position and style customer defined chat button */
 	.custom-webchat-button {
 		border-radius: 30px;
-		border: 2px solid #2a2a2a;
+		border: 2px solid #030303;
 		background-color: #ffffff;
 		padding: 15px 15px 10px 10px;
 		cursor: pointer;
@@ -39,7 +41,7 @@
 		font-size: 1.2rem;
 		font-weight: 400;
 		font-family: "Transport Heavy";
-		color: #2a2a2a;
+		color: #030303;
 		position:relative;
 		left:3px;
 		bottom: 3px;
@@ -53,9 +55,9 @@
     .title-box {
     	font-family: transport;
         background-color: #ffffff;
-        color: #2a2a2a;
+        color: #030303;
     	padding:  20px 20px 0px 20px;
-    	border: 2px solid #2a2a2a;
+    	border: 2px solid #030303;
     	border-radius: 5px;
     	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     	position: fixed;
@@ -79,7 +81,7 @@
 <!-- New button. -->
 <button id="custom-webchat-button" class="custom-webchat-button" onclick="launchChat()" onmouseenter="showTextOnHover()" onmouseleave="hideTextOnLeave()">
   <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20pt" height="16pt" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
-	<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#feaf1c" stroke="none">
+	<g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)" fill="#6699fe" stroke="none">
 	<path d="M135 2421 c-22 -10 -54 -34 -72 -52 -66 -70 -63 -32 -63 -851 0 -702 1 -745 19 -783 10 -22 34 -54 52 -72 57 -53 93 -63 239 -63 l130 0 0 -260 c0 -252 1 -260 21 -270 16 -9 26 -8 43 4 13 8 148 130 300 270 l276 256 653 0 c728 0 694 -3 764 71 66 70 63 32 63 849 0 817 3 779 -63 849 -18 18 -50 42 -72 52 -38 18 -90 19 -1145 19 -1055 0 -1107 -1 -1145 -19z"/>
 	</g>
   </svg>
