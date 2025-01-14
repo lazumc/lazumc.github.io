@@ -3,7 +3,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href='https://fonts.cdnfonts.com/css/transport-heavy' rel='stylesheet' type='text/css'>
-
 <style>
 	/* Force chat window to width 480px, no inset and no rounded edges */
 	/* Note: Cannot force height here as JS uses height attribute to make chat window open/close */
@@ -93,16 +92,17 @@
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
-	window.__8x8Chat = {
+    window.__8x8Chat = {
         uuid: "script_1049363971678557792e27f6.58430107",
         tenant: "cHNlbWVhaWNhZGVtbzAx",
         channel: "Red Kite Demo",
         channelUuid: "IpQMPIK2RUGhR9SaI51pMQ",
-        domain: "https://vcc-eu12.8x8.com",,
+        domain: "https://vcc-eu12.8x8.com",
         path: "/.",
         buttonContainerId: "__8x8-chat-button-container-script_dummy",
         stylesheetURL: "https://lazumc.github.io/redkitedemo.css",
         align: "right",
+        <!-- Triggered on initialisation to define window.bus which is  used to launch chat in custom button -->
 		onInit: function (bus) {
 		   window.bus = bus;
 		}
@@ -118,7 +118,6 @@
         os.parentNode.insertBefore(se, os);
     })();
     
-    // New launchChat() function to invoke chat (note this requires the onInit section to define window.bus in the main chat script above to work.
 	function launchChat() 
 	{
 		bus.publish("chat:trigger-chat-window");
@@ -160,6 +159,10 @@
     window.addEventListener('scroll', toggleTextVisibility);
 
 </script>
+</body>
+</html> 
+</script>
+
 </body>
 </html>
 
