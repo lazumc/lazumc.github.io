@@ -3,30 +3,19 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <style>
-	/* Force chat window to width 480px, no inset and no rounded edges */
-	/* Note: Cannot force height here as JS uses height attribute to make chat window open/close */
+	/* Position and style the chat window */
 	.__8x8Chat-Container {
-		width: 400px !important;
         box-shadow: -5px 5px 30px #444444 !important;
 		inset: auto 10px 10px auto !important;
 	}
-
-	/* Force chat to fill width of smart phone screen */
-	@media screen and (max-width: 480px){
-		.__8x8Chat-Container {
-			width: 100% !important;
-		}
-	}
-
-	/* Position and style customer defined chat button */
-	.webchat-button {
+	/* Position and style the chat button */
+	.__8x8Chat-Button {
 		position: fixed;
-		bottom: 350px;
-		right: 5px
+		bottom: 40%;
+		right: 5px;
+		border: 0px !important
 	}
-  
-}
- </style>
+</style>
 </head>
 <body bgcolor="#ffffff" style="width: 100%; max-width: 100%">
 
@@ -36,9 +25,7 @@
 <img src="https://lazumc.github.io/images/bysbackground4.png" width="100%">
 <img src="https://lazumc.github.io/images/bysbackground5.png" width="100%">
 
-
-
-<div id="__8x8-chat-button-container-script_113785303169d0d9ce7f2861.20815337" class="webchat-button"></div>
+<div id="__8x8-chat-button-container-script_11546640926981cfb894a561.27780062" class="__8x8Chat-Button"></div>
 
 <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
 <script type="text/javascript">
@@ -47,12 +34,12 @@
         var props = (typeofC === '[object Object]' && c) || {};
         var cb = f || (typeofC === '[object Function]' && c);
         var config = {
-            scriptUuid: "script_113785303169d0d9ce7f2861.20815337",
+            scriptUuid: "script_11546640926981cfb894a561.27780062",
             tenant: "YmlneWVsbG93c2VsZnN0b3I5MzIwMQ",
-            channelName: "bot_dev",
-            channelUuid: "-_5xv7rTQtOanFhE1CDpJg",
+            channelName: "bot",
+            channelUuid: "QxwJhLC5TeO5yM8RRm_Cig",
             domain: "https://vcc-eu11.8x8.com",
-            buttonContainerId: "__8x8-chat-button-container-script_113785303169d0d9ce7f2861.20815337",
+            buttonContainerId: "__8x8-chat-button-container-script_11546640926981cfb894a561.27780062",
             align: "right",
             themeCustom: {
             	"buttonPrimaryTextColor": "#343a40",
