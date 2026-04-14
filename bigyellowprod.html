@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+	/* Position and style the chat window */
+	.__8x8Chat-Container {
+        box-shadow: -5px 5px 30px #444444 !important;
+		inset: auto 10px 10px auto !important;
+	}
+	/* Position and style the chat button */
+	.__8x8Chat-Button {
+		position: fixed;
+		bottom: 40%;
+		right: 5px;
+		border: 0px !important
+	}
+</style>
+</head>
+<body bgcolor="#ffffff" style="width: 100%; max-width: 100%">
+
+<img src="https://lazumc.github.io/images/bysbackground1.png" width="100%">
+<img src="https://lazumc.github.io/images/bysbackground2.png" width="100%">
+<img src="https://lazumc.github.io/images/bysbackground3.png" width="100%">
+<img src="https://lazumc.github.io/images/bysbackground4.png" width="100%">
+<img src="https://lazumc.github.io/images/bysbackground5.png" width="100%">
+
+<div id="__8x8-chat-button-container-script_113785303169d0d9ce7f2861.20815337" class="__8x8Chat-Button"></div>
+
+<!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+<script type="text/javascript">
+    (function(c, f, ef){
+        var typeofC = Object.prototype.toString.call(c);
+        var props = (typeofC === '[object Object]' && c) || {};
+        var cb = f || (typeofC === '[object Function]' && c);
+        var config = {
+            scriptUuid: "script_113785303169d0d9ce7f2861.20815337",
+            tenant: "YmlneWVsbG93c2VsZnN0b3I5MzIwMQ",
+            channelName: "bot_dev",
+            channelUuid: "-_5xv7rTQtOanFhE1CDpJg",
+            domain: "https://vcc-eu11.8x8.com",
+            buttonContainerId: "__8x8-chat-button-container-script_113785303169d0d9ce7f2861.20815337",
+            align: "right",
+            themeCustom: {
+            	"buttonPrimaryTextColor": "#343a40",
+            	"buttonPrimaryBackgroundColor": "#ffff00",
+                "buttonPrimaryBackgroundColorHover": "#c6c31e",
+                "buttonPrimaryBackgroundColorActive": "#c6c31e",
+ 				"buttonPrimaryBackgroundColorDisabled": "#fcfcda",
+             	"buttonSecondaryTextColor": "#ffffff",
+            	"buttonSecondaryBackgroundColor": "#107e7e",
+                "buttonSecondaryBackgroundColorHover": "#0c5c5c",
+                "buttonSecondaryBackgroundColorActive": "#0c5c5c",
+                "messageIncomingBackgroundColor": "#fcfcda",
+                "messageIncomingTextColor": "#343a40",
+                "messageIncomingLinkColor": "#107e7e",
+                "messageIncomingLinkColorHover": "#0c5c5c",
+                "messageIncomingLinkColorFocus": "#0c5c5c",
+                "messageIncomingLinkColorVisited": "#0c5c5c",
+                "messageOutgoingBackgroundColor": "#f8f8f8",
+                "messageOutgoingTextColor": "#343a40",
+                "messageOutgoingLinkColor": "#107e7e",
+                "messageOutgoingLinkColorHover": "#0c5c5c",
+                "messageOutgoingLinkColorFocus": "#0c5c5c",
+                "messageOutgoingLinkColorVisited": "#0c5c5c",
+                "formElementTextColor": "#343a40",
+                "formLabelTextColor": "#ffffff",
+                "formElementBackgroundColor": "#fcfcda",
+                "headerIconColor": "#343a40",
+                "headerMenuBackgroundColor": "#107e7e",
+                "headerMenuLinkBackgroundColor": "#107e7e",
+                "headerMenuLinkBackgroundColorHover": "#0c5c5c",
+                "headerMenuLinkBackgroundColorFocus": "#0c5c5c",
+                "headerMenuLinkTextColor": "#ffffff",
+                "headerMenuLinkTextColorHover": "#ffffff",
+                "headerMenuLinkTextColorFocus": "#ffffff",
+                "headerMenuLinkIconColor": "#ffffff"
+            }
+        };
+
+        var url = new URL("https://cloud8-cc-geo.8x8.com/vcc-chat-channels/public/webchat/discovery");
+        var params = { domain: config.domain, tenant: config.tenant, channelUuid: config.channelUuid };
+        url.search = new URLSearchParams(params).toString();
+        fetch(url)
+            .then(response => response.json())
+            .then(data => config.domain = !data.domain ? config.domain : data.domain)
+            .catch(error => console.warn('Failed to retrieve override domain, will continue using ', config.domain, error))
+            .finally(() => loadChat());
+
+        function loadChat() {
+            var se = document.createElement("script");
+            se.type = "text/javascript";
+            se.async = true;
+            se.src = props.loaderURL || (config.domain + "/CHAT/common/js/chatv3.js");
+            Object.keys(config).forEach(function (k) { se.dataset[k] = config[k] });
+            Object.keys(props).forEach(function (k) { se.dataset[k] = props[k] });
+            function handleInitEvent(e) {
+                var initFn = e.detail.init;
+                initFn(config, cb);
+                se.removeEventListener('init', handleInitEvent)
+            }
+            function handleErrorEvent(e) {
+                ef && ef(e);
+                se.removeEventListener('customerror', handleErrorEvent);
+            }
+            se.addEventListener('init', handleInitEvent);
+            se.addEventListener('customerror', handleErrorEvent);
+            var os = document.getElementsByTagName("script")[0];
+            os.parentNode.insertBefore(se, os);
+        }
+    })();
+</script>
+</body>
+</html> 
