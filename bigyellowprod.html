@@ -16,13 +16,13 @@
 		border: 0px !important
 	  }
    	  /* Determine display type based on width*/
-	  [data-view="mobile"] {
+	  [button-view="mobile"] {
 	    display: none;
 	  }
 
 	  @media (max-width: 768px) {
-	    [data-view="desktop"] { display: none; }
-	    [data-view="mobile"]  { display: block; }
+	    [button-view="desktop"] { display: none; }
+	    [button-view="mobile"]  { display: block; }
 		.__8x8Chat-Button { bottom: 10px; }
 	  }
 	</style>
@@ -33,9 +33,10 @@
     <img src="https://lazumc.github.io/images/bysbackground3.png" width="100%">
     <img src="https://lazumc.github.io/images/bysbackground4.png" width="100%">
     <img src="https://lazumc.github.io/images/bysbackground5.png" width="100%">
+	
     <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
-    <div id="__8x8-chat-button-container-script_11546640926981cfb894a561.27780062" class="__8x8Chat-Button" data-view="desktop"></div>
-    <div id="__8x8-chat-button-container-script_27488351669e0e3ca18a1e4.70593249" class="__8x8Chat-Button" data-view="mobile"></div>
+    <div id="__8x8-chat-button-container-script_11546640926981cfb894a561.27780062" class="__8x8Chat-Button" button-view="desktop"></div>
+    <div id="__8x8-chat-button-container-script_27488351669e0e3ca18a1e4.70593249" class="__8x8Chat-Button" button-view="mobile"></div>
 
     <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
     <script type="text/javascript">
