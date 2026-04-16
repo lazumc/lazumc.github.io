@@ -3,15 +3,6 @@
   <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<style>
-   	  /* Determine display type based on width*/
-	  [data-view="mobile"] {
-	    display: none;
-	  }
-
-	  @media (max-width: 768px) {
-	    [data-view="desktop"] { display: none; }
-	    [data-view="mobile"]  { display: block; }
-	  }
 	  /* Position and style the chat window */
 	  .__8x8Chat-Container {
         box-shadow: -5px 5px 30px #444444 !important;
@@ -23,6 +14,16 @@
 		bottom: 40%;
 		right: 5px;
 		border: 0px !important
+	  }
+   	  /* Determine display type based on width*/
+	  [data-view="mobile"] {
+	    display: none;
+	  }
+
+	  @media (max-width: 768px) {
+	    [data-view="desktop"] { display: none; }
+	    [data-view="mobile"]  { display: block; }
+		.__8x8Chat-Button { bottom: 10px; }
 	  }
 	</style>
   </head>
