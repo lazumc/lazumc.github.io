@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareCo — Chatbot Configuration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .config-wrapper { max-width: 860px; margin: 2.5rem auto; padding: 0 1.5rem 4rem; }
+        .config-header { margin-bottom: 2rem; }
+        .config-header h1 { font-size: 1.8rem; color: var(--blue); margin-bottom: 0.4rem; }
+        .config-header p { color: #555; font-size: 0.95rem; }
+        .config-card { background: #fff; border-radius: 10px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,.07); margin-bottom: 1.5rem; }
+        .config-card h2 { font-size: 1.1rem; color: var(--dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .how-it-works { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .how-it-works li { display: flex; align-items: baseline; gap: 0.6rem; font-size: 0.9rem; color: #444; }
+        .step-num { background: var(--blue); color: #fff; border-radius: 50%; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+        .status-bar { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; padding: 0.5rem 0.75rem; border-radius: 6px; border-left: 4px solid transparent; }
+        .status-default { background: #e8f0fe; border-color: var(--blue); color: var(--blue); }
+        .status-custom  { background: #e6f9ee; border-color: #27ae60; color: #1a7a40; }
+        .status-saved   { background: #e6f9ee; border-color: #27ae60; color: #1a7a40; }
+        .status-error   { background: #fdecea; border-color: #c0392b; color: #b71c1c; }
+        .status-reset   { background: #fff8e1; border-color: #f39c12; color: #7d5700; }
+        label[for="snippet"] { display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        textarea#snippet { width: 100%; height: 320px; font-family: 'Courier New', monospace; font-size: 0.78rem; line-height: 1.5; border: 1.5px solid #d0d7de; border-radius: 6px; padding: 0.75rem; resize: vertical; color: var(--dark); background: #fafbfc; transition: border-color .2s; }
+        textarea#snippet:focus { outline: none; border-color: var(--blue); background: #fff; }
+        .btn-row { display: flex; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
+        .btn-primary { background: var(--blue); color: #fff; border: none; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: opacity .2s; }
+        .btn-primary:hover { opacity: .88; }
+        .btn-secondary { background: #fff; color: var(--dark); border: 1.5px solid #d0d7de; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: border-color .2s; }
+        .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+        .btn-danger { background: #fff; color: #c0392b; border: 1.5px solid #c0392b; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background .2s; }
+        .btn-danger:hover { background: #fdecea; }
+        .parsed-preview { margin-top: 1.25rem; font-size: 0.82rem; }
+        .parsed-preview table { width: 100%; border-collapse: collapse; }
+        .parsed-preview th, .parsed-preview td { padding: 0.4rem 0.6rem; text-align: left; border-bottom: 1px solid #eee; }
+        .parsed-preview th { background: var(--gray); font-weight: 600; color: #555; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .04em; }
+        .parsed-preview td:first-child { color: #555; width: 140px; }
+        .parsed-preview td:last-child  { font-family: monospace; word-break: break-all; }
+        .val-ok   { color: #27ae60; font-weight: 600; }
+        .val-miss { color: #e74c3c; font-style: italic; }
+        .pages-affected { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+        .page-chip { background: var(--gray); border: 1px solid #d0d7de; border-radius: 20px; padding: 0.25rem 0.75rem; font-size: 0.8rem; color: var(--text); }
+    </style>
+</head>
+<body>
+
+<div class="brand-bar"></div>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">♿</span>
+        <span>CareCo</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="products.html">🛵 Products</a>
+        <a href="stories.html">💬 Stories</a>
+        <a href="config.html" class="active">⚙ Config</a>
+    </div>
+</nav>
+
+<div class="config-wrapper">
+    <div class="config-header">
+        <h1>⚙ Chatbot Widget Configuration</h1>
+        <p>Paste a new 8x8 widget snippet below and click <strong>Save</strong>. It will be applied on all pages without editing HTML files.</p>
+    </div>
+
+    <div class="config-card">
+        <h2>ℹ️ How it works</h2>
+        <ul class="how-it-works">
+            <li><span class="step-num">1</span>Paste your full 8x8 snippet (the <code>&lt;div&gt;</code> + <code>&lt;script&gt;</code> block) in the textarea below.</li>
+            <li><span class="step-num">2</span>Click <strong>Save & Apply</strong>. The snippet is stored in this browser's <code>localStorage</code>.</li>
+            <li><span class="step-num">3</span>Each page reads from <code>localStorage</code> on load via <code>chatbot-loader.js</code> and injects the widget dynamically.</li>
+            <li><span class="step-num">4</span>If nothing is saved, pages fall back to the built-in default snippet automatically.</li>
+        </ul>
+    </div>
+
+    <div class="config-card">
+        <h2>📄 Pages using this configuration</h2>
+        <div class="pages-affected">
+            <span class="page-chip">🏠 index.html</span>
+            <span class="page-chip">🛵 products.html</span>
+            <span class="page-chip">💬 stories.html</span>
+        </div>
+    </div>
+
+    <div class="config-card">
+        <h2>📋 Widget Snippet</h2>
+        <div id="status" class="status-bar status-default">Loading current configuration…</div>
+        <label for="snippet">Paste the full 8x8 widget code here:</label>
+        <textarea id="snippet" spellcheck="false" autocorrect="off" autocapitalize="off"
+                  placeholder='<div id="__8x8-chat-button-container-..."></div>&#10;<script type="text/javascript">&#10;(function(c, f, ef){ ... })();&#10;</scr&#105;pt>'></textarea>
+        <div class="btn-row">
+            <button class="btn-primary"   onclick="saveConfig()">💾 Save &amp; Apply</button>
+            <button class="btn-secondary" onclick="loadDefault()">↩ Load Default</button>
+            <button class="btn-danger"    onclick="clearConfig()">🗑 Clear (use default)</button>
+        </div>
+        <div id="parsed" class="parsed-preview" style="display:none">
+            <h2 style="margin-top:1.2rem;font-size:1rem;">Parsed configuration</h2>
+            <table id="parsed-table"></table>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 CareCo News &mdash; Unofficial fan content &mdash;
+       <a href="index.html">Home</a> &middot;
+       <a href="products.html">Products</a> &middot;
+       <a href="stories.html">Stories</a>
+       &mdash; Content is for demonstration purposes only.</p>
+</footer>
+
+<script>
+var STORAGE_KEY = 'chatbot_snippet';
+var DEFAULT_SNIPPET = '<div id="__8x8-chat-button-container-script_509933349691224ed0535a3.19243387"></div>\n<script type="text/javascript">\n(function(c, f, ef){\n    var typeofC = Object.prototype.toString.call(c);\n    var props = (typeofC === \'[object Object]\' && c) || {};\n    var cb = f || (typeofC === \'[object Function]\' && c);\n    var config = {\n        scriptUuid: "script_509933349691224ed0535a3.19243387",\n        tenant: "Y2FyZWNvMDE",\n        channelName: "BOT_CHANNEL",\n        channelUuid: "BNlxPsdKR66S31AJph-QTA",\n        domain: "https://vcc-eu7.8x8.com",\n        buttonContainerId: "__8x8-chat-button-container-script_509933349691224ed0535a3.19243387",\n        align: "right",\n    };\n    var url = new URL("https://cloud8-cc-geo.8x8.com/vcc-chat-channels/public/webchat/discovery");\n    var params = { domain: config.domain, tenant: config.tenant, channelUuid: config.channelUuid };\n    url.search = new URLSearchParams(params).toString();\n    fetch(url)\n        .then(response => response.json())\n        .then(data => config.domain = !data.domain ? config.domain : data.domain)\n        .catch(error => console.warn(\'Failed to retrieve override domain\', error))\n        .finally(() => loadChat());\n    function loadChat() {\n        var se = document.createElement("script");\n        se.type = "text/javascript";\n        se.async = true;\n        se.src = props.loaderURL || (config.domain + "/CHAT/common/js/chatv3.js");\n        Object.keys(config).forEach(function(k) { se.dataset[k] = config[k]; });\n        Object.keys(props).forEach(function(k) { se.dataset[k] = props[k]; });\n        function handleInitEvent(e) { e.detail.init(config, cb); se.removeEventListener(\'init\', handleInitEvent); }\n        function handleErrorEvent(e) { ef && ef(e); se.removeEventListener(\'customerror\', handleErrorEvent); }\n        se.addEventListener(\'init\', handleInitEvent);\n        se.addEventListener(\'customerror\', handleErrorEvent);\n        var os = document.getElementsByTagName("script")[0];\n        os.parentNode.insertBefore(se, os);\n    }\n})();\n<\/script>';
+
+function setStatus(msg, type) { var el = document.getElementById('status'); el.textContent = msg; el.className = 'status-bar status-' + type; }
+
+function parseSnippet(raw) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(raw, 'text/html');
+    var divEl = doc.querySelector('div[id^="__8x8"]');
+    var scriptEl = doc.querySelector('script');
+    if (!divEl || !scriptEl) return null;
+    var fields = { buttonContainerId: null, scriptUuid: null, tenant: null, channelName: null, channelUuid: null, domain: null };
+    var src = scriptEl.textContent;
+    Object.keys(fields).forEach(function(key) { var re = new RegExp(key + ':\\s*["\']([^"\']+)["\']'); var m = src.match(re); fields[key] = m ? m[1] : null; });
+    fields['buttonContainerId'] = divEl.id || fields['buttonContainerId'];
+    return fields;
+}
+
+function renderParsed(fields) {
+    if (!fields) { document.getElementById('parsed').style.display = 'none'; return; }
+    var labels = { buttonContainerId: 'Container ID', scriptUuid: 'Script UUID', tenant: 'Tenant', channelName: 'Channel Name', channelUuid: 'Channel UUID', domain: 'Domain' };
+    var rows = Object.keys(labels).map(function(k) { var val = fields[k]; return '<tr><td>' + labels[k] + '</td><td class="' + (val ? 'val-ok' : 'val-miss') + '">' + (val || '— not found') + '</td></tr>'; }).join('');
+    document.getElementById('parsed-table').innerHTML = '<thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>' + rows + '</tbody>';
+    document.getElementById('parsed').style.display = 'block';
+}
+
+function loadCurrent() {
+    var stored = null;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+    if (stored) { document.getElementById('snippet').value = stored; setStatus('✅ Custom snippet active — saved in this browser\'s localStorage.', 'custom'); renderParsed(parseSnippet(stored)); }
+    else { document.getElementById('snippet').value = DEFAULT_SNIPPET; setStatus('ℹ️ Using built-in default snippet. Save a new one to override.', 'default'); renderParsed(parseSnippet(DEFAULT_SNIPPET)); }
+}
+
+function saveConfig() {
+    var raw = document.getElementById('snippet').value.trim();
+    if (!raw) { setStatus('⚠️ The textarea is empty — please paste a snippet first.', 'error'); return; }
+    var parsed = parseSnippet(raw);
+    if (!parsed) { setStatus('⚠️ Could not detect an 8x8 snippet. Make sure it includes the <div> and <script> blocks.', 'error'); return; }
+    try { localStorage.setItem(STORAGE_KEY, raw); } catch(e) { setStatus('⚠️ Could not write to localStorage: ' + e.message, 'error'); return; }
+    setStatus('✅ Saved! Navigate to any page — the new widget will load automatically.', 'saved');
+    renderParsed(parsed);
+}
+
+function loadDefault() { document.getElementById('snippet').value = DEFAULT_SNIPPET; setStatus('↩ Default snippet loaded. Click "Save & Apply" to make it active.', 'reset'); renderParsed(parseSnippet(DEFAULT_SNIPPET)); }
+
+function clearConfig() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    document.getElementById('snippet').value = DEFAULT_SNIPPET;
+    setStatus('🗑 Custom config cleared. Pages will now use the built-in default.', 'reset');
+    renderParsed(parseSnippet(DEFAULT_SNIPPET));
+}
+
+loadCurrent();
+</script>
+
+</body>
+</html>

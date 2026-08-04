@@ -1,0 +1,359 @@
+:root {
+    --blue:   #004F9F;
+    --accent: #6CC04A;
+    --white:  #FFFFFF;
+    --gray:   #F4F6F9;
+    --dark:   #1C2B3C;
+    --text:   #333333;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+    background: var(--gray);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.brand-bar {
+    height: 5px;
+    background: linear-gradient(to right, var(--blue) 50%, var(--accent) 50%);
+}
+
+/* ── NAV ── */
+nav {
+    background: var(--blue);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.35);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 0;
+    text-decoration: none;
+}
+
+.nav-logo-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.nav-logo span {
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 800;
+    white-space: nowrap;
+    letter-spacing: -0.3px;
+}
+
+.nav-links { display: flex; gap: 0.4rem; }
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    padding: 0.55rem 1.1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.nav-links a:hover  { background: rgba(255,255,255,0.12); color: var(--white); }
+.nav-links a.active { background: rgba(255,255,255,0.18); color: var(--white); }
+
+/* ── HERO ── */
+.hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.68);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,79,159,0.82) 0%, rgba(108,192,74,0.4) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    padding: 2rem;
+    max-width: 780px;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--dark);
+    padding: 0.28rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.3);
+}
+
+.hero-content p { font-size: 1.15rem; opacity: 0.92; line-height: 1.65; }
+
+/* ── HIGHLIGHTS BANNER ── */
+.score-banner {
+    background: linear-gradient(135deg, var(--blue), #0066CC);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+.score-banner h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.72;
+    margin-bottom: 1.5rem;
+}
+
+.score-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.score-team            { text-align: center; }
+.score-team .flag-icon { font-size: 2.8rem; display: block; margin-bottom: 0.4rem; }
+.score-team .team-name { font-size: 0.88rem; opacity: 0.72; }
+.score-number          { font-size: 5rem; font-weight: 900; line-height: 1; }
+.score-separator       { font-size: 2.5rem; opacity: 0.28; align-self: center; }
+.winner-score          { color: var(--accent); }
+.stat-secondary        { font-size: 2.4rem; font-weight: 900; color: rgba(255,255,255,0.85); }
+
+/* ── LAYOUT ── */
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.section-title { font-size: 1.9rem; font-weight: 800; color: var(--dark); margin-bottom: 0.4rem; }
+.section-title span { color: var(--blue); }
+.section-subtitle    { color: #666; margin-bottom: 2rem; font-size: 1rem; }
+
+/* ── NAV CARDS ── */
+.sport-nav-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.sport-card {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    height: 280px;
+    display: block;
+    text-decoration: none;
+}
+
+.sport-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+.sport-card:hover img { transform: scale(1.06); }
+
+.sport-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.8rem;
+}
+
+.sport-card-overlay .emoji { font-size: 2.2rem; margin-bottom: 0.4rem; }
+.sport-card-overlay h2     { color: var(--white); font-size: 1.55rem; font-weight: 800; }
+.sport-card-overlay p      { color: rgba(255,255,255,0.78); font-size: 0.88rem; margin-top: 0.3rem; }
+
+.btn-card {
+    display: inline-block;
+    margin-top: 0.9rem;
+    background: var(--white);
+    color: var(--dark);
+    padding: 0.45rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* ── CARD GRID ── */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transition: transform 0.22s, box-shadow 0.22s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 32px rgba(0,0,0,0.14); }
+.card img   { width: 100%; height: 190px; object-fit: cover; }
+.card-body  { padding: 1.4rem; }
+
+.card-tag {
+    display: inline-block;
+    padding: 0.22rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.tag-product { background: #ddeeff; color: #004499; }
+.tag-story   { background: #e8f5e9; color: #2e7d32; }
+.tag-award   { background: #fff3e0; color: #e65100; }
+.tag-news    { background: #f3e5f5; color: #6a1b9a; }
+
+.card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.45rem; line-height: 1.38; }
+.card p  { color: #666; font-size: 0.88rem; line-height: 1.55; }
+
+/* ── ARTICLE ── */
+.article {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    margin-bottom: 2.2rem;
+}
+
+.article > img { width: 100%; height: 340px; object-fit: cover; }
+.article-body  { padding: 2rem 2.2rem; }
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    color: #999;
+}
+
+.article h2 { font-size: 1.7rem; font-weight: 800; margin-bottom: 1rem; color: var(--dark); line-height: 1.3; }
+.article p  { line-height: 1.85; color: #444; margin-bottom: 1rem; font-size: 0.98rem; }
+.article h3 { font-size: 1.15rem; font-weight: 700; margin: 1.4rem 0 0.7rem; color: var(--blue); }
+
+/* ── QUOTE ── */
+.quote {
+    background: linear-gradient(135deg, var(--blue), #0066CC);
+    color: var(--white);
+    padding: 1.8rem 2rem 1.8rem 3rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    position: relative;
+}
+.quote::before {
+    content: '"';
+    position: absolute;
+    top: -5px; left: 15px;
+    font-size: 5rem;
+    opacity: 0.28;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+.quote p    { color: rgba(255,255,255,0.95); font-style: italic; font-size: 1.05rem; line-height: 1.7; margin: 0; }
+.quote cite { display: block; margin-top: 0.8rem; font-size: 0.85rem; opacity: 0.72; }
+
+/* ── STATS TABLE ── */
+.stats-table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+
+.stats-table th {
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.75rem 1.1rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.stats-table td { padding: 0.75rem 1.1rem; border-bottom: 1px solid #eee; font-size: 0.93rem; }
+.stats-table tr:nth-child(even) td { background: #f8f9fc; }
+.stat-france  { color: var(--blue); font-weight: 700; }
+.stat-england { color: #555; }
+.note { color: #aaa; font-size: 0.8rem; font-style: italic; margin-top: 0.5rem; }
+
+/* ── FOOTER ── */
+footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.42);
+    text-align: center;
+    padding: 1.8rem 2rem;
+    font-size: 0.82rem;
+    margin-top: 2rem;
+}
+footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+footer a:hover { color: var(--white); }
+
+/* ── CHATBOT BUTTON — always fixed bottom-right ── */
+[id^="__8x8-chat-button-container"] {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 99999 !important;
+    transform-origin: bottom right !important;
+    transform: scale(0.5) !important;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    .sport-nav-cards { grid-template-columns: 1fr; }
+    .score-number    { font-size: 3.5rem; }
+    .nav-links a     { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+    .article > img   { height: 220px; }
+    .article-body    { padding: 1.4rem; }
+}
