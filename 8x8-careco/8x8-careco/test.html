@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareCo News — Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="__8x8-chat-button-container-script_509933349691224ed0535a3.19243387" style="visibility: hidden"></div>
+<button onclick="window.chatApp.startChat()" style="position: fixed; bottom: 10px; right: 10px; border: none; background: none; padding: 0; cursor: pointer;">
+  <img src="chat.png" alt="chat" width="25" height="25">
+</button>
+<script type="text/javascript">
+(function(c, f, ef){
+    var typeofC = Object.prototype.toString.call(c);
+    var props = (typeofC === '[object Object]' && c) || {};
+    var cb = f || (typeofC === '[object Function]' && c);
+    var config = {
+        scriptUuid: "script_509933349691224ed0535a3.19243387",
+        tenant: "Y2FyZWNvMDE",
+        channelName: "BOT_CHANNEL",
+        channelUuid: "BNlxPsdKR66S31AJph-QTA",
+        domain: "https://vcc-eu7.8x8.com",
+        buttonContainerId: "__8x8-chat-button-container-script_509933349691224ed0535a3.19243387",
+        align: "right",
+    };
+    var url = new URL("https://cloud8-cc-geo.8x8.com/vcc-chat-channels/public/webchat/discovery");
+    var params = { domain: config.domain, tenant: config.tenant, channelUuid: config.channelUuid };
+    url.search = new URLSearchParams(params).toString();
+    fetch(url)
+        .then(response => response.json())
+        .then(data => config.domain = !data.domain ? config.domain : data.domain)
+        .catch(error => console.warn('Failed to retrieve override domain', error))
+        .finally(() => loadChat());
+    function loadChat() {
+        var se = document.createElement("script");
+        se.type = "text/javascript";
+        se.async = true;
+        se.src = props.loaderURL || (config.domain + "/CHAT/common/js/chatv3.js");
+        Object.keys(config).forEach(function(k) { se.dataset[k] = config[k]; });
+        Object.keys(props).forEach(function(k) { se.dataset[k] = props[k]; });
+        function handleInitEvent(e) { e.detail.init(config, cb); se.removeEventListener('init', handleInitEvent); }
+        function handleErrorEvent(e) { ef && ef(e); se.removeEventListener('customerror', handleErrorEvent); }
+        se.addEventListener('init', handleInitEvent);
+        se.addEventListener('customerror', handleErrorEvent);
+        var os = document.getElementsByTagName("script")[0];
+        os.parentNode.insertBefore(se, os);
+    }
+    })(function (chatApp) {
+window.chatApp = chatApp;
+},
+);
+    </script>
+
+<div class="brand-bar"></div>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">♿</span>
+        <span>CareCo</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html" class="active">🏠 Home</a>
+        <a href="products.html">🛵 Products</a>
+        <a href="stories.html">💬 Stories</a>
+        <a href="config.html">⚙ Config</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1400&h=600&fit=crop&q=80"
+         alt="CareCo — Helping people live independently">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="badge">🏆 The UK's Leading Mobility Retailer</span>
+        <h1>CareCo — Positive<br>News & Updates</h1>
+        <p>When your mobility changes, your life doesn't have to.<br>
+           Discover the latest from CareCo: new showrooms, award wins, and inspiring customer stories.</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2 class="section-title">Explore our <span>latest</span></h2>
+    <p class="section-subtitle">Products, awards and the people whose lives CareCo has transformed</p>
+
+    <div class="sport-nav-cards">
+        <a href="products.html" class="sport-card">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&h=560&fit=crop&q=80"
+                 alt="CareCo Products">
+            <div class="sport-card-overlay">
+                <span class="emoji">🛵</span>
+                <h2>Products & Awards</h2>
+                <p>500+ products, next-day delivery and the Which? Trusted Trader seal</p>
+                <span class="btn-card">Discover →</span>
+            </div>
+        </a>
+
+        <a href="stories.html" class="sport-card">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&h=560&fit=crop&q=80"
+                 alt="CareCo Customer Stories">
+            <div class="sport-card-overlay">
+                <span class="emoji">💬</span>
+                <h2>Customer Stories</h2>
+                <p>Real people, real independence — stories from CareCo customers across the UK</p>
+                <span class="btn-card">Read stories →</span>
+            </div>
+        </a>
+    </div>
+
+    <h2 class="section-title">Latest <span>Headlines</span></h2>
+    <p class="section-subtitle">The biggest CareCo news this summer</p>
+
+    <div class="cards-grid">
+        <a href="products.html" class="card">
+            <img src="https://images.unsplash.com/photo-1516307365869-87a8c0db7963?w=700&h=380&fit=crop&q=80"
+                 alt="Edinburgh Showroom">
+            <div class="card-body">
+                <span class="card-tag tag-news">Showrooms · August 2026</span>
+                <h3>CareCo opens its brand-new Edinburgh showroom on 22nd August 2026</h3>
+                <p>Scotland's first CareCo destination brings the full range of mobility aids to the North, with expert advisors on hand 7 days a week.</p>
+            </div>
+        </a>
+
+        <a href="products.html" class="card">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&h=380&fit=crop&q=80"
+                 alt="Which? Trusted Trader Award">
+            <div class="card-body">
+                <span class="card-tag tag-award">Award · 2026</span>
+                <h3>CareCo retains Which? Trusted Trader status for the third consecutive year</h3>
+                <p>The independent consumer champion once again recognises CareCo's commitment to quality, transparency and customer care.</p>
+            </div>
+        </a>
+
+        <a href="stories.html" class="card">
+            <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=700&h=380&fit=crop&q=80"
+                 alt="Customer Story">
+            <div class="card-body">
+                <span class="card-tag tag-story">Customer Story · 2026</span>
+                <h3>"CareCo gave me my independence back" — Karen's story after her MND diagnosis</h3>
+                <p>After being diagnosed with motor neurone disease in early 2025, Karen found the perfect fireside chair at CareCo — and has never looked back.</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 CareCo News &mdash; Unofficial fan content &mdash;
+       <a href="products.html">Products</a> &middot;
+       <a href="stories.html">Stories</a>
+       &mdash; Content is for demonstration purposes only. Visit <a href="https://www.careco.co.uk">careco.co.uk</a> for official information.</p>
+</footer>
+
+</body>
+</html>
+
